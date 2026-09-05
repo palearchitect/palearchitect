@@ -17,18 +17,18 @@
 
   <style>
     .mono { font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace; }
-    .card-title { font-family: 'Inter', -apple-system, sans-serif; font-weight: 700; font-size: 14.5px; fill: #ffffff; letter-spacing: 0.01em; }
-    .card-body { font-family: 'Inter', -apple-system, sans-serif; font-size: 11.5px; fill: #888888; }
-    .tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: #ffffff; font-weight: 600; }
-    .tier-lbl { font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: #a3a3a3; font-weight: 700; }
+    .card-title { font-family: 'Inter', -apple-system, sans-serif; font-weight: 700; font-size: 14px; fill: #ffffff; letter-spacing: 0.01em; }
+    .card-body { font-family: 'Inter', -apple-system, sans-serif; font-size: 11.5px; fill: #94a3b8; }
+    .tag { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; font-weight: 600; }
+    .tier-lbl { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; }
 
     @keyframes glideSlider {
       0% { transform: translateX(0); }
       100% { transform: translateX(-1240px); }
     }
     @keyframes beaconBlink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.2; }
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.3; transform: scale(0.85); }
     }
 
     .slider-track { display: flex; animation: glideSlider 28s linear infinite; }
@@ -40,14 +40,14 @@
 
   <!-- Pure Floating Marquee Track (Anchored cleanly at y=10) -->
   <g class="slider-track" transform="translate(10, 10)">
-    <!-- Card 1 -->
+    <!-- Card 1: Autonomous Agents (Violet) -->
     <g transform="translate(0, 0)">
-      <rect width="295" height="180" fill="#0c0c0c" stroke="#222222" stroke-width="1" rx="6" />
+      <rect width="295" height="180" fill="#0e071a" stroke="#4c1d95" stroke-width="1.2" rx="6" />
       
       <!-- Card Header Tier -->
-      <text x="20" y="32" class="tier-lbl">01 ▪ AUTONOMOUS AGENTS</text>
-      <circle cx="275" cy="28" r="3" fill="#ffffff" class="beacon" />
-      <line x1="20" y1="44" x2="275" y2="44" stroke="#1c1c1c" stroke-width="0.75" />
+      <text x="20" y="32" class="tier-lbl" fill="#c084fc">01 ▪ AUTONOMOUS AGENTS</text>
+      <circle cx="275" cy="28" r="3.5" fill="#a855f7" class="beacon" />
+      <line x1="20" y1="44" x2="275" y2="44" stroke="#2e1065" stroke-width="0.75" />
 
       <!-- Title & Content -->
       <text x="20" y="74" class="card-title">Stateful Loop Orchestration</text>
@@ -55,18 +55,19 @@
       <text x="20" y="118" class="card-body">tool-calling sandboxes &amp; evaluators.</text>
       
       <!-- Bottom Tag Pill -->
-      <rect x="20" y="138" width="124" height="24" fill="#161616" stroke="#282828" stroke-width="0.75" rx="3" />
-      <text x="28" y="154" class="tag">PYTORCH • MCP</text>
+      <rect x="20" y="138" width="134" height="24" fill="#24103d" stroke="#7c3aed" stroke-width="0.75" rx="3" />
+      <circle cx="30" cy="150" r="2" fill="#c084fc" />
+      <text x="38" y="154" class="tag" fill="#ede9fe">PYTORCH • MCP</text>
     </g>
 
-    <!-- Card 2 -->
+    <!-- Card 2: Distributed Engines (Amber/Orange) -->
     <g transform="translate(310, 0)">
-      <rect width="295" height="180" fill="#0c0c0c" stroke="#222222" stroke-width="1" rx="6" />
+      <rect width="295" height="180" fill="#140a04" stroke="#7c2d12" stroke-width="1.2" rx="6" />
       
       <!-- Card Header Tier -->
-      <text x="20" y="32" class="tier-lbl">02 ▪ DISTRIBUTED ENGINES</text>
-      <circle cx="275" cy="28" r="3" fill="#ffffff" class="beacon" />
-      <line x1="20" y1="44" x2="275" y2="44" stroke="#1c1c1c" stroke-width="0.75" />
+      <text x="20" y="32" class="tier-lbl" fill="#fb923c">02 ▪ DISTRIBUTED ENGINES</text>
+      <circle cx="275" cy="28" r="3.5" fill="#f97316" class="beacon" />
+      <line x1="20" y1="44" x2="275" y2="44" stroke="#431407" stroke-width="0.75" />
 
       <!-- Title & Content -->
       <text x="20" y="74" class="card-title">Low-Latency Microservices</text>
@@ -74,18 +75,19 @@
       <text x="20" y="118" class="card-body">lock-free pipelines &amp; memory-safe IO.</text>
       
       <!-- Bottom Tag Pill -->
-      <rect x="20" y="138" width="120" height="24" fill="#161616" stroke="#282828" stroke-width="0.75" rx="3" />
-      <text x="28" y="154" class="tag">RUST • GO • C++</text>
+      <rect x="20" y="138" width="136" height="24" fill="#2d1306" stroke="#ea580c" stroke-width="0.75" rx="3" />
+      <circle cx="30" cy="150" r="2" fill="#fb923c" />
+      <text x="38" y="154" class="tag" fill="#ffedd5">RUST • GO • C++</text>
     </g>
 
-    <!-- Card 3 -->
+    <!-- Card 3: Vector Retrieval (Emerald) -->
     <g transform="translate(620, 0)">
-      <rect width="295" height="180" fill="#0c0c0c" stroke="#222222" stroke-width="1" rx="6" />
+      <rect width="295" height="180" fill="#041710" stroke="#065f46" stroke-width="1.2" rx="6" />
       
       <!-- Card Header Tier -->
-      <text x="20" y="32" class="tier-lbl">03 ▪ VECTOR RETRIEVAL</text>
-      <circle cx="275" cy="28" r="3" fill="#ffffff" class="beacon" />
-      <line x1="20" y1="44" x2="275" y2="44" stroke="#1c1c1c" stroke-width="0.75" />
+      <text x="20" y="32" class="tier-lbl" fill="#34d399">03 ▪ VECTOR RETRIEVAL</text>
+      <circle cx="275" cy="28" r="3.5" fill="#10b981" class="beacon" />
+      <line x1="20" y1="44" x2="275" y2="44" stroke="#064e3b" stroke-width="0.75" />
 
       <!-- Title & Content -->
       <text x="20" y="74" class="card-title">Hybrid Dense/Sparse Index</text>
@@ -93,18 +95,19 @@
       <text x="20" y="118" class="card-body">semantic clustering &amp; vector search.</text>
       
       <!-- Bottom Tag Pill -->
-      <rect x="20" y="138" width="146" height="24" fill="#161616" stroke="#282828" stroke-width="0.75" rx="3" />
-      <text x="28" y="154" class="tag">QDRANT • PINECONE</text>
+      <rect x="20" y="138" width="160" height="24" fill="#062e1e" stroke="#059669" stroke-width="0.75" rx="3" />
+      <circle cx="30" cy="150" r="2" fill="#34d399" />
+      <text x="38" y="154" class="tag" fill="#d1fae5">QDRANT • PINECONE</text>
     </g>
 
-    <!-- Card 4 -->
+    <!-- Card 4: Zero-Trust DevOps (Cyan/Sky) -->
     <g transform="translate(930, 0)">
-      <rect width="295" height="180" fill="#0c0c0c" stroke="#222222" stroke-width="1" rx="6" />
+      <rect width="295" height="180" fill="#041521" stroke="#075985" stroke-width="1.2" rx="6" />
       
       <!-- Card Header Tier -->
-      <text x="20" y="32" class="tier-lbl">04 ▪ ZERO-TRUST DEVOPS</text>
-      <circle cx="275" cy="28" r="3" fill="#ffffff" class="beacon" />
-      <line x1="20" y1="44" x2="275" y2="44" stroke="#1c1c1c" stroke-width="0.75" />
+      <text x="20" y="32" class="tier-lbl" fill="#38bdf8">04 ▪ ZERO-TRUST DEVOPS</text>
+      <circle cx="275" cy="28" r="3.5" fill="#0284c7" class="beacon" />
+      <line x1="20" y1="44" x2="275" y2="44" stroke="#0c4a6e" stroke-width="0.75" />
 
       <!-- Title & Content -->
       <text x="20" y="74" class="card-title">Sandboxing &amp; CI/CD Security</text>
@@ -112,54 +115,63 @@
       <text x="20" y="118" class="card-body">K8s clusters &amp; container sandboxes.</text>
       
       <!-- Bottom Tag Pill -->
-      <rect x="20" y="138" width="136" height="24" fill="#161616" stroke="#282828" stroke-width="0.75" rx="3" />
-      <text x="28" y="154" class="tag">K8S • TERRAFORM</text>
+      <rect x="20" y="138" width="148" height="24" fill="#06273b" stroke="#0284c7" stroke-width="0.75" rx="3" />
+      <circle cx="30" cy="150" r="2" fill="#38bdf8" />
+      <text x="38" y="154" class="tag" fill="#e0f2fe">K8S • TERRAFORM</text>
     </g>
 
     <!-- DUPLICATE TRACK FOR CONTINUOUS LOOP (Offset +1240) -->
+    <!-- Loop Card 1: Autonomous Agents -->
     <g transform="translate(1240, 0)">
-      <rect width="295" height="180" fill="#0c0c0c" stroke="#222222" stroke-width="1" rx="6" />
-      <text x="20" y="32" class="tier-lbl">01 ▪ AUTONOMOUS AGENTS</text>
-      <circle cx="275" cy="28" r="3" fill="#ffffff" class="beacon" />
-      <line x1="20" y1="44" x2="275" y2="44" stroke="#1c1c1c" stroke-width="0.75" />
+      <rect width="295" height="180" fill="#0e071a" stroke="#4c1d95" stroke-width="1.2" rx="6" />
+      <text x="20" y="32" class="tier-lbl" fill="#c084fc">01 ▪ AUTONOMOUS AGENTS</text>
+      <circle cx="275" cy="28" r="3.5" fill="#a855f7" class="beacon" />
+      <line x1="20" y1="44" x2="275" y2="44" stroke="#2e1065" stroke-width="0.75" />
       <text x="20" y="74" class="card-title">Stateful Loop Orchestration</text>
       <text x="20" y="100" class="card-body">Deterministic multi-agent reasoning,</text>
       <text x="20" y="118" class="card-body">tool-calling sandboxes &amp; evaluators.</text>
-      <rect x="20" y="138" width="124" height="24" fill="#161616" stroke="#282828" stroke-width="0.75" rx="3" />
-      <text x="28" y="154" class="tag">PYTORCH • MCP</text>
+      <rect x="20" y="138" width="134" height="24" fill="#24103d" stroke="#7c3aed" stroke-width="0.75" rx="3" />
+      <circle cx="30" cy="150" r="2" fill="#c084fc" />
+      <text x="38" y="154" class="tag" fill="#ede9fe">PYTORCH • MCP</text>
     </g>
+    <!-- Loop Card 2: Distributed Engines -->
     <g transform="translate(1550, 0)">
-      <rect width="295" height="180" fill="#0c0c0c" stroke="#222222" stroke-width="1" rx="6" />
-      <text x="20" y="32" class="tier-lbl">02 ▪ DISTRIBUTED ENGINES</text>
-      <circle cx="275" cy="28" r="3" fill="#ffffff" class="beacon" />
-      <line x1="20" y1="44" x2="275" y2="44" stroke="#1c1c1c" stroke-width="0.75" />
+      <rect width="295" height="180" fill="#140a04" stroke="#7c2d12" stroke-width="1.2" rx="6" />
+      <text x="20" y="32" class="tier-lbl" fill="#fb923c">02 ▪ DISTRIBUTED ENGINES</text>
+      <circle cx="275" cy="28" r="3.5" fill="#f97316" class="beacon" />
+      <line x1="20" y1="44" x2="275" y2="44" stroke="#431407" stroke-width="0.75" />
       <text x="20" y="74" class="card-title">Low-Latency Microservices</text>
       <text x="20" y="100" class="card-body">High-throughput gRPC streaming,</text>
       <text x="20" y="118" class="card-body">lock-free pipelines &amp; memory-safe IO.</text>
-      <rect x="20" y="138" width="120" height="24" fill="#161616" stroke="#282828" stroke-width="0.75" rx="3" />
-      <text x="28" y="154" class="tag">RUST • GO • C++</text>
+      <rect x="20" y="138" width="136" height="24" fill="#2d1306" stroke="#ea580c" stroke-width="0.75" rx="3" />
+      <circle cx="30" cy="150" r="2" fill="#fb923c" />
+      <text x="38" y="154" class="tag" fill="#ffedd5">RUST • GO • C++</text>
     </g>
+    <!-- Loop Card 3: Vector Retrieval -->
     <g transform="translate(1860, 0)">
-      <rect width="295" height="180" fill="#0c0c0c" stroke="#222222" stroke-width="1" rx="6" />
-      <text x="20" y="32" class="tier-lbl">03 ▪ VECTOR RETRIEVAL</text>
-      <circle cx="275" cy="28" r="3" fill="#ffffff" class="beacon" />
-      <line x1="20" y1="44" x2="275" y2="44" stroke="#1c1c1c" stroke-width="0.75" />
+      <rect width="295" height="180" fill="#041710" stroke="#065f46" stroke-width="1.2" rx="6" />
+      <text x="20" y="32" class="tier-lbl" fill="#34d399">03 ▪ VECTOR RETRIEVAL</text>
+      <circle cx="275" cy="28" r="3.5" fill="#10b981" class="beacon" />
+      <line x1="20" y1="44" x2="275" y2="44" stroke="#064e3b" stroke-width="0.75" />
       <text x="20" y="74" class="card-title">Hybrid Dense/Sparse Index</text>
       <text x="20" y="100" class="card-body">Graph-augmented context retrieval,</text>
       <text x="20" y="118" class="card-body">semantic clustering &amp; vector search.</text>
-      <rect x="20" y="138" width="146" height="24" fill="#161616" stroke="#282828" stroke-width="0.75" rx="3" />
-      <text x="28" y="154" class="tag">QDRANT • PINECONE</text>
+      <rect x="20" y="138" width="160" height="24" fill="#062e1e" stroke="#059669" stroke-width="0.75" rx="3" />
+      <circle cx="30" cy="150" r="2" fill="#34d399" />
+      <text x="38" y="154" class="tag" fill="#d1fae5">QDRANT • PINECONE</text>
     </g>
+    <!-- Loop Card 4: Zero-Trust DevOps -->
     <g transform="translate(2170, 0)">
-      <rect width="295" height="180" fill="#0c0c0c" stroke="#222222" stroke-width="1" rx="6" />
-      <text x="20" y="32" class="tier-lbl">04 ▪ ZERO-TRUST DEVOPS</text>
-      <circle cx="275" cy="28" r="3" fill="#ffffff" class="beacon" />
-      <line x1="20" y1="44" x2="275" y2="44" stroke="#1c1c1c" stroke-width="0.75" />
+      <rect width="295" height="180" fill="#041521" stroke="#075985" stroke-width="1.2" rx="6" />
+      <text x="20" y="32" class="tier-lbl" fill="#38bdf8">04 ▪ ZERO-TRUST DEVOPS</text>
+      <circle cx="275" cy="28" r="3.5" fill="#0284c7" class="beacon" />
+      <line x1="20" y1="44" x2="275" y2="44" stroke="#0c4a6e" stroke-width="0.75" />
       <text x="20" y="74" class="card-title">Sandboxing &amp; CI/CD Security</text>
       <text x="20" y="100" class="card-body">Automated SAST auditing, immutable</text>
       <text x="20" y="118" class="card-body">K8s clusters &amp; container sandboxes.</text>
-      <rect x="20" y="138" width="136" height="24" fill="#161616" stroke="#282828" stroke-width="0.75" rx="3" />
-      <text x="28" y="154" class="tag">K8S • TERRAFORM</text>
+      <rect x="20" y="138" width="148" height="24" fill="#06273b" stroke="#0284c7" stroke-width="0.75" rx="3" />
+      <circle cx="30" cy="150" r="2" fill="#38bdf8" />
+      <text x="38" y="154" class="tag" fill="#e0f2fe">K8S • TERRAFORM</text>
     </g>
   </g>
 

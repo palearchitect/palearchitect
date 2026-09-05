@@ -24,17 +24,25 @@
       <stop offset="100%" stop-color="#0a0a0a" stop-opacity="1"/>
     </linearGradient>
 
-    <!-- Progress Meter Gradient -->
-    <linearGradient id="meter-glow" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#333333" />
-      <stop offset="100%" stop-color="#ffffff" />
+    <!-- Color Progress Meter Gradients -->
+    <linearGradient id="meter-amber" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c2d12" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+    <linearGradient id="meter-purple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#581c87" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+    <linearGradient id="meter-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0c4a6e" />
+      <stop offset="100%" stop-color="#38bdf8" />
     </linearGradient>
   </defs>
 
   <style>
     .mono { font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace; }
     .title { font-family: 'Inter', -apple-system, sans-serif; font-weight: 700; }
-    .tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 600; fill: #f5f5f5; }
+    .tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; }
 
     @keyframes marqueeScrollInfinite {
       0% { transform: translateX(0); }
@@ -56,156 +64,156 @@
   <rect x="8" y="8" width="904" height="354" fill="none" stroke="#1f1f1f" stroke-width="1" rx="5" />
 
   <!-- Section Header -->
-  <text x="32" y="34" fill="#a3a3a3" font-size="10.5" class="mono" font-weight="700">TECHNICAL SPECIFICATION MATRIX</text>
-  <text x="888" y="34" fill="#525252" font-size="9" text-anchor="end" class="mono">LIVE TELEMETRY • v4.2</text>
+  <text x="32" y="34" fill="#e2e8f0" font-size="10.5" class="mono" font-weight="700">TECHNICAL SPECIFICATION MATRIX</text>
+  <text x="888" y="34" fill="#38bdf8" font-size="9" text-anchor="end" class="mono" font-weight="600">LIVE TELEMETRY • v4.2</text>
 
-  <!-- Row 1: Systems & Concurrency -->
+  <!-- Row 1: Systems & Concurrency (Amber / Orange Accent) -->
   <g transform="translate(24, 52)">
-    <rect width="872" height="68" fill="#0d0d0d" stroke="#1c1c1c" stroke-width="1" rx="4" />
-    <text x="20" y="28" fill="#ffffff" font-size="12" class="title">01 ▪ SYSTEMS &amp; CONCURRENCY</text>
-    <text x="20" y="48" fill="#737373" font-size="9.5" class="mono">Rust • Go • C++ • Low-Latency Async IO • SIMD • Memory Safety</text>
+    <rect width="872" height="68" fill="#0d0d0d" stroke="#2a160c" stroke-width="1" rx="4" />
+    <text x="20" y="28" fill="#ffedd5" font-size="12" class="title">01 ▪ SYSTEMS &amp; CONCURRENCY</text>
+    <text x="20" y="48" fill="#94a3b8" font-size="9.5" class="mono"><tspan fill="#f97316">Rust</tspan> • <tspan fill="#06b6d4">Go</tspan> • <tspan fill="#60a5fa">C++</tspan> • Low-Latency Async IO • SIMD • Memory Safety</text>
     
-    <!-- Telemetry Meter (Positioned with 40px safe margin before status badge) -->
+    <!-- Telemetry Meter -->
     <g transform="translate(530, 20)">
-      <text x="0" y="10" fill="#888888" font-size="8.5" class="mono">THROUGHPUT: 95%</text>
-      <rect x="0" y="16" width="180" height="5" fill="#1a1a1a" rx="2.5" />
-      <rect x="0" y="16" width="170" height="5" fill="url(#meter-glow)" rx="2.5" class="meter-1" />
+      <text x="0" y="10" fill="#fdba74" font-size="8.5" class="mono" font-weight="600">THROUGHPUT: 95%</text>
+      <rect x="0" y="16" width="180" height="5" fill="#1e1008" rx="2.5" />
+      <rect x="0" y="16" width="170" height="5" fill="url(#meter-amber)" rx="2.5" class="meter-1" />
     </g>
 
-    <!-- Status Badge (Cleanly anchored at x=750 with 102px width) -->
-    <rect x="750" y="20" width="102" height="28" fill="#141414" stroke="#2b2b2b" stroke-width="1" rx="4" />
-    <circle cx="765" cy="34" r="3" fill="#ffffff" />
-    <text x="778" y="38" fill="#f5f5f5" font-size="9.5" class="mono" font-weight="700">OPTIMAL</text>
+    <!-- Status Badge (Emerald Optimal) -->
+    <rect x="750" y="20" width="102" height="28" fill="#052e16" stroke="#16a34a" stroke-width="1" rx="4" />
+    <circle cx="765" cy="34" r="3" fill="#22c55e" />
+    <text x="778" y="38" fill="#4ade80" font-size="9.5" class="mono" font-weight="700">OPTIMAL</text>
   </g>
 
-  <!-- Row 2: Agentic AI -->
+  <!-- Row 2: Agentic AI (Violet / Purple Accent) -->
   <g transform="translate(24, 128)">
-    <rect width="872" height="68" fill="#0d0d0d" stroke="#1c1c1c" stroke-width="1" rx="4" />
-    <text x="20" y="28" fill="#ffffff" font-size="12" class="title">02 ▪ AGENTIC AI &amp; MODEL PIPELINES</text>
-    <text x="20" y="48" fill="#737373" font-size="9.5" class="mono">PyTorch • LangChain • LlamaIndex • MCP Protocols • Evaluators</text>
+    <rect width="872" height="68" fill="#0d0d0d" stroke="#24103a" stroke-width="1" rx="4" />
+    <text x="20" y="28" fill="#f3e8ff" font-size="12" class="title">02 ▪ AGENTIC AI &amp; MODEL PIPELINES</text>
+    <text x="20" y="48" fill="#94a3b8" font-size="9.5" class="mono"><tspan fill="#a855f7">PyTorch</tspan> • <tspan fill="#10b981">LangChain</tspan> • <tspan fill="#c084fc">LlamaIndex</tspan> • MCP Protocols • Evaluators</text>
     
     <!-- Telemetry Meter -->
     <g transform="translate(530, 20)">
-      <text x="0" y="10" fill="#888888" font-size="8.5" class="mono">REASONING: 92%</text>
-      <rect x="0" y="16" width="180" height="5" fill="#1a1a1a" rx="2.5" />
-      <rect x="0" y="16" width="165" height="5" fill="url(#meter-glow)" rx="2.5" class="meter-2" />
+      <text x="0" y="10" fill="#d8b4fe" font-size="8.5" class="mono" font-weight="600">REASONING: 92%</text>
+      <rect x="0" y="16" width="180" height="5" fill="#19092c" rx="2.5" />
+      <rect x="0" y="16" width="165" height="5" fill="url(#meter-purple)" rx="2.5" class="meter-2" />
     </g>
 
-    <!-- Status Badge -->
-    <rect x="750" y="20" width="102" height="28" fill="#141414" stroke="#2b2b2b" stroke-width="1" rx="4" />
-    <circle cx="765" cy="34" r="3" fill="#ffffff" />
-    <text x="778" y="38" fill="#f5f5f5" font-size="9.5" class="mono" font-weight="700">ACTIVE</text>
+    <!-- Status Badge (Indigo Active) -->
+    <rect x="750" y="20" width="102" height="28" fill="#1e103a" stroke="#7c3aed" stroke-width="1" rx="4" />
+    <circle cx="765" cy="34" r="3" fill="#a855f7" />
+    <text x="778" y="38" fill="#c084fc" font-size="9.5" class="mono" font-weight="700">ACTIVE</text>
   </g>
 
-  <!-- Row 3: Modern Web & APIs -->
+  <!-- Row 3: Modern Web & APIs (Cyan / Sky Accent) -->
   <g transform="translate(24, 204)">
-    <rect width="872" height="68" fill="#0d0d0d" stroke="#1c1c1c" stroke-width="1" rx="4" />
-    <text x="20" y="28" fill="#ffffff" font-size="12" class="title">03 ▪ FULL-STACK SURFACES &amp; APIS</text>
-    <text x="20" y="48" fill="#737373" font-size="9.5" class="mono">Next.js • React • TypeScript • FastAPI • Node.js • gRPC • Tailwind</text>
+    <rect width="872" height="68" fill="#0d0d0d" stroke="#082338" stroke-width="1" rx="4" />
+    <text x="20" y="28" fill="#e0f2fe" font-size="12" class="title">03 ▪ FULL-STACK SURFACES &amp; APIS</text>
+    <text x="20" y="48" fill="#94a3b8" font-size="9.5" class="mono"><tspan fill="#38bdf8">Next.js</tspan> • <tspan fill="#61dafb">React</tspan> • <tspan fill="#3178c6">TypeScript</tspan> • <tspan fill="#009688">FastAPI</tspan> • Node.js • Tailwind</text>
     
     <!-- Telemetry Meter -->
     <g transform="translate(530, 20)">
-      <text x="0" y="10" fill="#888888" font-size="8.5" class="mono">LATENCY: 0.38ms</text>
-      <rect x="0" y="16" width="180" height="5" fill="#1a1a1a" rx="2.5" />
-      <rect x="0" y="16" width="160" height="5" fill="url(#meter-glow)" rx="2.5" class="meter-3" />
+      <text x="0" y="10" fill="#7dd3fc" font-size="8.5" class="mono" font-weight="600">LATENCY: 0.38ms</text>
+      <rect x="0" y="16" width="180" height="5" fill="#071927" rx="2.5" />
+      <rect x="0" y="16" width="160" height="5" fill="url(#meter-cyan)" rx="2.5" class="meter-3" />
     </g>
 
-    <!-- Status Badge -->
-    <rect x="750" y="20" width="102" height="28" fill="#141414" stroke="#2b2b2b" stroke-width="1" rx="4" />
-    <circle cx="765" cy="34" r="3" fill="#ffffff" />
-    <text x="778" y="38" fill="#f5f5f5" font-size="9.5" class="mono" font-weight="700">NOMINAL</text>
+    <!-- Status Badge (Cyan Nominal) -->
+    <rect x="750" y="20" width="102" height="28" fill="#08253a" stroke="#0284c7" stroke-width="1" rx="4" />
+    <circle cx="765" cy="34" r="3" fill="#38bdf8" />
+    <text x="778" y="38" fill="#7dd3fc" font-size="9.5" class="mono" font-weight="700">NOMINAL</text>
   </g>
 
-  <!-- Row 4: Contained Marquee Table -->
+  <!-- Row 4: Contained Color Marquee Table -->
   <g clip-path="url(#marquee-row-clip)">
     <rect x="24" y="280" width="872" height="74" fill="#0a0a0a" stroke="#1c1c1c" stroke-width="1" rx="4" />
-    <text x="44" y="300" fill="#888888" font-size="9" class="mono" font-weight="700">04 ▪ ACTIVE ECOSYSTEM MARQUEE</text>
+    <text x="44" y="300" fill="#94a3b8" font-size="9" class="mono" font-weight="700">04 ▪ ACTIVE ECOSYSTEM MARQUEE</text>
 
     <!-- Clipped Marquee Track -->
     <g clip-path="url(#marquee-track-clip)">
       <g class="marquee-track" transform="translate(36, 314)">
         <!-- Sequence 1 -->
         <g transform="translate(0,0)">
-          <rect width="80" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
-          <text x="40" y="16" text-anchor="middle" class="tag">RUST</text>
+          <rect width="80" height="24" fill="#1c0f08" stroke="#f97316" stroke-width="0.75" rx="3" />
+          <text x="40" y="16" fill="#fb923c" text-anchor="middle" class="tag">RUST</text>
         </g>
         <g transform="translate(88,0)">
-          <rect width="68" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
-          <text x="34" y="16" text-anchor="middle" class="tag">GO</text>
+          <rect width="68" height="24" fill="#081c24" stroke="#00add8" stroke-width="0.75" rx="3" />
+          <text x="34" y="16" fill="#38bdf8" text-anchor="middle" class="tag">GO</text>
         </g>
         <g transform="translate(164,0)">
-          <rect width="70" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
-          <text x="35" y="16" text-anchor="middle" class="tag">C++</text>
+          <rect width="70" height="24" fill="#081426" stroke="#00599c" stroke-width="0.75" rx="3" />
+          <text x="35" y="16" fill="#60a5fa" text-anchor="middle" class="tag">C++</text>
         </g>
         <g transform="translate(242,0)">
-          <rect width="92" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
-          <text x="46" y="16" text-anchor="middle" class="tag">PYTORCH</text>
+          <rect width="92" height="24" fill="#200a06" stroke="#ee4c2c" stroke-width="0.75" rx="3" />
+          <text x="46" y="16" fill="#f87171" text-anchor="middle" class="tag">PYTORCH</text>
         </g>
         <g transform="translate(342,0)">
-          <rect width="98" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
-          <text x="49" y="16" text-anchor="middle" class="tag">NEXT.JS</text>
+          <rect width="98" height="24" fill="#141414" stroke="#e2e8f0" stroke-width="0.75" rx="3" />
+          <text x="49" y="16" fill="#ffffff" text-anchor="middle" class="tag">NEXT.JS</text>
         </g>
         <g transform="translate(448,0)">
-          <rect width="112" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
-          <text x="56" y="16" text-anchor="middle" class="tag">KUBERNETES</text>
+          <rect width="112" height="24" fill="#0c1b33" stroke="#326ce5" stroke-width="0.75" rx="3" />
+          <text x="56" y="16" fill="#93c5fd" text-anchor="middle" class="tag">KUBERNETES</text>
         </g>
         <g transform="translate(568,0)">
-          <rect width="110" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
-          <text x="55" y="16" text-anchor="middle" class="tag">POSTGRESQL</text>
+          <rect width="110" height="24" fill="#091b24" stroke="#336791" stroke-width="0.75" rx="3" />
+          <text x="55" y="16" fill="#7dd3fc" text-anchor="middle" class="tag">POSTGRESQL</text>
         </g>
         <g transform="translate(686,0)">
-          <rect width="76" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
-          <text x="38" y="16" text-anchor="middle" class="tag">REDIS</text>
+          <rect width="76" height="24" fill="#240a08" stroke="#dc382d" stroke-width="0.75" rx="3" />
+          <text x="38" y="16" fill="#fca5a5" text-anchor="middle" class="tag">REDIS</text>
         </g>
         <g transform="translate(770,0)">
-          <rect width="90" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
-          <text x="45" y="16" text-anchor="middle" class="tag">QDRANT</text>
+          <rect width="90" height="24" fill="#1a0928" stroke="#a855f7" stroke-width="0.75" rx="3" />
+          <text x="45" y="16" fill="#d8b4fe" text-anchor="middle" class="tag">QDRANT</text>
         </g>
         <g transform="translate(868,0)">
-          <rect width="110" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
-          <text x="55" y="16" text-anchor="middle" class="tag">TERRAFORM</text>
+          <rect width="110" height="24" fill="#170d24" stroke="#844fba" stroke-width="0.75" rx="3" />
+          <text x="55" y="16" fill="#c084fc" text-anchor="middle" class="tag">TERRAFORM</text>
         </g>
 
-        <!-- Sequence 2 (Loop duplicate) -->
+        <!-- Sequence 2 (Duplicate for Loop) -->
         <g transform="translate(990,0)">
-          <rect width="80" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
-          <text x="40" y="16" text-anchor="middle" class="tag">RUST</text>
+          <rect width="80" height="24" fill="#1c0f08" stroke="#f97316" stroke-width="0.75" rx="3" />
+          <text x="40" y="16" fill="#fb923c" text-anchor="middle" class="tag">RUST</text>
         </g>
         <g transform="translate(1078,0)">
-          <rect width="68" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
-          <text x="34" y="16" text-anchor="middle" class="tag">GO</text>
+          <rect width="68" height="24" fill="#081c24" stroke="#00add8" stroke-width="0.75" rx="3" />
+          <text x="34" y="16" fill="#38bdf8" text-anchor="middle" class="tag">GO</text>
         </g>
         <g transform="translate(1154,0)">
-          <rect width="70" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
-          <text x="35" y="16" text-anchor="middle" class="tag">C++</text>
+          <rect width="70" height="24" fill="#081426" stroke="#00599c" stroke-width="0.75" rx="3" />
+          <text x="35" y="16" fill="#60a5fa" text-anchor="middle" class="tag">C++</text>
         </g>
         <g transform="translate(1232,0)">
-          <rect width="92" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
-          <text x="46" y="16" text-anchor="middle" class="tag">PYTORCH</text>
+          <rect width="92" height="24" fill="#200a06" stroke="#ee4c2c" stroke-width="0.75" rx="3" />
+          <text x="46" y="16" fill="#f87171" text-anchor="middle" class="tag">PYTORCH</text>
         </g>
         <g transform="translate(1332,0)">
-          <rect width="98" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
-          <text x="49" y="16" text-anchor="middle" class="tag">NEXT.JS</text>
+          <rect width="98" height="24" fill="#141414" stroke="#e2e8f0" stroke-width="0.75" rx="3" />
+          <text x="49" y="16" fill="#ffffff" text-anchor="middle" class="tag">NEXT.JS</text>
         </g>
         <g transform="translate(1438,0)">
-          <rect width="112" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
-          <text x="56" y="16" text-anchor="middle" class="tag">KUBERNETES</text>
+          <rect width="112" height="24" fill="#0c1b33" stroke="#326ce5" stroke-width="0.75" rx="3" />
+          <text x="56" y="16" fill="#93c5fd" text-anchor="middle" class="tag">KUBERNETES</text>
         </g>
         <g transform="translate(1558,0)">
-          <rect width="110" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
-          <text x="55" y="16" text-anchor="middle" class="tag">POSTGRESQL</text>
+          <rect width="110" height="24" fill="#091b24" stroke="#336791" stroke-width="0.75" rx="3" />
+          <text x="55" y="16" fill="#7dd3fc" text-anchor="middle" class="tag">POSTGRESQL</text>
         </g>
         <g transform="translate(1676,0)">
-          <rect width="76" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
-          <text x="38" y="16" text-anchor="middle" class="tag">REDIS</text>
+          <rect width="76" height="24" fill="#240a08" stroke="#dc382d" stroke-width="0.75" rx="3" />
+          <text x="38" y="16" fill="#fca5a5" text-anchor="middle" class="tag">REDIS</text>
         </g>
         <g transform="translate(1760,0)">
-          <rect width="90" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
-          <text x="45" y="16" text-anchor="middle" class="tag">QDRANT</text>
+          <rect width="90" height="24" fill="#1a0928" stroke="#a855f7" stroke-width="0.75" rx="3" />
+          <text x="45" y="16" fill="#d8b4fe" text-anchor="middle" class="tag">QDRANT</text>
         </g>
         <g transform="translate(1858,0)">
-          <rect width="110" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
-          <text x="55" y="16" text-anchor="middle" class="tag">TERRAFORM</text>
+          <rect width="110" height="24" fill="#170d24" stroke="#844fba" stroke-width="0.75" rx="3" />
+          <text x="55" y="16" fill="#c084fc" text-anchor="middle" class="tag">TERRAFORM</text>
         </g>
       </g>
 

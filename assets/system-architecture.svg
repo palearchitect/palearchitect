@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 340" width="100%" height="100%">
   <defs>
     <pattern id="dot-grid" width="18" height="18" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="0.75" fill="#1c1c1c" />
+      <circle cx="2" cy="2" r="0.75" fill="#171717" />
     </pattern>
 
     <linearGradient id="box-fill" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -9,11 +9,12 @@
       <stop offset="100%" stop-color="#080808" />
     </linearGradient>
 
-    <!-- Scan Beam -->
-    <linearGradient id="laser-beam" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.1" />
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    <!-- Glowing Bus Gradient -->
+    <linearGradient id="bus-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="35%" stop-color="#f97316" />
+      <stop offset="70%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#38bdf8" />
     </linearGradient>
 
     <clipPath id="arch-container-clip">
@@ -23,146 +24,136 @@
 
   <style>
     .mono { font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace; }
-    .tier-title { font-family: 'Inter', -apple-system, sans-serif; font-weight: 700; font-size: 12px; fill: #f5f5f5; }
-    .tier-sub { font-family: 'Inter', -apple-system, sans-serif; font-size: 10.5px; fill: #888888; }
-    .label { font-size: 9px; fill: #666666; font-weight: 600; }
+    .tier-title { font-family: 'Inter', -apple-system, sans-serif; font-weight: 700; font-size: 12px; fill: #f8fafc; }
+    .tier-sub { font-family: 'Inter', -apple-system, sans-serif; font-size: 10.5px; fill: #94a3b8; }
+    .label { font-size: 9px; font-weight: 700; }
 
-    /* Keyframes */
     @keyframes flowBus {
       0% { stroke-dashoffset: 32; }
       100% { stroke-dashoffset: 0; }
     }
-    @keyframes pulseNode {
-      0%, 100% { fill: #ffffff; opacity: 1; }
-      50% { fill: #525252; opacity: 0.3; }
-    }
-    @keyframes sweepGrid {
-      0% { transform: translateX(-920px); }
-      100% { transform: translateX(920px); }
-    }
+    @keyframes pulseViolet { 0%, 100% { fill: #c084fc; opacity: 1; } 50% { fill: #581c87; opacity: 0.4; } }
+    @keyframes pulseOrange { 0%, 100% { fill: #fb923c; opacity: 1; } 50% { fill: #7c2d12; opacity: 0.4; } }
+    @keyframes pulseGreen { 0%, 100% { fill: #34d399; opacity: 1; } 50% { fill: #064e3b; opacity: 0.4; } }
+    @keyframes pulseCyan { 0%, 100% { fill: #38bdf8; opacity: 1; } 50% { fill: #0c4a6e; opacity: 0.4; } }
 
-    .bus-stream { stroke-dasharray: 6, 6; animation: flowBus 1.5s linear infinite; }
-    .node-beacon { animation: pulseNode 2.5s ease-in-out infinite; }
-    .sweep { animation: sweepGrid 6s linear infinite; }
+    .bus-stream { stroke-dasharray: 6, 6; animation: flowBus 1.4s linear infinite; }
+    .node-violet { animation: pulseViolet 2.4s ease-in-out infinite; }
+    .node-orange { animation: pulseOrange 2.4s ease-in-out infinite; }
+    .node-green { animation: pulseGreen 2.4s ease-in-out infinite; }
+    .node-cyan { animation: pulseCyan 2.4s ease-in-out infinite; }
   </style>
 
   <!-- Container -->
   <rect width="920" height="340" fill="#040404" rx="8" />
   <rect width="920" height="340" fill="url(#dot-grid)" rx="8" />
-  <rect x="8" y="8" width="904" height="324" fill="none" stroke="#222222" stroke-width="1" rx="6" />
-
-  <!-- Clipped Laser Sweep -->
-  <g clip-path="url(#arch-container-clip)">
-    <g class="sweep">
-      <rect x="0" y="8" width="140" height="324" fill="url(#laser-beam)" />
-    </g>
-  </g>
+  <rect x="8" y="8" width="904" height="324" fill="none" stroke="#1f1f1f" stroke-width="1" rx="6" />
 
   <!-- Section Header -->
-  <text x="32" y="34" fill="#a3a3a3" font-size="10.5" class="mono" font-weight="700">DISTRIBUTED SYSTEM TOPOLOGY &amp; DATA BUS</text>
-  <text x="888" y="34" fill="#525252" font-size="9" text-anchor="end" class="mono">SYNCHRONIZED BUS // ACTIVE</text>
+  <text x="32" y="34" fill="#cbd5e1" font-size="10.5" class="mono" font-weight="700">DISTRIBUTED SYSTEM TOPOLOGY &amp; DATA BUS</text>
+  <text x="888" y="34" fill="#38bdf8" font-size="9" text-anchor="end" class="mono" font-weight="600">● SYNCHRONIZED BUS // ACTIVE</text>
 
-  <!-- Bus Interconnect Line -->
-  <line x1="128" y1="175" x2="792" y2="175" stroke="#262626" stroke-width="2" />
-  <line x1="128" y1="175" x2="792" y2="175" stroke="#ffffff" stroke-width="1.2" stroke-opacity="0.8" class="bus-stream" />
+  <!-- Color Bus Interconnect Line -->
+  <line x1="128" y1="175" x2="792" y2="175" stroke="#1e293b" stroke-width="3" />
+  <line x1="128" y1="175" x2="792" y2="175" stroke="url(#bus-glow)" stroke-width="2" class="bus-stream" />
 
-  <!-- Tier 1: Agentic Core -->
+  <!-- Tier 1: Agentic Core (Violet Accent) -->
   <g transform="translate(32, 54)">
-    <rect width="194" height="236" fill="url(#box-fill)" stroke="#222222" stroke-width="1" rx="5" />
-    <rect x="0" y="0" width="194" height="28" fill="#141414" rx="5" />
-    <text x="14" y="18" fill="#ffffff" font-size="11" class="mono" font-weight="700">01 // AGENTIC CORE</text>
-    <circle cx="176" cy="14" r="3" class="node-beacon" />
+    <rect width="194" height="236" fill="url(#box-fill)" stroke="#2e1065" stroke-width="1.2" rx="5" />
+    <rect x="0" y="0" width="194" height="28" fill="#170d2b" rx="5" />
+    <text x="14" y="18" fill="#e9d5ff" font-size="11" class="mono" font-weight="700">01 ▪ AGENTIC CORE</text>
+    <circle cx="176" cy="14" r="3.5" class="node-violet" />
 
-    <text x="14" y="52" class="mono label">ORCHESTRATION</text>
+    <text x="14" y="52" fill="#a855f7" class="mono label">ORCHESTRATION</text>
     <text x="14" y="68" class="tier-title">Autonomous Loops</text>
     <text x="14" y="84" class="tier-sub">LangChain • LlamaIndex</text>
 
-    <line x1="14" y1="102" x2="180" y2="102" stroke="#1c1c1c" stroke-width="0.75" />
+    <line x1="14" y1="102" x2="180" y2="102" stroke="#23153c" stroke-width="0.75" />
 
-    <text x="14" y="122" class="mono label">MODEL PIPELINES</text>
+    <text x="14" y="122" fill="#c084fc" class="mono label">MODEL PIPELINES</text>
     <text x="14" y="138" class="tier-title">PyTorch &amp; GenAI</text>
     <text x="14" y="154" class="tier-sub">Fine-tuning • Evaluators</text>
 
-    <line x1="14" y1="172" x2="180" y2="172" stroke="#1c1c1c" stroke-width="0.75" />
+    <line x1="14" y1="172" x2="180" y2="172" stroke="#23153c" stroke-width="0.75" />
 
-    <text x="14" y="192" class="mono label">TOOL PROTOCOL</text>
+    <text x="14" y="192" fill="#9333ea" class="mono label">TOOL PROTOCOL</text>
     <text x="14" y="208" class="tier-title">MCP Specification</text>
     <text x="14" y="222" class="tier-sub">Deterministic Sandbox</text>
   </g>
 
-  <!-- Tier 2: Systems Engine -->
+  <!-- Tier 2: Systems Engine (Warm Ember / Orange Accent) -->
   <g transform="translate(252, 54)">
-    <rect width="194" height="236" fill="url(#box-fill)" stroke="#222222" stroke-width="1" rx="5" />
-    <rect x="0" y="0" width="194" height="28" fill="#141414" rx="5" />
-    <text x="14" y="18" fill="#ffffff" font-size="11" class="mono" font-weight="700">02 // SYSTEMS ENGINE</text>
-    <circle cx="176" cy="14" r="3" class="node-beacon" />
+    <rect width="194" height="236" fill="url(#box-fill)" stroke="#431407" stroke-width="1.2" rx="5" />
+    <rect x="0" y="0" width="194" height="28" fill="#240f07" rx="5" />
+    <text x="14" y="18" fill="#ffedd5" font-size="11" class="mono" font-weight="700">02 ▪ SYSTEMS ENGINE</text>
+    <circle cx="176" cy="14" r="3.5" class="node-orange" />
 
-    <text x="14" y="52" class="mono label">CONCURRENCY</text>
+    <text x="14" y="52" fill="#f97316" class="mono label">CONCURRENCY</text>
     <text x="14" y="68" class="tier-title">Rust • Go • C++</text>
     <text x="14" y="84" class="tier-sub">Lock-Free IO • Microservices</text>
 
-    <line x1="14" y1="102" x2="180" y2="102" stroke="#1c1c1c" stroke-width="0.75" />
+    <line x1="14" y1="102" x2="180" y2="102" stroke="#37180d" stroke-width="0.75" />
 
-    <text x="14" y="122" class="mono label">HIGH-THROUGHPUT</text>
+    <text x="14" y="122" fill="#fb923c" class="mono label">HIGH-THROUGHPUT</text>
     <text x="14" y="138" class="tier-title">FastAPI • gRPC</text>
     <text x="14" y="154" class="tier-sub">Async Streaming Events</text>
 
-    <line x1="14" y1="172" x2="180" y2="172" stroke="#1c1c1c" stroke-width="0.75" />
+    <line x1="14" y1="172" x2="180" y2="172" stroke="#37180d" stroke-width="0.75" />
 
-    <text x="14" y="192" class="mono label">MEMORY SAFETY</text>
+    <text x="14" y="192" fill="#ea580c" class="mono label">MEMORY SAFETY</text>
     <text x="14" y="208" class="tier-title">Zero-Cost Abstractions</text>
     <text x="14" y="222" class="tier-sub">SIMD • Memory Pools</text>
   </g>
 
-  <!-- Tier 3: Persistence & Vector Mesh -->
+  <!-- Tier 3: Persistence (Jade / Emerald Accent) -->
   <g transform="translate(472, 54)">
-    <rect width="194" height="236" fill="url(#box-fill)" stroke="#222222" stroke-width="1" rx="5" />
-    <rect x="0" y="0" width="194" height="28" fill="#141414" rx="5" />
-    <text x="14" y="18" fill="#ffffff" font-size="11" class="mono" font-weight="700">03 // PERSISTENCE</text>
-    <circle cx="176" cy="14" r="3" class="node-beacon" />
+    <rect width="194" height="236" fill="url(#box-fill)" stroke="#064e3b" stroke-width="1.2" rx="5" />
+    <rect x="0" y="0" width="194" height="28" fill="#08231c" rx="5" />
+    <text x="14" y="18" fill="#d1fae5" font-size="11" class="mono" font-weight="700">03 ▪ PERSISTENCE</text>
+    <circle cx="176" cy="14" r="3.5" class="node-green" />
 
-    <text x="14" y="52" class="mono label">STATE &amp; ACID</text>
+    <text x="14" y="52" fill="#10b981" class="mono label">STATE &amp; ACID</text>
     <text x="14" y="68" class="tier-title">PostgreSQL • Redis</text>
     <text x="14" y="84" class="tier-sub">Distributed Cache • WAL</text>
 
-    <line x1="14" y1="102" x2="180" y2="102" stroke="#1c1c1c" stroke-width="0.75" />
+    <line x1="14" y1="102" x2="180" y2="102" stroke="#0e3a2e" stroke-width="0.75" />
 
-    <text x="14" y="122" class="mono label">VECTOR RETRIEVAL</text>
+    <text x="14" y="122" fill="#34d399" class="mono label">VECTOR RETRIEVAL</text>
     <text x="14" y="138" class="tier-title">Qdrant • Pinecone</text>
     <text x="14" y="154" class="tier-sub">Hybrid Dense/Sparse Search</text>
 
-    <line x1="14" y1="172" x2="180" y2="172" stroke="#1c1c1c" stroke-width="0.75" />
+    <line x1="14" y1="172" x2="180" y2="172" stroke="#0e3a2e" stroke-width="0.75" />
 
-    <text x="14" y="192" class="mono label">GRAPH INDEXING</text>
+    <text x="14" y="192" fill="#059669" class="mono label">GRAPH INDEXING</text>
     <text x="14" y="208" class="tier-title">ChromaDB • Knowledge</text>
     <text x="14" y="222" class="tier-sub">Graph-Augmented RAG</text>
   </g>
 
-  <!-- Tier 4: Cloud & Modern UI -->
+  <!-- Tier 4: Cloud & UI (Cyan / Sky Accent) -->
   <g transform="translate(692, 54)">
-    <rect width="194" height="236" fill="url(#box-fill)" stroke="#222222" stroke-width="1" rx="5" />
-    <rect x="0" y="0" width="194" height="28" fill="#141414" rx="5" />
-    <text x="14" y="18" fill="#ffffff" font-size="11" class="mono" font-weight="700">04 // CLOUD &amp; UI</text>
-    <circle cx="176" cy="14" r="3" class="node-beacon" />
+    <rect width="194" height="236" fill="url(#box-fill)" stroke="#0c4a6e" stroke-width="1.2" rx="5" />
+    <rect x="0" y="0" width="194" height="28" fill="#082333" rx="5" />
+    <text x="14" y="18" fill="#e0f2fe" font-size="11" class="mono" font-weight="700">04 ▪ CLOUD &amp; UI</text>
+    <circle cx="176" cy="14" r="3.5" class="node-cyan" />
 
-    <text x="14" y="52" class="mono label">INFRASTRUCTURE</text>
+    <text x="14" y="52" fill="#38bdf8" class="mono label">INFRASTRUCTURE</text>
     <text x="14" y="68" class="tier-title">K8s • Docker • TF</text>
     <text x="14" y="84" class="tier-sub">GCP • AWS • CI/CD Actions</text>
 
-    <line x1="14" y1="102" x2="180" y2="102" stroke="#1c1c1c" stroke-width="0.75" />
+    <line x1="14" y1="102" x2="180" y2="102" stroke="#123d57" stroke-width="0.75" />
 
-    <text x="14" y="122" class="mono label">FRONTEND SURFACES</text>
+    <text x="14" y="122" fill="#60a5fa" class="mono label">FRONTEND SURFACES</text>
     <text x="14" y="138" class="tier-title">Next.js • React • TS</text>
     <text x="14" y="154" class="tier-sub">High-Performance Web</text>
 
-    <line x1="14" y1="172" x2="180" y2="172" stroke="#1c1c1c" stroke-width="0.75" />
+    <line x1="14" y1="172" x2="180" y2="172" stroke="#123d57" stroke-width="0.75" />
 
-    <text x="14" y="192" class="mono label">DEVSECOPS PIPELINE</text>
+    <text x="14" y="192" fill="#0284c7" class="mono label">DEVSECOPS PIPELINE</text>
     <text x="14" y="208" class="tier-title">Security Auditing</text>
     <text x="14" y="222" class="tier-sub">Zero-Trust • SAST / DAST</text>
   </g>
 
   <!-- Bottom Legend -->
-  <text x="32" y="314" fill="#525252" font-size="8.5" class="mono">MESH TOPOLOGY: 4 SYNCHRONIZED TIERS // NON-BLOCKING PACKET STREAMING</text>
-  <text x="888" y="314" fill="#666666" font-size="8.5" text-anchor="end" class="mono">STATUS: HIGH-THROUGHPUT [100%]</text>
+  <text x="32" y="314" fill="#64748b" font-size="8.5" class="mono">MESH TOPOLOGY: <tspan fill="#a855f7">AGENTIC</tspan> ⇄ <tspan fill="#f97316">SYSTEMS</tspan> ⇄ <tspan fill="#10b981">PERSISTENCE</tspan> ⇄ <tspan fill="#38bdf8">CLOUD/UI</tspan></text>
+  <text x="888" y="314" fill="#22c55e" font-size="8.5" text-anchor="end" class="mono" font-weight="700">LATENCY: OPTIMAL [0.38ms]</text>
 </svg>

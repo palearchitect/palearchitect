@@ -3,9 +3,28 @@
     <pattern id="tele-grid" width="14" height="14" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="0.6" fill="#1c1c1c" />
     </pattern>
-    <linearGradient id="metric-fill" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#333333" />
-      <stop offset="100%" stop-color="#ffffff" />
+
+    <!-- Semantic Gradients for Language Velocity Meters -->
+    <linearGradient id="meter-rust" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9a3412" />
+      <stop offset="50%" stop-color="#ea580c" />
+      <stop offset="100%" stop-color="#fb923c" />
+    </linearGradient>
+    <linearGradient id="meter-ai" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#581c87" />
+      <stop offset="50%" stop-color="#9333ea" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+    <linearGradient id="meter-web" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0369a1" />
+      <stop offset="50%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <!-- Metric Card Glow Gradient -->
+    <linearGradient id="glow-card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#141414" />
+      <stop offset="100%" stop-color="#0a0a0a" />
     </linearGradient>
   </defs>
 
@@ -14,12 +33,12 @@
     .title { font-family: 'Inter', -apple-system, sans-serif; font-weight: 700; }
     .sub { font-family: 'Inter', -apple-system, sans-serif; font-size: 11px; fill: #888888; }
     
-    @keyframes pulseLive { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
-    @keyframes barAnim1 { 0%, 100% { width: 88%; } 50% { width: 82%; } }
-    @keyframes barAnim2 { 0%, 100% { width: 94%; } 50% { width: 90%; } }
-    @keyframes barAnim3 { 0%, 100% { width: 78%; } 50% { width: 84%; } }
+    @keyframes pulseLive { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.3; transform: scale(0.85); } }
+    @keyframes barAnim1 { 0%, 100% { width: 376px; } 50% { width: 350px; } }
+    @keyframes barAnim2 { 0%, 100% { width: 340px; } 50% { width: 320px; } }
+    @keyframes barAnim3 { 0%, 100% { width: 300px; } 50% { width: 280px; } }
 
-    .live-dot { animation: pulseLive 2s infinite ease-in-out; }
+    .live-dot { animation: pulseLive 2s infinite ease-in-out; transform-origin: 8px 12px; }
     .bar-1 { animation: barAnim1 4s ease-in-out infinite; }
     .bar-2 { animation: barAnim2 3.6s ease-in-out infinite; }
     .bar-3 { animation: barAnim3 4.2s ease-in-out infinite; }
@@ -28,60 +47,60 @@
   <!-- Container -->
   <rect width="920" height="180" fill="#060606" rx="8" />
   <rect width="920" height="180" fill="url(#tele-grid)" rx="8" />
-  <rect x="8" y="8" width="904" height="164" fill="none" stroke="#222222" stroke-width="1" rx="6" />
+  <rect x="8" y="8" width="904" height="164" fill="none" stroke="#1f1f1f" stroke-width="1" rx="6" />
 
   <!-- Left Column: Activity & Execution Stats -->
   <g transform="translate(24, 20)">
-    <circle cx="8" cy="12" r="3.5" fill="#ffffff" class="live-dot" />
-    <text x="22" y="15" fill="#f5f5f5" font-size="12" class="title">SYSTEM TELEMETRY &amp; REPO ACTIVITY</text>
-    <text x="22" y="32" fill="#737373" font-size="9.5" class="mono">NODE: palearchitect • REPOSITORIES: ACTIVE • INTEGRITY: 100%</text>
+    <circle cx="8" cy="12" r="3.5" fill="#22c55e" class="live-dot" />
+    <text x="22" y="15" fill="#f8fafc" font-size="12" class="title">SYSTEM TELEMETRY &amp; REPO ACTIVITY</text>
+    <text x="22" y="32" fill="#94a3b8" font-size="9.5" class="mono">NODE: <tspan fill="#38bdf8">palearchitect</tspan> • REPOSITORIES: <tspan fill="#22c55e">ACTIVE</tspan> • INTEGRITY: <tspan fill="#a855f7">100%</tspan></text>
 
     <!-- Metrics Grid -->
     <g transform="translate(0, 48)">
-      <!-- Metric 1 -->
-      <rect width="132" height="66" fill="#0e0e0e" stroke="#1f1f1f" stroke-width="1" rx="4" />
-      <text x="14" y="24" fill="#737373" font-size="9" class="mono">TOTAL COMMITS</text>
-      <text x="14" y="50" fill="#ffffff" font-size="20" font-weight="700" class="mono">1,420+</text>
+      <!-- Metric 1: Total Commits (Emerald) -->
+      <rect width="132" height="66" fill="#081c15" stroke="#059669" stroke-width="1" rx="4" />
+      <text x="14" y="24" fill="#6ee7b7" font-size="9" class="mono" font-weight="600">TOTAL COMMITS</text>
+      <text x="14" y="52" fill="#34d399" font-size="21" font-weight="700" class="mono">1,420+</text>
 
-      <!-- Metric 2 -->
+      <!-- Metric 2: Uptime (Amber/Gold) -->
       <g transform="translate(144, 0)">
-        <rect width="132" height="66" fill="#0e0e0e" stroke="#1f1f1f" stroke-width="1" rx="4" />
-        <text x="14" y="24" fill="#737373" font-size="9" class="mono">PRODUCTION UPTIME</text>
-        <text x="14" y="50" fill="#ffffff" font-size="20" font-weight="700" class="mono">99.98%</text>
+        <rect width="132" height="66" fill="#241406" stroke="#d97706" stroke-width="1" rx="4" />
+        <text x="14" y="24" fill="#fde68a" font-size="9" class="mono" font-weight="600">PROD UPTIME</text>
+        <text x="14" y="52" fill="#fbbf24" font-size="21" font-weight="700" class="mono">99.98%</text>
       </g>
 
-      <!-- Metric 3 -->
+      <!-- Metric 3: Code Quality (Violet) -->
       <g transform="translate(288, 0)">
-        <rect width="132" height="66" fill="#0e0e0e" stroke="#1f1f1f" stroke-width="1" rx="4" />
-        <text x="14" y="24" fill="#737373" font-size="9" class="mono">CODE QUALITY</text>
-        <text x="14" y="50" fill="#ffffff" font-size="20" font-weight="700" class="mono">A+ [SAST]</text>
+        <rect width="132" height="66" fill="#1b0c36" stroke="#7c3aed" stroke-width="1" rx="4" />
+        <text x="14" y="24" fill="#ddd6fe" font-size="9" class="mono" font-weight="600">CODE QUALITY</text>
+        <text x="14" y="52" fill="#c084fc" font-size="21" font-weight="700" class="mono">A+ [SAST]</text>
       </g>
     </g>
   </g>
 
   <!-- Right Column: Language Distribution & Workload -->
   <g transform="translate(480, 20)">
-    <text x="0" y="15" fill="#f5f5f5" font-size="12" class="title">CORE STACK VELOCITY</text>
-    <text x="0" y="32" fill="#737373" font-size="9.5" class="mono">ACTIVE DISTRIBUTION • DETERMINISTIC RUNTIMES</text>
+    <text x="0" y="15" fill="#f8fafc" font-size="12" class="title">CORE STACK VELOCITY</text>
+    <text x="0" y="32" fill="#94a3b8" font-size="9.5" class="mono"><tspan fill="#fb923c">RUST</tspan> • <tspan fill="#c084fc">PYTHON</tspan> • <tspan fill="#38bdf8">TYPESCRIPT</tspan> EXECUTION</text>
 
     <g transform="translate(0, 48)">
-      <!-- Lang 1 -->
-      <text x="0" y="12" fill="#e5e5e5" font-size="10" class="mono">RUST / GO / C++</text>
-      <text x="390" y="12" fill="#888888" font-size="9.5" text-anchor="end" class="mono">42%</text>
-      <rect x="0" y="18" width="400" height="5" fill="#171717" rx="2.5" />
-      <rect x="0" y="18" width="376" height="5" fill="url(#metric-fill)" rx="2.5" class="bar-1" />
+      <!-- Lang 1: Systems (Amber) -->
+      <text x="0" y="12" fill="#ffedd5" font-size="10" class="mono" font-weight="600">RUST / GO / C++</text>
+      <text x="390" y="12" fill="#fb923c" font-size="9.5" text-anchor="end" class="mono" font-weight="700">42%</text>
+      <rect x="0" y="18" width="400" height="6" fill="#241006" rx="3" />
+      <rect x="0" y="18" width="376" height="6" fill="url(#meter-rust)" rx="3" class="bar-1" />
 
-      <!-- Lang 2 -->
-      <text x="0" y="36" fill="#e5e5e5" font-size="10" class="mono">PYTHON (PYTORCH / AGENTS)</text>
-      <text x="390" y="36" fill="#888888" font-size="9.5" text-anchor="end" class="mono">34%</text>
-      <rect x="0" y="42" width="400" height="5" fill="#171717" rx="2.5" />
-      <rect x="0" y="42" width="360" height="5" fill="url(#metric-fill)" rx="2.5" class="bar-2" />
+      <!-- Lang 2: AI (Violet) -->
+      <text x="0" y="37" fill="#f3e8ff" font-size="10" class="mono" font-weight="600">PYTHON (PYTORCH / AGENTS)</text>
+      <text x="390" y="37" fill="#c084fc" font-size="9.5" text-anchor="end" class="mono" font-weight="700">34%</text>
+      <rect x="0" y="43" width="400" height="6" fill="#1b0c36" rx="3" />
+      <rect x="0" y="43" width="340" height="6" fill="url(#meter-ai)" rx="3" class="bar-2" />
 
-      <!-- Lang 3 -->
-      <text x="0" y="60" fill="#e5e5e5" font-size="10" class="mono">TYPESCRIPT / NEXT.JS / WEB</text>
-      <text x="390" y="60" fill="#888888" font-size="9.5" text-anchor="end" class="mono">24%</text>
-      <rect x="0" y="66" width="400" height="5" fill="#171717" rx="2.5" />
-      <rect x="0" y="66" width="320" height="5" fill="url(#metric-fill)" rx="2.5" class="bar-3" />
+      <!-- Lang 3: Web (Cyan) -->
+      <text x="0" y="62" fill="#e0f2fe" font-size="10" class="mono" font-weight="600">TYPESCRIPT / NEXT.JS / WEB</text>
+      <text x="390" y="62" fill="#38bdf8" font-size="9.5" text-anchor="end" class="mono" font-weight="700">24%</text>
+      <rect x="0" y="68" width="400" height="6" fill="#072233" rx="3" />
+      <rect x="0" y="68" width="300" height="6" fill="url(#meter-web)" rx="3" class="bar-3" />
     </g>
   </g>
 </svg>
