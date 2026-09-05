@@ -14,7 +14,7 @@
   <img src="./assets/status-telemetry.svg" alt="Status Telemetry" width="100%">
 </picture>
 
-<br/><br/>
+<br/>
 
 [![GitHub followers](https://img.shields.io/github/followers/palearchitect?style=for-the-badge&logo=github&logoColor=white&color=0d0d0d&labelColor=000000)](https://github.com/palearchitect)
 [![Repositories](https://img.shields.io/badge/FOCUS-AUTONOMOUS%20AGENTS%20%26%20DISTRIBUTED%20SYSTEMS-ffffff?style=for-the-badge&color=0d0d0d&labelColor=000000)](https://github.com/palearchitect)
@@ -22,7 +22,7 @@
 
 </div>
 
----
+<br/>
 
 ### `// 01. ARCHITECTURAL IDENTITY & MANIFESTO`
 
@@ -34,9 +34,7 @@
 
 > **I architect and engineer resilient, high-concurrency software systems, autonomous AI agent frameworks, and low-latency cloud infrastructure.** My work bridges deterministic systems engineering (`Rust` / `Go` / `C++`) with state-of-the-art agent orchestration (`PyTorch` / `LangChain` / `LlamaIndex`), vector retrieval meshes, and modern high-performance web platforms.
 
-<br/>
-
----
+<br/><br/>
 
 ### `// 02. SYSTEM TOPOLOGY & REAL-TIME DATA BUS`
 
@@ -44,9 +42,7 @@
   <img src="./assets/system-architecture.svg" alt="System Topology Matrix" width="100%">
 </div>
 
-<br/>
-
----
+<br/><br/>
 
 ### `// 03. TECHNICAL SPECIFICATIONS & ANIMATED STACK MATRIX`
 
@@ -57,7 +53,7 @@
 <br/>
 
 <details>
-<summary><b>▸ Click to expand full raw technology inventory</b></summary>
+<summary><b>▸ Expand raw inventory matrix</b></summary>
 <br/>
 
 <table>
@@ -123,9 +119,7 @@
 
 </details>
 
-<br/>
-
----
+<br/><br/>
 
 ### `// 04. FLAGSHIP DOMAINS & ARCHITECTURAL PILLARS`
 
@@ -151,9 +145,7 @@ impl EngineeringPillars {
 }
 ```
 
-<br/>
-
----
+<br/><br/>
 
 ### `// 05. LIVE TELEMETRY & GITHUB ACTIVITY`
 
@@ -175,9 +167,7 @@ impl EngineeringPillars {
   </table>
 </div>
 
-<br/>
-
----
+<br/><br/>
 
 ### `// 06. COORDINATES & SECURE CHANNELS`
 

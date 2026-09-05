@@ -1,23 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 380" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 370" width="100%" height="100%">
   <defs>
-    <!-- Pattern -->
-    <pattern id="table-grid" width="16" height="16" patternUnits="userSpaceOnUse">
-      <path d="M 16 0 L 0 0 0 16" fill="none" stroke="#171717" stroke-width="0.5"/>
+    <!-- Grid Pattern -->
+    <pattern id="matrix-pat" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.65" fill="#1c1c1c" />
     </pattern>
 
-    <!-- Edge Soft Fade Mask for Marquee -->
-    <linearGradient id="edge-mask-left" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#080808" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#080808" stop-opacity="0"/>
+    <!-- Clip Path for Row 4 Marquee -->
+    <clipPath id="marquee-clip">
+      <rect x="24" y="280" width="872" height="74" rx="4" />
+    </clipPath>
+
+    <clipPath id="marquee-inner-clip">
+      <rect x="36" y="312" width="848" height="34" />
+    </clipPath>
+
+    <!-- Edge Soft Fade Masks -->
+    <linearGradient id="fade-left-mask" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0a0a0a" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#0a0a0a" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="edge-mask-right" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#080808" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#080808" stop-opacity="1"/>
+    <linearGradient id="fade-right-mask" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0a0a0a" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a0a0a" stop-opacity="1"/>
     </linearGradient>
 
-    <!-- Progress Bar Gradient -->
-    <linearGradient id="bar-glow" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#444444" />
+    <!-- Progress Meter Gradient -->
+    <linearGradient id="meter-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#333333" />
       <stop offset="100%" stop-color="#ffffff" />
     </linearGradient>
   </defs>
@@ -25,191 +34,179 @@
   <style>
     .mono { font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace; }
     .title { font-family: 'Inter', -apple-system, sans-serif; font-weight: 700; }
-    .tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 600; fill: #ffffff; }
+    .tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 600; fill: #f5f5f5; }
 
-    /* Infinite Marquee Animation */
-    @keyframes marqueeScroll {
+    /* Keyframes */
+    @keyframes marqueeScrollInfinite {
       0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+      100% { transform: translateX(-990px); }
     }
-    @keyframes marqueeScrollReverse {
-      0% { transform: translateX(-50%); }
-      100% { transform: translateX(0); }
-    }
-    @keyframes meterLoad1 { 0%, 100% { width: 95%; } 50% { width: 91%; } }
-    @keyframes meterLoad2 { 0%, 100% { width: 92%; } 50% { width: 88%; } }
-    @keyframes meterLoad3 { 0%, 100% { width: 89%; } 50% { width: 94%; } }
-    @keyframes meterLoad4 { 0%, 100% { width: 96%; } 50% { width: 92%; } }
-    @keyframes pulseTag { 0%, 100% { opacity: 0.95; } 50% { opacity: 0.6; } }
+    @keyframes loadBar1 { 0%, 100% { width: 210px; } 50% { width: 198px; } }
+    @keyframes loadBar2 { 0%, 100% { width: 202px; } 50% { width: 190px; } }
+    @keyframes loadBar3 { 0%, 100% { width: 198px; } 50% { width: 208px; } }
 
-    .marquee-track-1 { display: flex; animation: marqueeScroll 24s linear infinite; }
-    .marquee-track-2 { display: flex; animation: marqueeScrollReverse 22s linear infinite; }
-    .meter-1 { animation: meterLoad1 4s ease-in-out infinite; }
-    .meter-2 { animation: meterLoad2 4.5s ease-in-out infinite; }
-    .meter-3 { animation: meterLoad3 3.8s ease-in-out infinite; }
-    .meter-4 { animation: meterLoad4 4.2s ease-in-out infinite; }
-    .pulsing { animation: pulseTag 3s ease-in-out infinite; }
+    .marquee-track { animation: marqueeScrollInfinite 20s linear infinite; }
+    .meter-1 { animation: loadBar1 4s ease-in-out infinite; }
+    .meter-2 { animation: loadBar2 4.5s ease-in-out infinite; }
+    .meter-3 { animation: loadBar3 3.8s ease-in-out infinite; }
   </style>
 
   <!-- Container -->
-  <rect width="920" height="380" fill="#080808" rx="8" />
-  <rect width="920" height="380" fill="url(#table-grid)" rx="8" />
-  <rect x="10" y="10" width="900" height="360" fill="none" stroke="#222222" stroke-width="1.2" rx="6" />
+  <rect width="920" height="370" fill="#080808" rx="8" />
+  <rect width="920" height="370" fill="url(#matrix-pat)" rx="8" />
+  <rect x="8" y="8" width="904" height="354" fill="none" stroke="#222222" stroke-width="1" rx="6" />
 
-  <!-- Table Title Bar -->
-  <rect x="10" y="10" width="900" height="38" fill="#121212" rx="6" />
-  <text x="32" y="34" fill="#a3a3a3" font-size="11" class="mono" font-weight="700">LAYER 01 // INTERACTIVE TECHNICAL SPECIFICATION MATRIX</text>
-  <text x="880" y="34" fill="#666666" font-size="9.5" text-anchor="end" class="mono">TELEMETRY // LIVE SPEC v4.2</text>
-  <line x1="10" y1="48" x2="910" y2="48" stroke="#262626" stroke-width="1" />
+  <!-- Section Header -->
+  <text x="32" y="34" fill="#a3a3a3" font-size="11" class="mono" font-weight="700">TECHNICAL SPECIFICATION MATRIX</text>
+  <text x="888" y="34" fill="#525252" font-size="9.5" text-anchor="end" class="mono">LIVE TELEMETRY // v4.2</text>
 
-  <!-- Row 1: Core Systems & High-Concurrency -->
-  <g transform="translate(24, 62)">
-    <rect width="872" height="64" fill="#0d0d0d" stroke="#1c1c1c" stroke-width="1" rx="4" />
-    <text x="18" y="26" fill="#ffffff" font-size="12" class="title">01 // SYSTEMS &amp; CONCURRENCY</text>
-    <text x="18" y="44" fill="#737373" font-size="9.5" class="mono">Rust • Go • C++ • Low-Latency Async IO • SIMD • Memory Safety</text>
+  <!-- Row 1: Systems & Concurrency -->
+  <g transform="translate(24, 52)">
+    <rect width="872" height="68" fill="#0d0d0d" stroke="#1c1c1c" stroke-width="1" rx="4" />
+    <text x="20" y="28" fill="#ffffff" font-size="12.5" class="title">01 // SYSTEMS &amp; CONCURRENCY</text>
+    <text x="20" y="48" fill="#737373" font-size="9.5" class="mono">Rust • Go • C++ • Low-Latency Async IO • SIMD • Memory Safety</text>
     
-    <!-- Animated Telemetry Bar -->
-    <rect x="520" y="24" width="220" height="6" fill="#1c1c1c" rx="3" />
-    <rect x="520" y="24" width="210" height="6" fill="url(#bar-glow)" rx="3" class="meter-1" />
-    <text x="750" y="30" fill="#a3a3a3" font-size="9" class="mono">THROUGHPUT: 95%</text>
+    <!-- Telemetry -->
+    <rect x="520" y="26" width="220" height="5" fill="#1a1a1a" rx="2.5" />
+    <rect x="520" y="26" width="210" height="5" fill="url(#meter-glow)" rx="2.5" class="meter-1" />
+    <text x="750" y="31" fill="#888888" font-size="9" class="mono">THROUGHPUT: 95%</text>
 
-    <!-- Status Badge -->
-    <rect x="764" y="20" width="92" height="24" fill="#141414" stroke="#333333" stroke-width="1" rx="3" />
-    <circle cx="776" cy="32" r="3" fill="#ffffff" />
-    <text x="786" y="35" fill="#f5f5f5" font-size="9" class="mono" font-weight="700">OPTIMAL</text>
+    <!-- Status -->
+    <rect x="768" y="20" width="88" height="24" fill="#141414" stroke="#2b2b2b" stroke-width="1" rx="3" />
+    <circle cx="780" cy="32" r="3" fill="#ffffff" />
+    <text x="790" y="35" fill="#f5f5f5" font-size="9" class="mono" font-weight="700">OPTIMAL</text>
   </g>
 
-  <!-- Row 2: Agentic Intelligence & Model Pipelines -->
-  <g transform="translate(24, 134)">
-    <rect width="872" height="64" fill="#0d0d0d" stroke="#1c1c1c" stroke-width="1" rx="4" />
-    <text x="18" y="26" fill="#ffffff" font-size="12" class="title">02 // AGENTIC AI &amp; MODEL OPS</text>
-    <text x="18" y="44" fill="#737373" font-size="9.5" class="mono">PyTorch • LangChain • LlamaIndex • MCP Protocols • Evaluators</text>
+  <!-- Row 2: Agentic AI -->
+  <g transform="translate(24, 128)">
+    <rect width="872" height="68" fill="#0d0d0d" stroke="#1c1c1c" stroke-width="1" rx="4" />
+    <text x="20" y="28" fill="#ffffff" font-size="12.5" class="title">02 // AGENTIC AI &amp; MODEL PIPELINES</text>
+    <text x="20" y="48" fill="#737373" font-size="9.5" class="mono">PyTorch • LangChain • LlamaIndex • MCP Protocols • Evaluators</text>
     
-    <!-- Animated Telemetry Bar -->
-    <rect x="520" y="24" width="220" height="6" fill="#1c1c1c" rx="3" />
-    <rect x="520" y="24" width="202" height="6" fill="url(#bar-glow)" rx="3" class="meter-2" />
-    <text x="750" y="30" fill="#a3a3a3" font-size="9" class="mono">REASONING: 92%</text>
+    <!-- Telemetry -->
+    <rect x="520" y="26" width="220" height="5" fill="#1a1a1a" rx="2.5" />
+    <rect x="520" y="26" width="202" height="5" fill="url(#meter-glow)" rx="2.5" class="meter-2" />
+    <text x="750" y="31" fill="#888888" font-size="9" class="mono">REASONING: 92%</text>
 
-    <!-- Status Badge -->
-    <rect x="764" y="20" width="92" height="24" fill="#141414" stroke="#333333" stroke-width="1" rx="3" />
-    <circle cx="776" cy="32" r="3" fill="#ffffff" />
-    <text x="786" y="35" fill="#f5f5f5" font-size="9" class="mono" font-weight="700">ACTIVE</text>
+    <!-- Status -->
+    <rect x="768" y="20" width="88" height="24" fill="#141414" stroke="#2b2b2b" stroke-width="1" rx="3" />
+    <circle cx="780" cy="32" r="3" fill="#ffffff" />
+    <text x="790" y="35" fill="#f5f5f5" font-size="9" class="mono" font-weight="700">ACTIVE</text>
   </g>
 
-  <!-- Row 3: Modern Web & API Mesh -->
-  <g transform="translate(24, 206)">
-    <rect width="872" height="64" fill="#0d0d0d" stroke="#1c1c1c" stroke-width="1" rx="4" />
-    <text x="18" y="26" fill="#ffffff" font-size="12" class="title">03 // FULL-STACK SURFACES &amp; APIS</text>
-    <text x="18" y="44" fill="#737373" font-size="9.5" class="mono">Next.js • React • TypeScript • FastAPI • Node.js • gRPC • Tailwind</text>
+  <!-- Row 3: Modern Web & APIs -->
+  <g transform="translate(24, 204)">
+    <rect width="872" height="68" fill="#0d0d0d" stroke="#1c1c1c" stroke-width="1" rx="4" />
+    <text x="20" y="28" fill="#ffffff" font-size="12.5" class="title">03 // FULL-STACK SURFACES &amp; APIS</text>
+    <text x="20" y="48" fill="#737373" font-size="9.5" class="mono">Next.js • React • TypeScript • FastAPI • Node.js • gRPC • Tailwind</text>
     
-    <!-- Animated Telemetry Bar -->
-    <rect x="520" y="24" width="220" height="6" fill="#1c1c1c" rx="3" />
-    <rect x="520" y="24" width="198" height="6" fill="url(#bar-glow)" rx="3" class="meter-3" />
-    <text x="750" y="30" fill="#a3a3a3" font-size="9" class="mono">RESPONSIVE: 90%</text>
+    <!-- Telemetry -->
+    <rect x="520" y="26" width="220" height="5" fill="#1a1a1a" rx="2.5" />
+    <rect x="520" y="26" width="198" height="5" fill="url(#meter-glow)" rx="2.5" class="meter-3" />
+    <text x="750" y="31" fill="#888888" font-size="9" class="mono">LATENCY: 0.38ms</text>
 
-    <!-- Status Badge -->
-    <rect x="764" y="20" width="92" height="24" fill="#141414" stroke="#333333" stroke-width="1" rx="3" />
-    <circle cx="776" cy="32" r="3" fill="#ffffff" />
-    <text x="786" y="35" fill="#f5f5f5" font-size="9" class="mono" font-weight="700">NOMINAL</text>
+    <!-- Status -->
+    <rect x="768" y="20" width="88" height="24" fill="#141414" stroke="#2b2b2b" stroke-width="1" rx="3" />
+    <circle cx="780" cy="32" r="3" fill="#ffffff" />
+    <text x="790" y="35" fill="#f5f5f5" font-size="9" class="mono" font-weight="700">NOMINAL</text>
   </g>
 
-  <!-- Row 4: Persistent Data & Cloud Platform Marquee -->
-  <g transform="translate(24, 278)">
-    <rect width="872" height="78" fill="#0d0d0d" stroke="#1c1c1c" stroke-width="1" rx="4" />
-    <text x="18" y="22" fill="#a3a3a3" font-size="9" class="mono" font-weight="700">04 // CONTINUOUS STACK MARQUEE (K8S • PGSQL • DOCKER • TERRAFORM • REDIS • QDRANT)</text>
+  <!-- Row 4: Contained Marquee Table with Strict ClipPath -->
+  <g clip-path="url(#marquee-clip)">
+    <rect x="24" y="280" width="872" height="74" fill="#0a0a0a" stroke="#1c1c1c" stroke-width="1" rx="4" />
+    <text x="44" y="300" fill="#888888" font-size="9" class="mono" font-weight="700">04 // ACTIVE ECOSYSTEM MARQUEE</text>
 
-    <!-- SVG Marquee Container -->
-    <g transform="translate(14, 34)">
-      <!-- Animated Marquee Track -->
-      <g class="marquee-track-1">
+    <!-- Clipped Marquee Viewport -->
+    <g clip-path="url(#marquee-inner-clip)">
+      <g class="marquee-track" transform="translate(36, 314)">
         <!-- Sequence 1 -->
         <g transform="translate(0,0)">
-          <rect x="0" y="0" width="82" height="26" fill="#171717" stroke="#333333" stroke-width="0.75" rx="3" />
-          <text x="41" y="17" text-anchor="middle" class="tag">RUST</text>
+          <rect width="80" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
+          <text x="40" y="16" text-anchor="middle" class="tag">RUST</text>
         </g>
-        <g transform="translate(90,0)">
-          <rect x="0" y="0" width="70" height="26" fill="#171717" stroke="#333333" stroke-width="0.75" rx="3" />
-          <text x="35" y="17" text-anchor="middle" class="tag">GO</text>
+        <g transform="translate(88,0)">
+          <rect width="68" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
+          <text x="34" y="16" text-anchor="middle" class="tag">GO</text>
         </g>
-        <g transform="translate(168,0)">
-          <rect x="0" y="0" width="72" height="26" fill="#171717" stroke="#333333" stroke-width="0.75" rx="3" />
-          <text x="36" y="17" text-anchor="middle" class="tag">C++</text>
+        <g transform="translate(164,0)">
+          <rect width="70" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
+          <text x="35" y="16" text-anchor="middle" class="tag">C++</text>
         </g>
-        <g transform="translate(248,0)">
-          <rect x="0" y="0" width="94" height="26" fill="#171717" stroke="#333333" stroke-width="0.75" rx="3" />
-          <text x="47" y="17" text-anchor="middle" class="tag">PYTORCH</text>
+        <g transform="translate(242,0)">
+          <rect width="92" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
+          <text x="46" y="16" text-anchor="middle" class="tag">PYTORCH</text>
         </g>
-        <g transform="translate(350,0)">
-          <rect x="0" y="0" width="102" height="26" fill="#171717" stroke="#333333" stroke-width="0.75" rx="3" />
-          <text x="51" y="17" text-anchor="middle" class="tag">NEXT.JS 15</text>
+        <g transform="translate(342,0)">
+          <rect width="98" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
+          <text x="49" y="16" text-anchor="middle" class="tag">NEXT.JS</text>
         </g>
-        <g transform="translate(460,0)">
-          <rect x="0" y="0" width="112" height="26" fill="#171717" stroke="#333333" stroke-width="0.75" rx="3" />
-          <text x="56" y="17" text-anchor="middle" class="tag">KUBERNETES</text>
+        <g transform="translate(448,0)">
+          <rect width="112" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
+          <text x="56" y="16" text-anchor="middle" class="tag">KUBERNETES</text>
         </g>
-        <g transform="translate(580,0)">
-          <rect x="0" y="0" width="96" height="26" fill="#171717" stroke="#333333" stroke-width="0.75" rx="3" />
-          <text x="48" y="17" text-anchor="middle" class="tag">POSTGRES</text>
+        <g transform="translate(568,0)">
+          <rect width="110" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
+          <text x="55" y="16" text-anchor="middle" class="tag">POSTGRESQL</text>
         </g>
-        <g transform="translate(684,0)">
-          <rect x="0" y="0" width="80" height="26" fill="#171717" stroke="#333333" stroke-width="0.75" rx="3" />
-          <text x="40" y="17" text-anchor="middle" class="tag">REDIS</text>
+        <g transform="translate(686,0)">
+          <rect width="76" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
+          <text x="38" y="16" text-anchor="middle" class="tag">REDIS</text>
         </g>
-        <g transform="translate(772,0)">
-          <rect x="0" y="0" width="92" height="26" fill="#171717" stroke="#333333" stroke-width="0.75" rx="3" />
-          <text x="46" y="17" text-anchor="middle" class="tag">QDRANT</text>
+        <g transform="translate(770,0)">
+          <rect width="90" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
+          <text x="45" y="16" text-anchor="middle" class="tag">QDRANT</text>
         </g>
-        <g transform="translate(872,0)">
-          <rect x="0" y="0" width="100" height="26" fill="#171717" stroke="#333333" stroke-width="0.75" rx="3" />
-          <text x="50" y="17" text-anchor="middle" class="tag">TERRAFORM</text>
+        <g transform="translate(868,0)">
+          <rect width="110" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
+          <text x="55" y="16" text-anchor="middle" class="tag">TERRAFORM</text>
         </g>
-        
-        <!-- Duplicate for Continuous Loop (Offset 980) -->
-        <g transform="translate(980,0)">
-          <rect x="0" y="0" width="82" height="26" fill="#171717" stroke="#333333" stroke-width="0.75" rx="3" />
-          <text x="41" y="17" text-anchor="middle" class="tag">RUST</text>
+
+        <!-- Sequence 2 (Loop duplicate) -->
+        <g transform="translate(990,0)">
+          <rect width="80" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
+          <text x="40" y="16" text-anchor="middle" class="tag">RUST</text>
         </g>
-        <g transform="translate(1070,0)">
-          <rect x="0" y="0" width="70" height="26" fill="#171717" stroke="#333333" stroke-width="0.75" rx="3" />
-          <text x="35" y="17" text-anchor="middle" class="tag">GO</text>
+        <g transform="translate(1078,0)">
+          <rect width="68" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
+          <text x="34" y="16" text-anchor="middle" class="tag">GO</text>
         </g>
-        <g transform="translate(1148,0)">
-          <rect x="0" y="0" width="72" height="26" fill="#171717" stroke="#333333" stroke-width="0.75" rx="3" />
-          <text x="36" y="17" text-anchor="middle" class="tag">C++</text>
+        <g transform="translate(1154,0)">
+          <rect width="70" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
+          <text x="35" y="16" text-anchor="middle" class="tag">C++</text>
         </g>
-        <g transform="translate(1228,0)">
-          <rect x="0" y="0" width="94" height="26" fill="#171717" stroke="#333333" stroke-width="0.75" rx="3" />
-          <text x="47" y="17" text-anchor="middle" class="tag">PYTORCH</text>
+        <g transform="translate(1232,0)">
+          <rect width="92" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
+          <text x="46" y="16" text-anchor="middle" class="tag">PYTORCH</text>
         </g>
-        <g transform="translate(1330,0)">
-          <rect x="0" y="0" width="102" height="26" fill="#171717" stroke="#333333" stroke-width="0.75" rx="3" />
-          <text x="51" y="17" text-anchor="middle" class="tag">NEXT.JS 15</text>
+        <g transform="translate(1332,0)">
+          <rect width="98" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
+          <text x="49" y="16" text-anchor="middle" class="tag">NEXT.JS</text>
         </g>
-        <g transform="translate(1440,0)">
-          <rect x="0" y="0" width="112" height="26" fill="#171717" stroke="#333333" stroke-width="0.75" rx="3" />
-          <text x="56" y="17" text-anchor="middle" class="tag">KUBERNETES</text>
+        <g transform="translate(1438,0)">
+          <rect width="112" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
+          <text x="56" y="16" text-anchor="middle" class="tag">KUBERNETES</text>
         </g>
-        <g transform="translate(1560,0)">
-          <rect x="0" y="0" width="96" height="26" fill="#171717" stroke="#333333" stroke-width="0.75" rx="3" />
-          <text x="48" y="17" text-anchor="middle" class="tag">POSTGRES</text>
+        <g transform="translate(1558,0)">
+          <rect width="110" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
+          <text x="55" y="16" text-anchor="middle" class="tag">POSTGRESQL</text>
         </g>
-        <g transform="translate(1664,0)">
-          <rect x="0" y="0" width="80" height="26" fill="#171717" stroke="#333333" stroke-width="0.75" rx="3" />
-          <text x="40" y="17" text-anchor="middle" class="tag">REDIS</text>
+        <g transform="translate(1676,0)">
+          <rect width="76" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
+          <text x="38" y="16" text-anchor="middle" class="tag">REDIS</text>
         </g>
-        <g transform="translate(1752,0)">
-          <rect x="0" y="0" width="92" height="26" fill="#171717" stroke="#333333" stroke-width="0.75" rx="3" />
-          <text x="46" y="17" text-anchor="middle" class="tag">QDRANT</text>
+        <g transform="translate(1760,0)">
+          <rect width="90" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
+          <text x="45" y="16" text-anchor="middle" class="tag">QDRANT</text>
         </g>
-        <g transform="translate(1852,0)">
-          <rect x="0" y="0" width="100" height="26" fill="#171717" stroke="#333333" stroke-width="0.75" rx="3" />
-          <text x="50" y="17" text-anchor="middle" class="tag">TERRAFORM</text>
+        <g transform="translate(1858,0)">
+          <rect width="110" height="24" fill="#141414" stroke="#282828" stroke-width="0.75" rx="3" />
+          <text x="55" y="16" text-anchor="middle" class="tag">TERRAFORM</text>
         </g>
       </g>
 
-      <!-- Soft Edge Gradient Fade Masks -->
-      <rect x="0" y="0" width="45" height="32" fill="url(#edge-mask-left)" pointer-events="none" />
-      <rect x="799" y="0" width="45" height="32" fill="url(#edge-mask-right)" pointer-events="none" />
+      <!-- Soft Edge Fade Masks -->
+      <rect x="36" y="312" width="40" height="34" fill="url(#fade-left-mask)" pointer-events="none" />
+      <rect x="844" y="312" width="40" height="34" fill="url(#fade-right-mask)" pointer-events="none" />
     </g>
   </g>
 </svg>
