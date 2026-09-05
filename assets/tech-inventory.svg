@@ -1,349 +1,400 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 340" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 460" width="100%" height="100%">
   <defs>
-    <pattern id="inv-grid" width="18" height="18" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="0.6" fill="#131d2e" />
+    <!-- Background Blueprint Grid -->
+    <pattern id="bento-grid" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.65" fill="#141f33" />
     </pattern>
-    <linearGradient id="badge-bg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0e1726" />
-      <stop offset="100%" stop-color="#070b12" />
+
+    <!-- Professional Linear Gradients -->
+    <linearGradient id="panel-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0c1322" />
+      <stop offset="100%" stop-color="#070b14" />
+    </linearGradient>
+
+    <linearGradient id="chip-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#111c30" />
+      <stop offset="100%" stop-color="#0b1220" />
+    </linearGradient>
+
+    <linearGradient id="header-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#60a5fa" />
     </linearGradient>
   </defs>
 
   <style>
     .mono { font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace; }
-    .tier-title { font-family: 'Inter', -apple-system, sans-serif; font-size: 11px; font-weight: 700; fill: #f8fafc; letter-spacing: 0.06em; }
-    .badge-text { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; font-weight: 600; fill: #e2e8f0; }
-    .tier-num { font-family: 'JetBrains Mono', monospace; font-size: 8.5px; font-weight: 600; fill: #38bdf8; }
+    .panel-title { font-family: 'Inter', -apple-system, sans-serif; font-size: 11px; font-weight: 700; fill: #f8fafc; letter-spacing: 0.05em; }
+    .tier-badge { font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 700; fill: #38bdf8; }
+    .chip-text { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; font-weight: 600; fill: #e2e8f0; }
   </style>
 
-  <!-- Background Ground -->
-  <rect width="920" height="340" fill="#04060a" rx="6" />
-  <rect width="920" height="340" fill="url(#inv-grid)" rx="6" />
-  <rect x="8" y="8" width="904" height="324" fill="none" stroke="#151e2e" stroke-width="1" rx="5" />
+  <!-- Container Ground -->
+  <rect width="920" height="460" fill="#04060a" rx="8" />
+  <rect width="920" height="460" fill="url(#bento-grid)" rx="8" />
+  <rect x="8" y="8" width="904" height="444" fill="none" stroke="#17243a" stroke-width="1" rx="6" />
 
-  <!-- Tier 1: Core Systems -->
-  <g transform="translate(24, 18)">
-    <rect width="872" height="54" fill="#080e18" stroke="#1c283d" stroke-width="1" rx="4" />
-    <text x="18" y="29" class="tier-title">CORE SYSTEMS</text>
-    <text x="18" y="42" class="tier-num">TIER 01</text>
+  <!-- Master Section Header -->
+  <g transform="translate(24, 26)">
+    <text x="0" y="0" fill="#f8fafc" font-size="12" class="mono" font-weight="700">TECHNICAL CAPABILITY INVENTORY</text>
+    <text x="872" y="0" fill="#60a5fa" font-size="9" text-anchor="end" class="mono" font-weight="600">● 27 ACTIVE RUNTIMES &amp; ENGINES</text>
+  </g>
 
-    <g transform="translate(160, 14)">
-      <!-- Rust (Authentic Cogwheel Logo) -->
-      <g transform="translate(0, 0)">
-        <rect width="88" height="26" fill="url(#badge-bg)" stroke="#2563eb" stroke-width="0.8" rx="3" />
-        <g transform="translate(9, 7)">
-          <path d="M6 1a5 5 0 100 10A5 5 0 006 1zm0 1.5a3.5 3.5 0 110 7 3.5 3.5 0 010-7zM4.5 4.5h2a1.2 1.2 0 010 2.4h-1v1.6H4.5V4.5zm1 1.5h1a.4.4 0 000-.8h-1v.8z" fill="#38bdf8" />
-        </g>
-        <text x="54" y="17" text-anchor="middle" class="badge-text">RUST</text>
+  <!-- ================= ROW 1 ================= -->
+
+  <!-- Panel 1: Systems & Core Runtimes (Left: x=24, y=42, w=428, h=124) -->
+  <g transform="translate(24, 42)">
+    <rect width="428" height="124" fill="url(#panel-bg)" stroke="#1e2e4a" stroke-width="1" rx="5" />
+    <!-- Header -->
+    <text x="14" y="22" class="panel-title">SYSTEMS &amp; CORE RUNTIMES</text>
+    <text x="414" y="22" text-anchor="end" class="tier-badge">TIER 01</text>
+    <line x1="14" y1="32" x2="414" y2="32" stroke="#16233a" stroke-width="0.75" />
+
+    <!-- Chips (2 columns x 3 rows) -->
+    <!-- Col 1 -->
+    <!-- Rust -->
+    <g transform="translate(14, 42)">
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#2563eb" stroke-width="0.75" rx="3" />
+      <g transform="translate(8, 5)">
+        <path d="M6 1a5 5 0 100 10A5 5 0 006 1zm0 1.5a3.5 3.5 0 110 7 3.5 3.5 0 010-7zM4.5 4.5h2a1.2 1.2 0 010 2.4h-1v1.6H4.5V4.5zm1 1.5h1a.4.4 0 000-.8h-1v.8z" fill="#38bdf8" />
       </g>
-
-      <!-- Go (Authentic Go Logo) -->
-      <g transform="translate(96, 0)">
-        <rect width="76" height="26" fill="url(#badge-bg)" stroke="#1e293b" stroke-width="0.8" rx="3" />
-        <g transform="translate(9, 7)">
-          <path d="M1.5 4.5h6.5v1.2H3v1.8h4.5v1.2H1.5zm8 0h3.2a2.4 2.4 0 012.4 2.4v.8a2.4 2.4 0 01-2.4 2.4H9.5zm1.5 1.2v3.2h1.6a1.2 1.2 0 001.2-1.2v-.8a1.2 1.2 0 00-1.2-1.2z" fill="#60a5fa" />
-        </g>
-        <text x="49" y="17" text-anchor="middle" class="badge-text">GO</text>
+      <text x="30" y="15" class="chip-text">RUST</text>
+      <text x="184" y="15" text-anchor="end" fill="#60a5fa" font-size="8" class="mono">ADVANCED</text>
+    </g>
+    <!-- Go -->
+    <g transform="translate(14, 69)">
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <g transform="translate(8, 5)">
+        <path d="M1.5 4.5h6.5v1.2H3v1.8h4.5v1.2H1.5zm8 0h3.2a2.4 2.4 0 012.4 2.4v.8a2.4 2.4 0 01-2.4 2.4H9.5zm1.5 1.2v3.2h1.6a1.2 1.2 0 001.2-1.2v-.8a1.2 1.2 0 00-1.2-1.2z" fill="#60a5fa" />
       </g>
-
-      <!-- C++ (Authentic C++ Hex Logo) -->
-      <g transform="translate(180, 0)">
-        <rect width="80" height="26" fill="url(#badge-bg)" stroke="#1e293b" stroke-width="0.8" rx="3" />
-        <g transform="translate(9, 7)">
-          <path d="M6 0.5L1.5 3.2v5.6L6 11.5l4.5-2.7V3.2L6 0.5zm-1 3.5a2 2 0 110 4 2 2 0 010-4zm3.2 1.5h.8v1h-.8V7.5h-.8V6.5h-.8v-1h.8V4.5h.8v1zm2 0h.8v1h-.8V7.5h-.8V6.5h-.8v-1h.8V4.5h.8v1z" fill="#94a3b8" />
-        </g>
-        <text x="50" y="17" text-anchor="middle" class="badge-text">C++</text>
+      <text x="30" y="15" class="chip-text">GO</text>
+      <text x="184" y="15" text-anchor="end" fill="#94a3b8" font-size="8" class="mono">ASYNC IO</text>
+    </g>
+    <!-- C++ -->
+    <g transform="translate(14, 96)">
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <g transform="translate(8, 5)">
+        <path d="M6 0.5L1.5 3.2v5.6L6 11.5l4.5-2.7V3.2L6 0.5zm-1 3.5a2 2 0 110 4 2 2 0 010-4zm3.2 1.5h.8v1h-.8V7.5h-.8V6.5h-.8v-1h.8V4.5h.8v1zm2 0h.8v1h-.8V7.5h-.8V6.5h-.8v-1h.8V4.5h.8v1z" fill="#94a3b8" />
       </g>
+      <text x="30" y="15" class="chip-text">C++ (20/23)</text>
+      <text x="184" y="15" text-anchor="end" fill="#94a3b8" font-size="8" class="mono">SIMD</text>
+    </g>
 
-      <!-- Python (Authentic Twin Snakes Logo) -->
-      <g transform="translate(268, 0)">
-        <rect width="100" height="26" fill="url(#badge-bg)" stroke="#1e293b" stroke-width="0.8" rx="3" />
-        <g transform="translate(9, 7)">
-          <path d="M6 0.5C3.5 0.5 2 1.5 2 3v1.5h4v.5H1.5C.5 5 0 6.2 0 8s.5 3 1.5 3.5h1V10c0-1.5 1.2-2.8 2.8-2.8h4.4c.8 0 1.5-.7 1.5-1.5V3c0-1.5-1.7-2.5-3.7-2.5zm-1.8 1a.6.6 0 110 1.2.6.6 0 010-1.2zm3.6 11.5c2.5 0 4-1 4-2.5v-1.5H7.8V8.5h4.5c1 0 1.5-1.2 1.5-3s-.5-3-1.5-3.5h-1V3.5c0 1.5-1.2 2.8-2.8 2.8H4.1c-.8 0-1.5.7-1.5 1.5v2.7c0 1.5 1.7 2.5 3.7 2.5zm1.8-1a.6.6 0 110-1.2.6.6 0 010 1.2z" fill="#38bdf8" />
-        </g>
-        <text x="59" y="17" text-anchor="middle" class="badge-text">PYTHON</text>
+    <!-- Col 2 -->
+    <!-- Python -->
+    <g transform="translate(222, 42)">
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <g transform="translate(8, 5)">
+        <path d="M6 0.5C3.5 0.5 2 1.5 2 3v1.5h4v.5H1.5C.5 5 0 6.2 0 8s.5 3 1.5 3.5h1V10c0-1.5 1.2-2.8 2.8-2.8h4.4c.8 0 1.5-.7 1.5-1.5V3c0-1.5-1.7-2.5-3.7-2.5zm-1.8 1a.6.6 0 110 1.2.6.6 0 010-1.2zm3.6 11.5c2.5 0 4-1 4-2.5v-1.5H7.8V8.5h4.5c1 0 1.5-1.2 1.5-3s-.5-3-1.5-3.5h-1V3.5c0 1.5-1.2 2.8-2.8 2.8H4.1c-.8 0-1.5.7-1.5 1.5v2.7c0 1.5 1.7 2.5 3.7 2.5zm1.8-1a.6.6 0 110-1.2.6.6 0 010 1.2z" fill="#38bdf8" />
       </g>
-
-      <!-- TypeScript (Authentic TS Brand Logo) -->
-      <g transform="translate(376, 0)">
-        <rect width="120" height="26" fill="url(#badge-bg)" stroke="#2563eb" stroke-width="0.8" rx="3" />
-        <g transform="translate(9, 7)">
-          <rect width="12" height="12" fill="none" stroke="#60a5fa" stroke-width="0.9" rx="1.5" />
-          <path d="M2.5 4h4m-2 0v5.5m3-3c.4-.6 1.8-.7 2.2 0s-.2 1.3-1.2 1.5 0 1.2.8 1.2" stroke="#60a5fa" stroke-width="0.8" fill="none" />
-        </g>
-        <text x="69" y="17" text-anchor="middle" class="badge-text">TYPESCRIPT</text>
+      <text x="30" y="15" class="chip-text">PYTHON</text>
+      <text x="184" y="15" text-anchor="end" fill="#38bdf8" font-size="8" class="mono">AI CORE</text>
+    </g>
+    <!-- TypeScript -->
+    <g transform="translate(222, 69)">
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#2563eb" stroke-width="0.75" rx="3" />
+      <g transform="translate(8, 5)">
+        <rect width="12" height="12" fill="none" stroke="#60a5fa" stroke-width="0.9" rx="1.5" />
+        <path d="M2.5 4h4m-2 0v5.5m3-3c.4-.6 1.8-.7 2.2 0s-.2 1.3-1.2 1.5 0 1.2.8 1.2" stroke="#60a5fa" stroke-width="0.8" fill="none" />
       </g>
-
-      <!-- JavaScript (Authentic JS Brand Logo) -->
-      <g transform="translate(504, 0)">
-        <rect width="120" height="26" fill="url(#badge-bg)" stroke="#1e293b" stroke-width="0.8" rx="3" />
-        <g transform="translate(9, 7)">
-          <rect width="12" height="12" fill="none" stroke="#94a3b8" stroke-width="0.9" rx="1.5" />
-          <path d="M4 7v2.5a1 1 0 01-1.5 0m3.5-2c.4-.6 1.8-.7 2.2 0s-.2 1.3-1.2 1.5 0 1.2.8 1.2" stroke="#94a3b8" stroke-width="0.8" fill="none" />
-        </g>
-        <text x="69" y="17" text-anchor="middle" class="badge-text">JAVASCRIPT</text>
+      <text x="30" y="15" class="chip-text">TYPESCRIPT</text>
+      <text x="184" y="15" text-anchor="end" fill="#60a5fa" font-size="8" class="mono">STRICT</text>
+    </g>
+    <!-- JavaScript -->
+    <g transform="translate(222, 96)">
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <g transform="translate(8, 5)">
+        <rect width="12" height="12" fill="none" stroke="#94a3b8" stroke-width="0.9" rx="1.5" />
+        <path d="M4 7v2.5a1 1 0 01-1.5 0m3.5-2c.4-.6 1.8-.7 2.2 0s-.2 1.3-1.2 1.5 0 1.2.8 1.2" stroke="#94a3b8" stroke-width="0.8" fill="none" />
       </g>
+      <text x="30" y="15" class="chip-text">JAVASCRIPT</text>
+      <text x="184" y="15" text-anchor="end" fill="#94a3b8" font-size="8" class="mono">ESNEXT</text>
     </g>
   </g>
 
-  <!-- Tier 2: Agentic AI -->
-  <g transform="translate(24, 79)">
-    <rect width="872" height="54" fill="#080e18" stroke="#1c283d" stroke-width="1" rx="4" />
-    <text x="18" y="29" class="tier-title">AGENTIC AI</text>
-    <text x="18" y="42" class="tier-num">TIER 02</text>
+  <!-- Panel 2: Agentic AI & Cognitive Engines (Right: x=468, y=42, w=428, h=124) -->
+  <g transform="translate(468, 42)">
+    <rect width="428" height="124" fill="url(#panel-bg)" stroke="#1e2e4a" stroke-width="1" rx="5" />
+    <text x="14" y="22" class="panel-title">AGENTIC AI &amp; COGNITIVE ENGINES</text>
+    <text x="414" y="22" text-anchor="end" class="tier-badge">TIER 02</text>
+    <line x1="14" y1="32" x2="414" y2="32" stroke="#16233a" stroke-width="0.75" />
 
-    <g transform="translate(160, 14)">
-      <!-- PyTorch (Authentic Flame Logo) -->
-      <g transform="translate(0, 0)">
-        <rect width="98" height="26" fill="url(#badge-bg)" stroke="#2563eb" stroke-width="0.8" rx="3" />
-        <g transform="translate(9, 7)">
-          <path d="M7.5 1a5.5 5.5 0 00-4 9.2l1-1A4.2 4.2 0 013.2 6a4.3 4.3 0 016-3.8l.8-.8A5.5 5.5 0 007.5 1zm2.8 2.2l-.8.8a4.2 4.2 0 011.3 3.2 4.3 4.3 0 01-6 3.8l-.8.8a5.5 5.5 0 006.3-8.6zM8 3.5a1 1 0 100 2 1 1 0 000-2z" fill="#38bdf8" />
-        </g>
-        <text x="58" y="17" text-anchor="middle" class="badge-text">PYTORCH</text>
+    <!-- Col 1 -->
+    <!-- PyTorch -->
+    <g transform="translate(14, 42)">
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#2563eb" stroke-width="0.75" rx="3" />
+      <g transform="translate(8, 5)">
+        <path d="M7.5 1a5.5 5.5 0 00-4 9.2l1-1A4.2 4.2 0 013.2 6a4.3 4.3 0 016-3.8l.8-.8A5.5 5.5 0 007.5 1zm2.8 2.2l-.8.8a4.2 4.2 0 011.3 3.2 4.3 4.3 0 01-6 3.8l-.8.8a5.5 5.5 0 006.3-8.6zM8 3.5a1 1 0 100 2 1 1 0 000-2z" fill="#38bdf8" />
       </g>
+      <text x="30" y="15" class="chip-text">PYTORCH</text>
+      <text x="184" y="15" text-anchor="end" fill="#38bdf8" font-size="8" class="mono">MODELS</text>
+    </g>
+    <!-- LangChain -->
+    <g transform="translate(14, 69)">
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <g transform="translate(8, 5)">
+        <path d="M7 1a3 3 0 00-3 3v2H2a1 1 0 00-1 1v4a1 1 0 001 1h8a1 1 0 001-1V4a3 3 0 00-3-3zm-1 3a1 1 0 110-2 1 1 0 010 2z" fill="#60a5fa" />
+      </g>
+      <text x="30" y="15" class="chip-text">LANGCHAIN</text>
+      <text x="184" y="15" text-anchor="end" fill="#60a5fa" font-size="8" class="mono">CHAINS</text>
+    </g>
+    <!-- LlamaIndex -->
+    <g transform="translate(14, 96)">
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <g transform="translate(8, 5)">
+        <path d="M3 1h2v4h3v2H7v4H5V7H3V1zm0 0l-1 2h1V1z" fill="#94a3b8" />
+      </g>
+      <text x="30" y="15" class="chip-text">LLAMAINDEX</text>
+      <text x="184" y="15" text-anchor="end" fill="#94a3b8" font-size="8" class="mono">RAG</text>
+    </g>
 
-      <!-- LangChain (Authentic LangChain Bird/Parrot Logo) -->
-      <g transform="translate(106, 0)">
-        <rect width="112" height="26" fill="url(#badge-bg)" stroke="#1e293b" stroke-width="0.8" rx="3" />
-        <g transform="translate(9, 7)">
-          <path d="M7 1a3 3 0 00-3 3v2H2a1 1 0 00-1 1v4a1 1 0 001 1h8a1 1 0 001-1V4a3 3 0 00-3-3zm-1 3a1 1 0 110-2 1 1 0 010 2z" fill="#60a5fa" />
-        </g>
-        <text x="65" y="17" text-anchor="middle" class="badge-text">LANGCHAIN</text>
+    <!-- Col 2 -->
+    <!-- OpenAI API -->
+    <g transform="translate(222, 42)">
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <g transform="translate(8, 5)">
+        <circle cx="6" cy="6" r="5" fill="none" stroke="#38bdf8" stroke-width="0.9" />
+        <circle cx="6" cy="6" r="1.5" fill="#38bdf8" />
       </g>
-
-      <!-- LlamaIndex (Authentic Llama Logo) -->
-      <g transform="translate(226, 0)">
-        <rect width="116" height="26" fill="url(#badge-bg)" stroke="#1e293b" stroke-width="0.8" rx="3" />
-        <g transform="translate(9, 7)">
-          <path d="M3 1h2v4h3v2H7v4H5V7H3V1zm0 0l-1 2h1V1z" fill="#94a3b8" />
-        </g>
-        <text x="67" y="17" text-anchor="middle" class="badge-text">LLAMAINDEX</text>
+      <text x="30" y="15" class="chip-text">OPENAI API</text>
+      <text x="184" y="15" text-anchor="end" fill="#38bdf8" font-size="8" class="mono">LLMS</text>
+    </g>
+    <!-- HuggingFace -->
+    <g transform="translate(222, 69)">
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <g transform="translate(8, 5)">
+        <circle cx="6" cy="6" r="5.2" fill="none" stroke="#60a5fa" stroke-width="0.9" />
+        <circle cx="4.2" cy="4.8" r="0.75" fill="#60a5fa" />
+        <circle cx="7.8" cy="4.8" r="0.75" fill="#60a5fa" />
+        <path d="M3.8 7.8c.8.9 3.6.9 4.4 0" stroke="#60a5fa" stroke-width="0.8" fill="none" />
       </g>
-
-      <!-- OpenAI (Authentic Spiral Rosette Logo) -->
-      <g transform="translate(350, 0)">
-        <rect width="108" height="26" fill="url(#badge-bg)" stroke="#1e293b" stroke-width="0.8" rx="3" />
-        <g transform="translate(9, 7)">
-          <circle cx="6" cy="6" r="5" fill="none" stroke="#38bdf8" stroke-width="0.9" />
-          <path d="M6 1.5l3.8 2.2v4.6L6 10.5 2.2 8.3V3.7L6 1.5z" fill="none" stroke="#38bdf8" stroke-width="0.8" />
-          <circle cx="6" cy="6" r="1.5" fill="#38bdf8" />
-        </g>
-        <text x="63" y="17" text-anchor="middle" class="badge-text">OPENAI API</text>
+      <text x="30" y="15" class="chip-text">HUGGINGFACE</text>
+      <text x="184" y="15" text-anchor="end" fill="#60a5fa" font-size="8" class="mono">TRANSFORMERS</text>
+    </g>
+    <!-- MCP Protocol -->
+    <g transform="translate(222, 96)">
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#2563eb" stroke-width="0.75" rx="3" />
+      <g transform="translate(8, 5)">
+        <circle cx="2.5" cy="2.5" r="1.5" fill="#38bdf8" />
+        <circle cx="9.5" cy="2.5" r="1.5" fill="#38bdf8" />
+        <circle cx="6" cy="9.5" r="1.5" fill="#38bdf8" />
+        <path d="M2.5 2.5L6 9.5L9.5 2.5" stroke="#38bdf8" stroke-width="0.8" fill="none" />
       </g>
-
-      <!-- HuggingFace (Authentic HuggingFace Emoji Logo) -->
-      <g transform="translate(466, 0)">
-        <rect width="124" height="26" fill="url(#badge-bg)" stroke="#1e293b" stroke-width="0.8" rx="3" />
-        <g transform="translate(9, 7)">
-          <circle cx="6" cy="6" r="5.2" fill="none" stroke="#60a5fa" stroke-width="0.9" />
-          <circle cx="4.2" cy="4.8" r="0.75" fill="#60a5fa" />
-          <circle cx="7.8" cy="4.8" r="0.75" fill="#60a5fa" />
-          <path d="M3.8 7.8c.8.9 3.6.9 4.4 0" stroke="#60a5fa" stroke-width="0.8" fill="none" />
-          <path d="M1 6.5C0 5 0 3 1.5 2.5s2 1.5 1.5 3M11 6.5C12 5 12 3 10.5 2.5S8.5 4 9 5.5" stroke="#60a5fa" stroke-width="0.75" fill="none" />
-        </g>
-        <text x="71" y="17" text-anchor="middle" class="badge-text">HUGGINGFACE</text>
-      </g>
-
-      <!-- MCP Protocol (Network Bus Logo) -->
-      <g transform="translate(598, 0)">
-        <rect width="118" height="26" fill="url(#badge-bg)" stroke="#2563eb" stroke-width="0.8" rx="3" />
-        <g transform="translate(9, 7)">
-          <circle cx="2.5" cy="2.5" r="1.5" fill="#38bdf8" />
-          <circle cx="9.5" cy="2.5" r="1.5" fill="#38bdf8" />
-          <circle cx="6" cy="9.5" r="1.5" fill="#38bdf8" />
-          <path d="M2.5 2.5L6 9.5L9.5 2.5" stroke="#38bdf8" stroke-width="0.8" fill="none" />
-        </g>
-        <text x="67" y="17" text-anchor="middle" class="badge-text">MCP PROTOCOL</text>
-      </g>
+      <text x="30" y="15" class="chip-text">MCP PROTOCOL</text>
+      <text x="184" y="15" text-anchor="end" fill="#38bdf8" font-size="8" class="mono">STANDARD</text>
     </g>
   </g>
 
-  <!-- Tier 3: Web & APIs -->
-  <g transform="translate(24, 140)">
-    <rect width="872" height="54" fill="#080e18" stroke="#1c283d" stroke-width="1" rx="4" />
-    <text x="18" y="29" class="tier-title">WEB &amp; APIS</text>
-    <text x="18" y="42" class="tier-num">TIER 03</text>
+  <!-- ================= ROW 2 ================= -->
 
-    <g transform="translate(160, 14)">
-      <!-- Next.js 15 (Authentic Next.js N Logo) -->
-      <g transform="translate(0, 0)">
-        <rect width="98" height="26" fill="url(#badge-bg)" stroke="#2563eb" stroke-width="0.8" rx="3" />
-        <g transform="translate(9, 7)">
-          <path d="M6 0a6 6 0 100 12A6 6 0 006 0zm2.2 8.7L4.7 4.2h-.9v4.5h.9V5.6l3 4a5 5 0 01-.5.3z" fill="#f8fafc" />
-        </g>
-        <text x="58" y="17" text-anchor="middle" class="badge-text">NEXT.JS 15</text>
-      </g>
+  <!-- Panel 3: High-Performance Web & APIs (Left: x=24, y=178, w=428, h=124) -->
+  <g transform="translate(24, 178)">
+    <rect width="428" height="124" fill="url(#panel-bg)" stroke="#1e2e4a" stroke-width="1" rx="5" />
+    <text x="14" y="22" class="panel-title">HIGH-PERFORMANCE WEB &amp; APIS</text>
+    <text x="414" y="22" text-anchor="end" class="tier-badge">TIER 03</text>
+    <line x1="14" y1="32" x2="414" y2="32" stroke="#16233a" stroke-width="0.75" />
 
-      <!-- React (Authentic React 3-Ring Atom Logo) -->
-      <g transform="translate(106, 0)">
-        <rect width="88" height="26" fill="url(#badge-bg)" stroke="#1e293b" stroke-width="0.8" rx="3" />
-        <g transform="translate(9, 7)">
-          <ellipse cx="6" cy="6" rx="5.5" ry="2.2" fill="none" stroke="#38bdf8" stroke-width="0.8" />
-          <ellipse cx="6" cy="6" rx="5.5" ry="2.2" fill="none" stroke="#38bdf8" stroke-width="0.8" transform="rotate(60 6 6)" />
-          <ellipse cx="6" cy="6" rx="5.5" ry="2.2" fill="none" stroke="#38bdf8" stroke-width="0.8" transform="rotate(120 6 6)" />
-          <circle cx="6" cy="6" r="1.2" fill="#38bdf8" />
-        </g>
-        <text x="52" y="17" text-anchor="middle" class="badge-text">REACT</text>
+    <!-- Col 1 -->
+    <!-- Next.js 15 -->
+    <g transform="translate(14, 42)">
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#2563eb" stroke-width="0.75" rx="3" />
+      <g transform="translate(8, 5)">
+        <path d="M6 0a6 6 0 100 12A6 6 0 006 0zm2.2 8.7L4.7 4.2h-.9v4.5h.9V5.6l3 4a5 5 0 01-.5.3z" fill="#f8fafc" />
       </g>
+      <text x="30" y="15" class="chip-text">NEXT.JS 15 (APP)</text>
+      <text x="184" y="15" text-anchor="end" fill="#f8fafc" font-size="8" class="mono">SSR/RSC</text>
+    </g>
+    <!-- React 19 -->
+    <g transform="translate(14, 69)">
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <g transform="translate(8, 5)">
+        <ellipse cx="6" cy="6" rx="5.5" ry="2.2" fill="none" stroke="#38bdf8" stroke-width="0.8" />
+        <ellipse cx="6" cy="6" rx="5.5" ry="2.2" fill="none" stroke="#38bdf8" stroke-width="0.8" transform="rotate(60 6 6)" />
+        <ellipse cx="6" cy="6" rx="5.5" ry="2.2" fill="none" stroke="#38bdf8" stroke-width="0.8" transform="rotate(120 6 6)" />
+        <circle cx="6" cy="6" r="1.2" fill="#38bdf8" />
+      </g>
+      <text x="30" y="15" class="chip-text">REACT 19</text>
+      <text x="184" y="15" text-anchor="end" fill="#38bdf8" font-size="8" class="mono">CONCURRENT</text>
+    </g>
+    <!-- Node.js -->
+    <g transform="translate(14, 96)">
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <g transform="translate(8, 5)">
+        <path d="M6 1L1 3.9v5.8L6 12.6l5-2.9V3.9L6 1zm0 2.2l3.5 2v4.1L6 11.3 2.5 9.3V5.2L6 3.2zm-1.5 2v3.6h1.2V6.6l1.8 2.2h1.2V5.2h-1.2v2.2L5.7 5.2H4.5z" fill="#60a5fa" />
+      </g>
+      <text x="30" y="15" class="chip-text">NODE.JS</text>
+      <text x="184" y="15" text-anchor="end" fill="#60a5fa" font-size="8" class="mono">RUNTIME</text>
+    </g>
 
-      <!-- Node.js (Authentic Node.js Hexagon Logo) -->
-      <g transform="translate(202, 0)">
-        <rect width="98" height="26" fill="url(#badge-bg)" stroke="#1e293b" stroke-width="0.8" rx="3" />
-        <g transform="translate(9, 7)">
-          <path d="M6 1L1 3.9v5.8L6 12.6l5-2.9V3.9L6 1zm0 2.2l3.5 2v4.1L6 11.3 2.5 9.3V5.2L6 3.2zm-1.5 2v3.6h1.2V6.6l1.8 2.2h1.2V5.2h-1.2v2.2L5.7 5.2H4.5z" fill="#60a5fa" />
-        </g>
-        <text x="57" y="17" text-anchor="middle" class="badge-text">NODE.JS</text>
+    <!-- Col 2 -->
+    <!-- FastAPI -->
+    <g transform="translate(222, 42)">
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <g transform="translate(8, 5)">
+        <path d="M6 0a6 6 0 100 12A6 6 0 006 0zm.8 2.2L3.5 6.5h2.8l-.8 3.3 4.2-4.5H6.8l.8-3.1z" fill="#38bdf8" />
       </g>
-
-      <!-- FastAPI (Authentic Lightning Bolt Logo) -->
-      <g transform="translate(308, 0)">
-        <rect width="96" height="26" fill="url(#badge-bg)" stroke="#1e293b" stroke-width="0.8" rx="3" />
-        <g transform="translate(9, 7)">
-          <path d="M6 0a6 6 0 100 12A6 6 0 006 0zm.8 2.2L3.5 6.5h2.8l-.8 3.3 4.2-4.5H6.8l.8-3.1z" fill="#38bdf8" />
-        </g>
-        <text x="56" y="17" text-anchor="middle" class="badge-text">FASTAPI</text>
+      <text x="30" y="15" class="chip-text">FASTAPI</text>
+      <text x="184" y="15" text-anchor="end" fill="#38bdf8" font-size="8" class="mono">ASYNC REST</text>
+    </g>
+    <!-- gRPC -->
+    <g transform="translate(222, 69)">
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <g transform="translate(8, 5)">
+        <circle cx="6" cy="6" r="5" fill="none" stroke="#94a3b8" stroke-width="0.9" stroke-dasharray="2.5,1.5" />
+        <circle cx="6" cy="6" r="1.8" fill="#94a3b8" />
       </g>
-
-      <!-- gRPC (Streaming Sockets Logo) -->
-      <g transform="translate(412, 0)">
-        <rect width="86" height="26" fill="url(#badge-bg)" stroke="#1e293b" stroke-width="0.8" rx="3" />
-        <g transform="translate(9, 7)">
-          <circle cx="6" cy="6" r="5" fill="none" stroke="#94a3b8" stroke-width="0.9" stroke-dasharray="2.5,1.5" />
-          <circle cx="6" cy="6" r="1.8" fill="#94a3b8" />
-        </g>
-        <text x="51" y="17" text-anchor="middle" class="badge-text">GRPC</text>
+      <text x="30" y="15" class="chip-text">GRPC &amp; PROTOBUF</text>
+      <text x="184" y="15" text-anchor="end" fill="#94a3b8" font-size="8" class="mono">RPC</text>
+    </g>
+    <!-- TailwindCSS -->
+    <g transform="translate(222, 96)">
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <g transform="translate(8, 5)">
+        <path d="M2.5 4.5C3.3 3 4.3 2.5 5.5 3c.9.4 1.5 1.4 2.2 1.6C8.5 4.8 9.3 4.3 10 3.5c-.8 1.5-1.8 2-3 1.5-.9-.4-1.5-1.4-2.2-1.6-.8-.2-1.6.3-2.3 1.1zm-2 4C1.3 7 2.3 6.5 3.5 7c.9.4 1.5 1.4 2.2 1.6.8.2 1.6-.3 2.3-1.1-.8 1.5-1.8 2-3 1.5-.9-.4-1.5-1.4-2.2-1.6-.8-.2-1.6.3-2.3 1.1z" fill="#38bdf8" />
       </g>
-
-      <!-- TailwindCSS (Authentic Dual Waves Logo) -->
-      <g transform="translate(506, 0)">
-        <rect width="122" height="26" fill="url(#badge-bg)" stroke="#1e293b" stroke-width="0.8" rx="3" />
-        <g transform="translate(9, 7)">
-          <path d="M2.5 4.5C3.3 3 4.3 2.5 5.5 3c.9.4 1.5 1.4 2.2 1.6C8.5 4.8 9.3 4.3 10 3.5c-.8 1.5-1.8 2-3 1.5-.9-.4-1.5-1.4-2.2-1.6-.8-.2-1.6.3-2.3 1.1zm-2 4C1.3 7 2.3 6.5 3.5 7c.9.4 1.5 1.4 2.2 1.6.8.2 1.6-.3 2.3-1.1-.8 1.5-1.8 2-3 1.5-.9-.4-1.5-1.4-2.2-1.6-.8-.2-1.6.3-2.3 1.1z" fill="#38bdf8" />
-        </g>
-        <text x="69" y="17" text-anchor="middle" class="badge-text">TAILWINDCSS</text>
-      </g>
+      <text x="30" y="15" class="chip-text">TAILWINDCSS</text>
+      <text x="184" y="15" text-anchor="end" fill="#38bdf8" font-size="8" class="mono">ENGINE</text>
     </g>
   </g>
 
-  <!-- Tier 4: Data & Vectors -->
-  <g transform="translate(24, 201)">
-    <rect width="872" height="54" fill="#080e18" stroke="#1c283d" stroke-width="1" rx="4" />
-    <text x="18" y="29" class="tier-title">DATA &amp; VECTORS</text>
-    <text x="18" y="42" class="tier-num">TIER 04</text>
+  <!-- Panel 4: Vector Data & Persistence (Right: x=468, y=178, w=428, h=124) -->
+  <g transform="translate(468, 178)">
+    <rect width="428" height="124" fill="url(#panel-bg)" stroke="#1e2e4a" stroke-width="1" rx="5" />
+    <text x="14" y="22" class="panel-title">VECTOR DATA &amp; PERSISTENCE</text>
+    <text x="414" y="22" text-anchor="end" class="tier-badge">TIER 04</text>
+    <line x1="14" y1="32" x2="414" y2="32" stroke="#16233a" stroke-width="0.75" />
 
-    <g transform="translate(160, 14)">
-      <!-- PostgreSQL (Authentic Elephant Logo) -->
-      <g transform="translate(0, 0)">
-        <rect width="120" height="26" fill="url(#badge-bg)" stroke="#2563eb" stroke-width="0.8" rx="3" />
-        <g transform="translate(9, 7)">
-          <path d="M6 1C3.5 1 2 2.5 2 4.5c0 1.5.8 2.5 1.5 3.2V11h1.5V9.2c.4.2.8.3 1.2.3.8 0 1.5-.3 2-.8V11h1.5V7.5c.8-.8 1.3-1.8 1.3-3C10 2.5 8.5 1 6 1zm-1.5 3a.8.8 0 110 1.6.8.8 0 010-1.6zm3 0a.8.8 0 110 1.6.8.8 0 010-1.6z" fill="#38bdf8" />
-        </g>
-        <text x="68" y="17" text-anchor="middle" class="badge-text">POSTGRESQL</text>
+    <!-- Col 1 -->
+    <!-- PostgreSQL -->
+    <g transform="translate(14, 42)">
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#2563eb" stroke-width="0.75" rx="3" />
+      <g transform="translate(8, 5)">
+        <path d="M6 1C3.5 1 2 2.5 2 4.5c0 1.5.8 2.5 1.5 3.2V11h1.5V9.2c.4.2.8.3 1.2.3.8 0 1.5-.3 2-.8V11h1.5V7.5c.8-.8 1.3-1.8 1.3-3C10 2.5 8.5 1 6 1zm-1.5 3a.8.8 0 110 1.6.8.8 0 010-1.6zm3 0a.8.8 0 110 1.6.8.8 0 010-1.6z" fill="#38bdf8" />
       </g>
+      <text x="30" y="15" class="chip-text">POSTGRESQL (PGVECTOR)</text>
+      <text x="184" y="15" text-anchor="end" fill="#38bdf8" font-size="8" class="mono">ACID</text>
+    </g>
+    <!-- Redis -->
+    <g transform="translate(14, 69)">
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <g transform="translate(8, 5)">
+        <path d="M6 1L1 3.5 6 6l5-2.5L6 1zm-4.5 4L6 7.5 10.5 5 11 5.8 6 8.5 1 5.8 1.5 5zm0 2.5L6 10l4.5-2.5.5.8L6 11 1 8.3l.5-.8z" fill="#60a5fa" />
+      </g>
+      <text x="30" y="15" class="chip-text">REDIS</text>
+      <text x="184" y="15" text-anchor="end" fill="#60a5fa" font-size="8" class="mono">SUB-MS</text>
+    </g>
+    <!-- Qdrant -->
+    <g transform="translate(14, 96)">
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#2563eb" stroke-width="0.75" rx="3" />
+      <g transform="translate(8, 5)">
+        <circle cx="6" cy="6" r="4.8" fill="none" stroke="#38bdf8" stroke-width="0.9" />
+        <line x1="6" y1="1" x2="6" y2="11" stroke="#38bdf8" stroke-width="0.8" />
+        <line x1="1" y1="6" x2="11" y2="6" stroke="#38bdf8" stroke-width="0.8" />
+      </g>
+      <text x="30" y="15" class="chip-text">QDRANT</text>
+      <text x="184" y="15" text-anchor="end" fill="#38bdf8" font-size="8" class="mono">HNSW</text>
+    </g>
 
-      <!-- Redis (Authentic Layered Blocks Logo) -->
-      <g transform="translate(128, 0)">
-        <rect width="86" height="26" fill="url(#badge-bg)" stroke="#1e293b" stroke-width="0.8" rx="3" />
-        <g transform="translate(9, 7)">
-          <path d="M6 1L1 3.5 6 6l5-2.5L6 1zm-4.5 4L6 7.5 10.5 5 11 5.8 6 8.5 1 5.8 1.5 5zm0 2.5L6 10l4.5-2.5.5.8L6 11 1 8.3l.5-.8z" fill="#60a5fa" />
-        </g>
-        <text x="51" y="17" text-anchor="middle" class="badge-text">REDIS</text>
+    <!-- Col 2 -->
+    <!-- Pinecone -->
+    <g transform="translate(222, 42)">
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <g transform="translate(8, 5)">
+        <polygon points="6,1 10.5,9.5 1.5,9.5" fill="none" stroke="#60a5fa" stroke-width="0.9" />
+        <line x1="6" y1="9.5" x2="6" y2="11.5" stroke="#60a5fa" stroke-width="1.2" />
       </g>
-
-      <!-- Qdrant (Target Crosshair Logo) -->
-      <g transform="translate(222, 0)">
-        <rect width="96" height="26" fill="url(#badge-bg)" stroke="#1e293b" stroke-width="0.8" rx="3" />
-        <g transform="translate(9, 7)">
-          <circle cx="6" cy="6" r="4.8" fill="none" stroke="#38bdf8" stroke-width="0.9" />
-          <line x1="6" y1="1" x2="6" y2="11" stroke="#38bdf8" stroke-width="0.8" />
-          <line x1="1" y1="6" x2="11" y2="6" stroke="#38bdf8" stroke-width="0.8" />
-        </g>
-        <text x="56" y="17" text-anchor="middle" class="badge-text">QDRANT</text>
+      <text x="30" y="15" class="chip-text">PINECONE</text>
+      <text x="184" y="15" text-anchor="end" fill="#60a5fa" font-size="8" class="mono">SERVERLESS</text>
+    </g>
+    <!-- ChromaDB -->
+    <g transform="translate(222, 69)">
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <g transform="translate(8, 5)">
+        <circle cx="3.5" cy="4.5" r="2.2" fill="none" stroke="#94a3b8" stroke-width="0.8" />
+        <circle cx="8.5" cy="4.5" r="2.2" fill="none" stroke="#94a3b8" stroke-width="0.8" />
+        <circle cx="6" cy="8.5" r="2.2" fill="none" stroke="#94a3b8" stroke-width="0.8" />
       </g>
-
-      <!-- Pinecone (Geometric Pine Logo) -->
-      <g transform="translate(326, 0)">
-        <rect width="106" height="26" fill="url(#badge-bg)" stroke="#1e293b" stroke-width="0.8" rx="3" />
-        <g transform="translate(9, 7)">
-          <polygon points="6,1 10.5,9.5 1.5,9.5" fill="none" stroke="#60a5fa" stroke-width="0.9" />
-          <line x1="6" y1="9.5" x2="6" y2="11.5" stroke="#60a5fa" stroke-width="1.2" />
-        </g>
-        <text x="61" y="17" text-anchor="middle" class="badge-text">PINECONE</text>
+      <text x="30" y="15" class="chip-text">CHROMADB</text>
+      <text x="184" y="15" text-anchor="end" fill="#94a3b8" font-size="8" class="mono">EMBEDDINGS</text>
+    </g>
+    <!-- SQLite / Vector -->
+    <g transform="translate(222, 96)">
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <g transform="translate(8, 5)">
+        <ellipse cx="6" cy="3" rx="4.5" ry="1.5" fill="none" stroke="#94a3b8" stroke-width="0.8" />
+        <path d="M1.5 3v5c0 1 2 1.5 4.5 1.5s4.5-.5 4.5-1.5V3" fill="none" stroke="#94a3b8" stroke-width="0.8" />
       </g>
-
-      <!-- ChromaDB (Prism Cluster Logo) -->
-      <g transform="translate(440, 0)">
-        <rect width="110" height="26" fill="url(#badge-bg)" stroke="#1e293b" stroke-width="0.8" rx="3" />
-        <g transform="translate(9, 7)">
-          <circle cx="3.5" cy="4.5" r="2.2" fill="none" stroke="#94a3b8" stroke-width="0.8" />
-          <circle cx="8.5" cy="4.5" r="2.2" fill="none" stroke="#94a3b8" stroke-width="0.8" />
-          <circle cx="6" cy="8.5" r="2.2" fill="none" stroke="#94a3b8" stroke-width="0.8" />
-        </g>
-        <text x="63" y="17" text-anchor="middle" class="badge-text">CHROMADB</text>
-      </g>
+      <text x="30" y="15" class="chip-text">SQLITE &amp; LIB当中</text>
+      <text x="184" y="15" text-anchor="end" fill="#94a3b8" font-size="8" class="mono">LOCAL</text>
     </g>
   </g>
 
-  <!-- Tier 5: Cloud & DevOps -->
-  <g transform="translate(24, 262)">
-    <rect width="872" height="54" fill="#080e18" stroke="#1c283d" stroke-width="1" rx="4" />
-    <text x="18" y="29" class="tier-title">CLOUD &amp; DEVOPS</text>
-    <text x="18" y="42" class="tier-num">TIER 05</text>
+  <!-- ================= ROW 3: Full Width ================= -->
 
-    <g transform="translate(160, 14)">
-      <!-- Kubernetes (Authentic 7-spoke Helm Wheel Logo) -->
-      <g transform="translate(0, 0)">
-        <rect width="120" height="26" fill="url(#badge-bg)" stroke="#2563eb" stroke-width="0.8" rx="3" />
-        <g transform="translate(9, 7)">
-          <path d="M6 1a5 5 0 100 10A5 5 0 006 1zm0 1.2a3.8 3.8 0 013.7 3.3L8.2 6a2.2 2.2 0 00-1.4-1.2V3.4A3.8 3.8 0 016 2.2zm-1.2 1.2v1.4A2.2 2.2 0 003.4 6L2.1 5.5A3.8 3.8 0 014.8 3.4zM6 5a1 1 0 110 2 1 1 0 010-2zm-2.8 2.2l1.3.5a2.2 2.2 0 001.2 1.4v1.5A3.8 3.8 0 013.2 7.2zm3.3 3.4V9.1a2.2 2.2 0 001.3-1.4l1.3-.5a3.8 3.8 0 01-2.6 3.4z" fill="#38bdf8" />
-        </g>
-        <text x="68" y="17" text-anchor="middle" class="badge-text">KUBERNETES</text>
-      </g>
+  <!-- Panel 5: Cloud, Infrastructure & Zero-Trust DevOps (x=24, y=314, w=872, h=124) -->
+  <g transform="translate(24, 314)">
+    <rect width="872" height="124" fill="url(#panel-bg)" stroke="#1e2e4a" stroke-width="1" rx="5" />
+    <text x="14" y="22" class="panel-title">CLOUD, INFRASTRUCTURE &amp; ZERO-TRUST DEVOPS</text>
+    <text x="858" y="22" text-anchor="end" class="tier-badge">TIER 05</text>
+    <line x1="14" y1="32" x2="858" y2="32" stroke="#16233a" stroke-width="0.75" />
 
-      <!-- Docker (Authentic Whale Container Logo) -->
-      <g transform="translate(128, 0)">
-        <rect width="92" height="26" fill="url(#badge-bg)" stroke="#1e293b" stroke-width="0.8" rx="3" />
-        <g transform="translate(9, 7)">
-          <path d="M1 4.5h1.2v1.2H1zm1.6 0h1.2v1.2H2.6zm1.6 0h1.2v1.2H4.2zm-1.6-1.5h1.2v1.2H2.6zm1.6 0h1.2v1.2H4.2zm1.6 1.5h1.2v1.2H5.8zm1.6 0h1.2v1.2H7.4zm-1.6-1.5h1.2v1.2H5.8zm4 3.5c-.5-.2-.8-.6-.9-1.2H.5C.2 8.5 1.5 10.5 5 10.5c3.2 0 4.8-1.5 5.5-2.8.5.1 1 .1 1.5-.2-.2-.5-.6-.8-1-1z" fill="#60a5fa" />
-        </g>
-        <text x="54" y="17" text-anchor="middle" class="badge-text">DOCKER</text>
+    <!-- 6 Columns across 2 rows -->
+    <!-- Row 1 of Panel 5 -->
+    <!-- Kubernetes -->
+    <g transform="translate(14, 44)">
+      <rect width="268" height="28" fill="url(#chip-bg)" stroke="#2563eb" stroke-width="0.8" rx="3" />
+      <g transform="translate(10, 8)">
+        <path d="M6 1a5 5 0 100 10A5 5 0 006 1zm0 1.2a3.8 3.8 0 013.7 3.3L8.2 6a2.2 2.2 0 00-1.4-1.2V3.4A3.8 3.8 0 016 2.2zm-1.2 1.2v1.4A2.2 2.2 0 003.4 6L2.1 5.5A3.8 3.8 0 014.8 3.4zM6 5a1 1 0 110 2 1 1 0 010-2zm-2.8 2.2l1.3.5a2.2 2.2 0 001.2 1.4v1.5A3.8 3.8 0 013.2 7.2zm3.3 3.4V9.1a2.2 2.2 0 001.3-1.4l1.3-.5a3.8 3.8 0 01-2.6 3.4z" fill="#38bdf8" />
       </g>
+      <text x="34" y="18" class="chip-text">KUBERNETES (K8S)</text>
+      <text x="256" y="18" text-anchor="end" fill="#38bdf8" font-size="8.5" class="mono">ORCHESTRATION</text>
+    </g>
+    <!-- Docker -->
+    <g transform="translate(302, 44)">
+      <rect width="268" height="28" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.8" rx="3" />
+      <g transform="translate(10, 8)">
+        <path d="M1 4.5h1.2v1.2H1zm1.6 0h1.2v1.2H2.6zm1.6 0h1.2v1.2H4.2zm-1.6-1.5h1.2v1.2H2.6zm1.6 0h1.2v1.2H4.2zm1.6 1.5h1.2v1.2H5.8zm1.6 0h1.2v1.2H7.4zm-1.6-1.5h1.2v1.2H5.8zm4 3.5c-.5-.2-.8-.6-.9-1.2H.5C.2 8.5 1.5 10.5 5 10.5c3.2 0 4.8-1.5 5.5-2.8.5.1 1 .1 1.5-.2-.2-.5-.6-.8-1-1z" fill="#60a5fa" />
+      </g>
+      <text x="34" y="18" class="chip-text">DOCKER &amp; PODMAN</text>
+      <text x="256" y="18" text-anchor="end" fill="#60a5fa" font-size="8.5" class="mono">CONTAINERS</text>
+    </g>
+    <!-- Terraform -->
+    <g transform="translate(590, 44)">
+      <rect width="268" height="28" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.8" rx="3" />
+      <g transform="translate(10, 8)">
+        <path d="M1 1h3.2v3.8H1zm3.8 0H8v3.8H4.8zm0 4.2H8V9H4.8zm3.8 0h3.2V9H8.6z" fill="#38bdf8" />
+      </g>
+      <text x="34" y="18" class="chip-text">TERRAFORM (IAC)</text>
+      <text x="256" y="18" text-anchor="end" fill="#38bdf8" font-size="8.5" class="mono">DECLARATIVE</text>
+    </g>
 
-      <!-- Terraform (Authentic 4-Facet Polygon Logo) -->
-      <g transform="translate(228, 0)">
-        <rect width="116" height="26" fill="url(#badge-bg)" stroke="#1e293b" stroke-width="0.8" rx="3" />
-        <g transform="translate(9, 7)">
-          <path d="M1 1h3.2v3.8H1zm3.8 0H8v3.8H4.8zm0 4.2H8V9H4.8zm3.8 0h3.2V9H8.6z" fill="#38bdf8" />
-        </g>
-        <text x="66" y="17" text-anchor="middle" class="badge-text">TERRAFORM</text>
+    <!-- Row 2 of Panel 5 -->
+    <!-- GitHub Actions -->
+    <g transform="translate(14, 80)">
+      <rect width="268" height="28" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.8" rx="3" />
+      <g transform="translate(10, 8)">
+        <path d="M6 0C2.7 0 0 2.7 0 6c0 2.6 1.7 4.8 4.1 5.6.3.1.4-.1.4-.3v-1.1c-1.7.4-2.1-.8-2.1-.8-.3-.7-.7-.9-.7-.9-.5-.4.1-.4.1-.4.6 0 1 .6 1 .6.5.9 1.4.6 1.8.5.1-.4.2-.6.4-.8-1.3-.1-2.7-.7-2.7-3 0-.7.2-1.2.6-1.6-.1-.2-.3-.8.1-1.6 0 0 .5-.2 1.7.6.5-.1 1-.2 1.5-.2s1 .1 1.5.2c1.2-.8 1.7-.6 1.7-.6.4.8.2 1.4.1 1.6.4.4.6.9.6 1.6 0 2.3-1.4 2.9-2.7 3 .2.2.4.6.4 1.2v1.8c0 .2.1.4.4.3C10.3 10.8 12 8.6 12 6c0-3.3-2.7-6-6-6z" fill="#94a3b8" />
       </g>
-
-      <!-- GitHub Actions (Authentic Workflow / Octicon Logo) -->
-      <g transform="translate(352, 0)">
-        <rect width="142" height="26" fill="url(#badge-bg)" stroke="#1e293b" stroke-width="0.8" rx="3" />
-        <g transform="translate(9, 7)">
-          <path d="M6 0C2.7 0 0 2.7 0 6c0 2.6 1.7 4.8 4.1 5.6.3.1.4-.1.4-.3v-1.1c-1.7.4-2.1-.8-2.1-.8-.3-.7-.7-.9-.7-.9-.5-.4.1-.4.1-.4.6 0 1 .6 1 .6.5.9 1.4.6 1.8.5.1-.4.2-.6.4-.8-1.3-.1-2.7-.7-2.7-3 0-.7.2-1.2.6-1.6-.1-.2-.3-.8.1-1.6 0 0 .5-.2 1.7.6.5-.1 1-.2 1.5-.2s1 .1 1.5.2c1.2-.8 1.7-.6 1.7-.6.4.8.2 1.4.1 1.6.4.4.6.9.6 1.6 0 2.3-1.4 2.9-2.7 3 .2.2.4.6.4 1.2v1.8c0 .2.1.4.4.3C10.3 10.8 12 8.6 12 6c0-3.3-2.7-6-6-6z" fill="#94a3b8" />
-        </g>
-        <text x="80" y="17" text-anchor="middle" class="badge-text">GITHUB ACTIONS</text>
+      <text x="34" y="18" class="chip-text">GITHUB ACTIONS CI/CD</text>
+      <text x="256" y="18" text-anchor="end" fill="#94a3b8" font-size="8.5" class="mono">SAST / AUDIT</text>
+    </g>
+    <!-- GCP -->
+    <g transform="translate(302, 80)">
+      <rect width="268" height="28" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.8" rx="3" />
+      <g transform="translate(10, 8)">
+        <path d="M7.5 3a2.5 2.5 0 00-2.3 1.5A3 3 0 002 7a3 3 0 003 3h4.5a2.5 2.5 0 000-5H9a2.5 2.5 0 00-1.5-2z" fill="#60a5fa" />
       </g>
-
-      <!-- GCP (Authentic Cloud Cluster Logo) -->
-      <g transform="translate(502, 0)">
-        <rect width="74" height="26" fill="url(#badge-bg)" stroke="#1e293b" stroke-width="0.8" rx="3" />
-        <g transform="translate(9, 7)">
-          <path d="M7.5 3a2.5 2.5 0 00-2.3 1.5A3 3 0 002 7a3 3 0 003 3h4.5a2.5 2.5 0 000-5H9a2.5 2.5 0 00-1.5-2z" fill="#60a5fa" />
-        </g>
-        <text x="45" y="17" text-anchor="middle" class="badge-text">GCP</text>
+      <text x="34" y="18" class="chip-text">GOOGLE CLOUD (GCP)</text>
+      <text x="256" y="18" text-anchor="end" fill="#60a5fa" font-size="8.5" class="mono">GKE / BIGQUERY</text>
+    </g>
+    <!-- AWS -->
+    <g transform="translate(590, 80)">
+      <rect width="268" height="28" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.8" rx="3" />
+      <g transform="translate(10, 8)">
+        <path d="M1 8.5C3.8 10.2 7.2 10.2 10 8.5c.2-.1.4 0 .3.2-.4.7-1.2 1.2-2.1 1.5-1.5.4-3.1.2-4.5-.7-.2-.1-.1-.3.1-.4zm8.6-.2l1.2.6c.1.1.1.2 0 .3l-1.3.8c-.1.1-.3 0-.3-.1l.1-.6-.6-.2c-.1 0-.1-.2 0-.3l.7-.4c.1-.1.2-.1.2-.1z" fill="#38bdf8" />
       </g>
-
-      <!-- AWS (Authentic AWS Smile Logo) -->
-      <g transform="translate(584, 0)">
-        <rect width="74" height="26" fill="url(#badge-bg)" stroke="#1e293b" stroke-width="0.8" rx="3" />
-        <g transform="translate(9, 7)">
-          <path d="M1 8.5C3.8 10.2 7.2 10.2 10 8.5c.2-.1.4 0 .3.2-.4.7-1.2 1.2-2.1 1.5-1.5.4-3.1.2-4.5-.7-.2-.1-.1-.3.1-.4zm8.6-.2l1.2.6c.1.1.1.2 0 .3l-1.3.8c-.1.1-.3 0-.3-.1l.1-.6-.6-.2c-.1 0-.1-.2 0-.3l.7-.4c.1-.1.2-.1.2-.1z" fill="#38bdf8" />
-        </g>
-        <text x="45" y="17" text-anchor="middle" class="badge-text">AWS</text>
-      </g>
+      <text x="34" y="18" class="chip-text">AMAZON WEB SERVICES</text>
+      <text x="256" y="18" text-anchor="end" fill="#38bdf8" font-size="8.5" class="mono">EKS / S3 / IAM</text>
     </g>
   </g>
 </svg>
