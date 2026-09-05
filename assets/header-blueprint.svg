@@ -1,86 +1,150 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 280" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 290" width="100%" height="100%">
   <defs>
-    <pattern id="arch-grid" width="24" height="24" patternUnits="userSpaceOnUse">
-      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#262626" stroke-width="0.75" stroke-dasharray="2,2"/>
+    <!-- Architectural Grid -->
+    <pattern id="arch-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1f1f1f" stroke-width="0.75" stroke-dasharray="1.5,1.5"/>
     </pattern>
-    <linearGradient id="fade-overlay" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0a0a0a" stop-opacity="0.95" />
-      <stop offset="50%" stop-color="#050505" stop-opacity="0.8" />
-      <stop offset="100%" stop-color="#000000" stop-opacity="0.98" />
+
+    <!-- Chrome Shimmer Sweep -->
+    <linearGradient id="shimmer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.3">
+        <animate attributeName="stop-color" values="#ffffff;#737373;#ffffff" dur="4s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="35%" stop-color="#ffffff" stop-opacity="0.95">
+        <animate attributeName="offset" values="0;1;0" dur="5s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="70%" stop-color="#a3a3a3" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.3" />
     </linearGradient>
-    <linearGradient id="chrome-rule" x1="0%" y1="0%" x2="100%" y2="0%">
+
+    <!-- Scanline Beam -->
+    <linearGradient id="scanline" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
-      <stop offset="25%" stop-color="#e5e5e5" stop-opacity="0.8" />
-      <stop offset="75%" stop-color="#737373" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.08" />
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Mask for Edge Fade -->
+    <linearGradient id="edge-fade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="1" />
+      <stop offset="5%" stop-color="#000000" stop-opacity="0" />
+      <stop offset="95%" stop-color="#000000" stop-opacity="0" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="1" />
     </linearGradient>
   </defs>
 
   <style>
     .mono { font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace; }
-    .serif-title { font-family: 'Cinzel', 'Playfair Display', Georgia, serif; font-weight: 700; letter-spacing: 0.28em; }
+    .serif-title { font-family: 'Cinzel', 'Playfair Display', Georgia, serif; font-weight: 700; letter-spacing: 0.3em; }
     .ink-sub { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; letter-spacing: 0.18em; }
-    .glow-dim { text-shadow: 0 0 12px rgba(255,255,255,0.25); }
-    @keyframes pulse { 0%, 100% { opacity: 0.85; } 50% { opacity: 0.35; } }
-    .blink { animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+
+    /* CSS Keyframe Animations */
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.9; transform: scale(1); }
+      50% { opacity: 0.3; transform: scale(0.95); }
+    }
+    @keyframes radarSpin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes scanDown {
+      0% { transform: translateY(-290px); }
+      100% { transform: translateY(290px); }
+    }
+    @keyframes drawBorder {
+      0% { stroke-dashoffset: 2400; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes beaconBlink {
+      0%, 100% { opacity: 1; fill: #ffffff; }
+      50% { opacity: 0.15; fill: #737373; }
+    }
+    @keyframes typeCursor {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .pulse { animation: pulseGlow 3s ease-in-out infinite; }
+    .beacon { animation: beaconBlink 1.8s ease-in-out infinite; }
+    .cursor { animation: typeCursor 0.9s infinite; }
+    .scanner { animation: scanDown 4.5s linear infinite; }
+    .rotating { transform-origin: 864px 40px; animation: radarSpin 12s linear infinite; }
+    .draw-line { stroke-dasharray: 2400; animation: drawBorder 3.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
   </style>
 
   <!-- Canvas Background -->
-  <rect width="920" height="280" fill="#000000" rx="10" />
-  <rect width="920" height="280" fill="url(#arch-grid)" rx="10" />
-  <rect width="920" height="280" fill="url(#fade-overlay)" rx="10" />
+  <rect width="920" height="290" fill="#000000" rx="10" />
+  <rect width="920" height="290" fill="url(#arch-grid)" rx="10" />
 
-  <!-- Architectural Outer Framing -->
-  <rect x="12" y="12" width="896" height="256" fill="none" stroke="#2a2a2a" stroke-width="1" rx="6" />
-  <rect x="16" y="16" width="888" height="248" fill="none" stroke="#171717" stroke-width="0.75" rx="4" />
-
-  <!-- Corner Coordinates & Crosshairs -->
-  <path d="M 24 36 L 24 24 L 36 24" fill="none" stroke="#ffffff" stroke-width="1.5" />
-  <path d="M 896 36 L 896 24 L 884 24" fill="none" stroke="#ffffff" stroke-width="1.5" />
-  <path d="M 24 244 L 24 256 L 36 256" fill="none" stroke="#ffffff" stroke-width="1.5" />
-  <path d="M 896 244 L 896 256 L 884 256" fill="none" stroke="#ffffff" stroke-width="1.5" />
-
-  <!-- Top Metadata Header -->
-  <text x="44" y="42" fill="#737373" font-size="10" class="mono" font-weight="600">SYS.ID: THE-PALE-ARCHITECT</text>
-  <text x="460" y="42" fill="#525252" font-size="9" text-anchor="middle" class="mono">DISCIPLINE // HIGH-CONCURRENCY DISTRIBUTED SYSTEMS &amp; AUTONOMOUS AGENTS</text>
-  <circle cx="866" cy="39" r="3.5" fill="#ffffff" class="blink" />
-  <text x="854" y="42" fill="#a3a3a3" font-size="9" text-anchor="end" class="mono">STATUS: ACTIVE</text>
-
-  <!-- Divider Rule -->
-  <path d="M 40 54 L 880 54" stroke="url(#chrome-rule)" stroke-width="1" />
-
-  <!-- Central Kanji / Monogram Watermark -->
-  <text x="460" y="165" fill="#141414" font-size="110" font-family="'Noto Serif JP', serif" text-anchor="middle" font-weight="900">構 造</text>
-
-  <!-- Main Persona Display -->
-  <text x="460" y="118" fill="#f5f5f5" font-size="32" text-anchor="middle" class="serif-title glow-dim">THE PALE ARCHITECT</text>
-  <text x="460" y="146" fill="#a3a3a3" font-size="11" text-anchor="middle" class="ink-sub" font-weight="500">FULL-STACK SYSTEMS &amp; AUTONOMOUS AGENTIC ARCHITECTURES</text>
-
-  <!-- Telemetry Row / Specs -->
-  <g transform="translate(110, 172)">
-    <!-- Node 1 -->
-    <rect x="0" y="0" width="160" height="42" fill="#0d0d0d" stroke="#262626" stroke-width="1" rx="3" />
-    <text x="12" y="18" fill="#737373" font-size="8.5" class="mono">01 / RUNTIME</text>
-    <text x="12" y="32" fill="#e5e5e5" font-size="11" font-weight="700" class="mono">GO • RUST • C++</text>
-
-    <!-- Node 2 -->
-    <rect x="180" y="0" width="160" height="42" fill="#0d0d0d" stroke="#262626" stroke-width="1" rx="3" />
-    <text x="192" y="18" fill="#737373" font-size="8.5" class="mono">02 / AGENTIC AI</text>
-    <text x="192" y="32" fill="#e5e5e5" font-size="11" font-weight="700" class="mono">PYTORCH • LLMS</text>
-
-    <!-- Node 3 -->
-    <rect x="360" y="0" width="160" height="42" fill="#0d0d0d" stroke="#262626" stroke-width="1" rx="3" />
-    <text x="372" y="18" fill="#737373" font-size="8.5" class="mono">03 / WEB &amp; CLOUD</text>
-    <text x="372" y="32" fill="#e5e5e5" font-size="11" font-weight="700" class="mono">NEXT.JS • K8S • TS</text>
-
-    <!-- Node 4 -->
-    <rect x="540" y="0" width="160" height="42" fill="#0d0d0d" stroke="#262626" stroke-width="1" rx="3" />
-    <text x="552" y="18" fill="#737373" font-size="8.5" class="mono">04 / DATA MESH</text>
-    <text x="552" y="32" fill="#e5e5e5" font-size="11" font-weight="700" class="mono">PGSQL • VECTOR</text>
+  <!-- Animated Scanner Laser -->
+  <g class="scanner">
+    <rect x="0" y="0" width="920" height="60" fill="url(#scanline)" />
+    <line x1="12" y1="60" x2="908" y2="60" stroke="#ffffff" stroke-width="0.75" stroke-opacity="0.35" />
   </g>
 
-  <!-- Bottom Technical Legend -->
-  <path d="M 40 232 L 880 232" stroke="#262626" stroke-width="0.75" />
-  <text x="44" y="247" fill="#525252" font-size="8.5" class="mono">PROTOCOL: DETERMINISTIC // ZERO CYBERPUNK CLICHÉS // MONOCHROME PRECISION</text>
-  <text x="876" y="247" fill="#737373" font-size="8.5" text-anchor="end" class="mono">LATENCY: 0.42ms // EPOCH 2026.09</text>
+  <!-- Architectural Outer Framing with Draw Animation -->
+  <rect x="12" y="12" width="896" height="266" fill="none" stroke="#262626" stroke-width="1.2" rx="6" class="draw-line" />
+  <rect x="16" y="16" width="888" height="258" fill="none" stroke="#141414" stroke-width="0.75" rx="4" />
+
+  <!-- Corner Crosshairs -->
+  <path d="M 22 34 L 22 22 L 34 22" fill="none" stroke="#ffffff" stroke-width="1.5" />
+  <path d="M 898 34 L 898 22 L 886 22" fill="none" stroke="#ffffff" stroke-width="1.5" />
+  <path d="M 22 256 L 22 268 L 34 268" fill="none" stroke="#ffffff" stroke-width="1.5" />
+  <path d="M 898 256 L 898 268 L 886 268" fill="none" stroke="#ffffff" stroke-width="1.5" />
+
+  <!-- Rotating Reticle in Top Right -->
+  <g class="rotating">
+    <circle cx="864" cy="40" r="10" fill="none" stroke="#333333" stroke-width="0.75" stroke-dasharray="2,2" />
+    <line x1="850" y1="40" x2="878" y2="40" stroke="#525252" stroke-width="0.75" />
+    <line x1="864" y1="26" x2="864" y2="54" stroke="#525252" stroke-width="0.75" />
+  </g>
+
+  <!-- Top Metadata Header -->
+  <text x="44" y="44" fill="#a3a3a3" font-size="10.5" class="mono" font-weight="700">SYS.ID // THE-PALE-ARCHITECT</text>
+  <text x="460" y="44" fill="#737373" font-size="9.5" text-anchor="middle" class="mono">DISCIPLINE // HIGH-CONCURRENCY DISTRIBUTED SYSTEMS &amp; AGENTIC LOOPS</text>
+  
+  <circle cx="830" cy="40" r="3.5" class="beacon" />
+  <text x="818" y="44" fill="#e5e5e5" font-size="9" text-anchor="end" class="mono">ONLINE</text>
+
+  <!-- Divider Rule -->
+  <line x1="36" y1="58" x2="884" y2="58" stroke="#333333" stroke-width="1" />
+
+  <!-- Central Watermark -->
+  <text x="460" y="172" fill="#121212" font-size="114" font-family="'Noto Serif JP', serif" text-anchor="middle" font-weight="900">構 造</text>
+
+  <!-- Animated Main Title -->
+  <text x="460" y="122" fill="url(#shimmer)" font-size="33" text-anchor="middle" class="serif-title">THE PALE ARCHITECT</text>
+  <text x="460" y="150" fill="#a3a3a3" font-size="11" text-anchor="middle" class="ink-sub" font-weight="600">FULL-STACK SYSTEMS • AUTONOMOUS AGENTS • DISTRIBUTED RUNTIMES</text>
+
+  <!-- Telemetry Row / Specs with Subtle Hover/Pulse Nodes -->
+  <g transform="translate(100, 178)">
+    <!-- Node 1 -->
+    <rect x="0" y="0" width="168" height="44" fill="#0d0d0d" stroke="#262626" stroke-width="1" rx="4" />
+    <text x="14" y="18" fill="#737373" font-size="8.5" class="mono">01 // RUNTIMES</text>
+    <text x="14" y="34" fill="#f5f5f5" font-size="11.5" font-weight="700" class="mono">RUST • GO • C++</text>
+    <circle cx="152" cy="16" r="2.5" fill="#525252" />
+
+    <!-- Node 2 -->
+    <rect x="184" y="0" width="168" height="44" fill="#0d0d0d" stroke="#262626" stroke-width="1" rx="4" />
+    <text x="198" y="18" fill="#737373" font-size="8.5" class="mono">02 // AGENTIC AI</text>
+    <text x="198" y="34" fill="#f5f5f5" font-size="11.5" font-weight="700" class="mono">PYTORCH • LLMS</text>
+    <circle cx="336" cy="16" r="2.5" fill="#525252" />
+
+    <!-- Node 3 -->
+    <rect x="368" y="0" width="168" height="44" fill="#0d0d0d" stroke="#262626" stroke-width="1" rx="4" />
+    <text x="382" y="18" fill="#737373" font-size="8.5" class="mono">03 // WEB &amp; CLOUD</text>
+    <text x="382" y="34" fill="#f5f5f5" font-size="11.5" font-weight="700" class="mono">NEXT.JS • K8S • TS</text>
+    <circle cx="520" cy="16" r="2.5" fill="#525252" />
+
+    <!-- Node 4 -->
+    <rect x="552" y="0" width="168" height="44" fill="#0d0d0d" stroke="#262626" stroke-width="1" rx="4" />
+    <text x="566" y="18" fill="#737373" font-size="8.5" class="mono">04 // PERSISTENCE</text>
+    <text x="566" y="34" fill="#f5f5f5" font-size="11.5" font-weight="700" class="mono">PGSQL • VECTOR</text>
+    <circle cx="704" cy="16" r="2.5" fill="#525252" />
+  </g>
+
+  <!-- Bottom Technical Legend with Cursor Animation -->
+  <line x1="36" y1="242" x2="884" y2="242" stroke="#262626" stroke-width="0.75" />
+  <text x="44" y="258" fill="#737373" font-size="9" class="mono">PROTOCOL: DETERMINISTIC // ZERO CYBERPUNK CLICHÉS // MONOCHROME PRECISION<tspan class="cursor" fill="#ffffff">_</tspan></text>
+  <text x="876" y="258" fill="#737373" font-size="9" text-anchor="end" class="mono">LATENCY: 0.38ms // EPOCH 2026.09</text>
 </svg>

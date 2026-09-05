@@ -1,6 +1,6 @@
 <div align="center">
 
-<!-- Header Architectural Blueprint Banner -->
+<!-- Animated Header Architectural Blueprint Banner -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/header-blueprint.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/header-blueprint.svg">
@@ -9,7 +9,7 @@
 
 <br/>
 
-<!-- Real-time Status Telemetry HUD -->
+<!-- Real-Time Status Telemetry HUD -->
 <picture>
   <img src="./assets/status-telemetry.svg" alt="Status Telemetry" width="100%">
 </picture>
@@ -18,30 +18,27 @@
 
 [![GitHub followers](https://img.shields.io/github/followers/palearchitect?style=for-the-badge&logo=github&logoColor=white&color=0d0d0d&labelColor=000000)](https://github.com/palearchitect)
 [![Repositories](https://img.shields.io/badge/FOCUS-AUTONOMOUS%20AGENTS%20%26%20DISTRIBUTED%20SYSTEMS-ffffff?style=for-the-badge&color=0d0d0d&labelColor=000000)](https://github.com/palearchitect)
-[![License](https://img.shields.io/badge/STATUS-OPERATIONAL%20%5B2026%5D-ffffff?style=for-the-badge&color=0d0d0d&labelColor=000000)](mailto:thepalearchitect@gmail.com)
+[![Status](https://img.shields.io/badge/STATUS-OPERATIONAL%20%5B2026%5D-ffffff?style=for-the-badge&color=0d0d0d&labelColor=000000)](mailto:thepalearchitect@gmail.com)
 
 </div>
 
 ---
 
-### `// 01. ARCHITECTURAL OVERVIEW & IDENTITY`
+### `// 01. ARCHITECTURAL IDENTITY & MANIFESTO`
 
-```
-┌──────────────────────────────────────────────────────────────────────────────┐
-│  ID          : ThePaleArchitect (palearchitect)                             │
-│  DOMAIN      : Full-Stack Systems, Autonomous Agents & Distributed Engines   │
-│  METHODOLOGY : Deterministic Execution • Zero Cyberpunk Clichés • Zero Fluff │
-│  COORDINATES : thepalearchitect@gmail.com                                    │
-└──────────────────────────────────────────────────────────────────────────────┘
-```
+<div align="center">
+  <img src="./assets/terminal-typing.svg" alt="Architectural CLI Execution" width="100%">
+</div>
 
-> **I architect and engineer resilient, high-concurrency software systems, autonomous AI agent frameworks, and low-latency cloud infrastructure.** My work bridges deterministic systems engineering (Rust / Go / C++) with state-of-the-art agent orchestration, vector retrieval meshes, and modern high-performance web platforms.
+<br/>
+
+> **I architect and engineer resilient, high-concurrency software systems, autonomous AI agent frameworks, and low-latency cloud infrastructure.** My work bridges deterministic systems engineering (`Rust` / `Go` / `C++`) with state-of-the-art agent orchestration (`PyTorch` / `LangChain` / `LlamaIndex`), vector retrieval meshes, and modern high-performance web platforms.
 
 <br/>
 
 ---
 
-### `// 02. SYSTEM TOPOLOGY & ARCHITECTURAL TIERS`
+### `// 02. SYSTEM TOPOLOGY & REAL-TIME DATA BUS`
 
 <div align="center">
   <img src="./assets/system-architecture.svg" alt="System Topology Matrix" width="100%">
@@ -51,7 +48,17 @@
 
 ---
 
-### `// 03. TECHNICAL SPECIFICATIONS & ACTIVE STACK`
+### `// 03. TECHNICAL SPECIFICATIONS & ANIMATED STACK MATRIX`
+
+<div align="center">
+  <img src="./assets/tech-matrix.svg" alt="Animated Technical Specification Matrix & Infinite Marquee" width="100%">
+</div>
+
+<br/>
+
+<details>
+<summary><b>▸ Click to expand full raw technology inventory</b></summary>
+<br/>
 
 <table>
   <tr>
@@ -114,11 +121,19 @@
   </tr>
 </table>
 
+</details>
+
 <br/>
 
 ---
 
-### `// 04. CORE DISCIPLINES & FLAGSHIP DOMAINS`
+### `// 04. FLAGSHIP DOMAINS & ARCHITECTURAL PILLARS`
+
+<div align="center">
+  <img src="./assets/projects-marquee.svg" alt="Flagship Pillars Auto-Glide Slider Marquee" width="100%">
+</div>
+
+<br/>
 
 ```rust
 pub struct EngineeringPillars {
@@ -135,13 +150,6 @@ impl EngineeringPillars {
     }
 }
 ```
-
-<br/>
-
-- ⚡ **Autonomous Agent Frameworks & Tooling**: Designing deterministic loop orchestrators, multi-agent evaluation suites, and stateful model reasoning systems with tool-calling capabilities.
-- 🏛️ **Distributed Microservices & Systems**: High-throughput message streaming, gRPC RPC contracts, lock-free data pipelines, and async IO engines in Go and Rust.
-- 🔍 **Vector Retrieval & Knowledge Graphs**: Semantic embedding pipelines, hybrid dense/sparse search indices, and low-latency contextual augmentation.
-- 🛡️ **DevSecOps & Platform Automation**: Immutable Kubernetes deployments, automated SAST security auditing, container sandboxing, and zero-trust cloud architecture.
 
 <br/>
 
