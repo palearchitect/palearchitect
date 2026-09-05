@@ -12,7 +12,7 @@
     .status-dot { animation: pulse 2s infinite ease-in-out; }
   </style>
 
-  <rect width="920" height="64" fill="url(#bar-bg)" stroke="#262626" stroke-width="1" rx="6" />
+  <rect width="920" height="64" fill="url(#bar-bg)" stroke="#222222" stroke-width="1" rx="6" />
 
   <!-- Metric 1: System State -->
   <g transform="translate(30, 20)">
@@ -24,18 +24,18 @@
   <!-- Metric 2: Primary Focus -->
   <g transform="translate(260, 20)">
     <text x="0" y="10" fill="#737373" font-size="8.5" class="mono">CURRENT WORKSTREAM</text>
-    <text x="0" y="24" fill="#e5e5e5" font-size="11" font-weight="700" class="mono">AGENTIC PROTOCOLS &amp; DISTRIBUTED IO</text>
+    <text x="0" y="24" fill="#e5e5e5" font-size="11" font-weight="700" class="mono">AGENTIC PROTOCOLS • DISTRIBUTED IO</text>
   </g>
 
   <!-- Metric 3: Concurrency Engine -->
   <g transform="translate(560, 20)">
-    <text x="0" y="10" fill="#737373" font-size="8.5" class="mono">RUNTIME ENVIRONMENT</text>
+    <text x="0" y="10" fill="#737373" font-size="8.5" class="mono">ACTIVE RUNTIME</text>
     <text x="0" y="24" fill="#e5e5e5" font-size="11" font-weight="700" class="mono">RUST • GO • PYTORCH • NEXT.JS</text>
   </g>
 
   <!-- Metric 4: Coordinates -->
   <g transform="translate(790, 20)">
     <text x="0" y="10" fill="#737373" font-size="8.5" class="mono">SECURITY POSTURE</text>
-    <text x="0" y="24" fill="#a3a3a3" font-size="11" font-weight="700" class="mono">ZERO-TRUST // SAST</text>
+    <text x="0" y="24" fill="#a3a3a3" font-size="11" font-weight="700" class="mono">ZERO-TRUST • SAST</text>
   </g>
 </svg>

@@ -1,6 +1,6 @@
 <div align="center">
 
-<!-- Animated Header Architectural Blueprint Banner -->
+<!-- Architectural Header Banner -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/header-blueprint.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/header-blueprint.svg">
@@ -17,17 +17,15 @@
 <br/>
 
 [![GitHub followers](https://img.shields.io/github/followers/palearchitect?style=for-the-badge&logo=github&logoColor=white&color=0d0d0d&labelColor=000000)](https://github.com/palearchitect)
-[![Repositories](https://img.shields.io/badge/FOCUS-AUTONOMOUS%20AGENTS%20%26%20DISTRIBUTED%20SYSTEMS-ffffff?style=for-the-badge&color=0d0d0d&labelColor=000000)](https://github.com/palearchitect)
+[![Focus](https://img.shields.io/badge/FOCUS-AUTONOMOUS%20AGENTS%20%26%20DISTRIBUTED%20SYSTEMS-ffffff?style=for-the-badge&color=0d0d0d&labelColor=000000)](https://github.com/palearchitect)
 [![Status](https://img.shields.io/badge/STATUS-OPERATIONAL%20%5B2026%5D-ffffff?style=for-the-badge&color=0d0d0d&labelColor=000000)](mailto:thepalearchitect@gmail.com)
 
 </div>
 
 <br/>
 
-### `// 01. ARCHITECTURAL IDENTITY & MANIFESTO`
-
 <div align="center">
-  <img src="./assets/terminal-typing.svg" alt="Architectural CLI Execution" width="100%">
+  <img src="./assets/terminal-typing.svg" alt="Architectural Execution Simulation" width="100%">
 </div>
 
 <br/>
@@ -36,24 +34,20 @@
 
 <br/><br/>
 
-### `// 02. SYSTEM TOPOLOGY & REAL-TIME DATA BUS`
-
 <div align="center">
   <img src="./assets/system-architecture.svg" alt="System Topology Matrix" width="100%">
 </div>
 
 <br/><br/>
 
-### `// 03. TECHNICAL SPECIFICATIONS & ANIMATED STACK MATRIX`
-
 <div align="center">
-  <img src="./assets/tech-matrix.svg" alt="Animated Technical Specification Matrix & Infinite Marquee" width="100%">
+  <img src="./assets/tech-matrix.svg" alt="Technical Specification Matrix & Continuous Marquee" width="100%">
 </div>
 
 <br/>
 
 <details>
-<summary><b>▸ Expand raw inventory matrix</b></summary>
+<summary><b>▸ Expand full inventory matrix</b></summary>
 <br/>
 
 <table>
@@ -121,8 +115,6 @@
 
 <br/><br/>
 
-### `// 04. FLAGSHIP DOMAINS & ARCHITECTURAL PILLARS`
-
 <div align="center">
   <img src="./assets/projects-marquee.svg" alt="Flagship Pillars Auto-Glide Slider Marquee" width="100%">
 </div>
@@ -147,52 +139,16 @@ impl EngineeringPillars {
 
 <br/><br/>
 
-### `// 05. LIVE TELEMETRY & GITHUB ACTIVITY`
-
 <div align="center">
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td width="50%" align="center">
-        <img src="https://github-readme-stats.vercel.app/api?username=palearchitect&show_icons=true&theme=dark&bg_color=050505&title_color=f5f5f5&text_color=a3a3a3&icon_color=ffffff&border_color=262626&hide_border=false" width="100%" alt="palearchitect Stats" />
-      </td>
-      <td width="50%" align="center">
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=palearchitect&layout=compact&theme=dark&bg_color=050505&title_color=f5f5f5&text_color=a3a3a3&border_color=262626&hide_border=false" width="100%" alt="Top Languages" />
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2" align="center">
-        <img src="https://github-readme-streak-stats.herokuapp.com/?user=palearchitect&theme=dark&background=050505&border=262626&stroke=ffffff&ring=ffffff&fire=ffffff&currStreakNum=ffffff&sideNums=a3a3a3&sideLabels=737373&dates=737373&hide_border=false" width="100%" alt="GitHub Streak" />
-      </td>
-    </tr>
-  </table>
+  <img src="./assets/github-telemetry.svg" alt="System Telemetry & Activity" width="100%">
+  <br/><br/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=palearchitect&theme=dark&background=060606&border=222222&stroke=ffffff&ring=ffffff&fire=ffffff&currStreakNum=ffffff&sideNums=a3a3a3&sideLabels=737373&dates=737373&hide_border=false" width="100%" alt="GitHub Streak" />
 </div>
 
 <br/><br/>
 
-### `// 06. COORDINATES & SECURE CHANNELS`
-
 <div align="center">
-
-```
-  ┌────────────────────────────────────────────────────────────────────────┐
-  │                                                                        │
-  │   EMAIL       ▸  thepalearchitect@gmail.com                            │
-  │   GITHUB      ▸  github.com/palearchitect                              │
-  │   X / TWITTER ▸  x.com/ThePaleArchitect                                │
-  │   LINKEDIN    ▸  linkedin.com/in/thepalearchitect                      │
-  │                                                                        │
-  └────────────────────────────────────────────────────────────────────────┘
-```
-
-<br/>
-
-[![Email](https://img.shields.io/badge/EMAIL-thepalearchitect%40gmail.com-000000?style=for-the-badge&logo=gmail&logoColor=white)](mailto:thepalearchitect@gmail.com)
-[![GitHub](https://img.shields.io/badge/GITHUB-palearchitect-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/palearchitect)
-[![X/Twitter](https://img.shields.io/badge/X-@ThePaleArchitect-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/ThePaleArchitect)
-[![LinkedIn](https://img.shields.io/badge/LINKEDIN-/in/thepalearchitect-000000?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/thepalearchitect)
-
-<br/>
-
-<sub><b>THE PALE ARCHITECT</b> // STARK MONOCHROME EDITORIAL PRECISION // LATENCY OPTIMIZED // DETERMINISTIC EXCELLENCE</sub>
-
+  <img src="./assets/social-dock.svg" alt="Coordinates & Secure Channels" width="100%">
+  <br/><br/>
+  <sub><b>THE PALE ARCHITECT</b> • STARK MONOCHROME EDITORIAL PRECISION • LATENCY OPTIMIZED • DETERMINISTIC EXCELLENCE</sub>
 </div>
