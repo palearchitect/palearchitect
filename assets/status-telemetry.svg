@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 64" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bar-bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0a0a0a" />
+      <stop offset="50%" stop-color="#121212" />
+      <stop offset="100%" stop-color="#0a0a0a" />
+    </linearGradient>
+  </defs>
+  <style>
+    .mono { font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+    .status-dot { animation: pulse 2s infinite ease-in-out; }
+  </style>
+
+  <rect width="920" height="64" fill="url(#bar-bg)" stroke="#262626" stroke-width="1" rx="6" />
+
+  <!-- Metric 1: System State -->
+  <g transform="translate(30, 20)">
+    <circle cx="6" cy="12" r="4" fill="#ffffff" class="status-dot" />
+    <text x="18" y="10" fill="#737373" font-size="8.5" class="mono">CORE STATE</text>
+    <text x="18" y="24" fill="#f5f5f5" font-size="11" font-weight="700" class="mono">SYSTEMS OPERATIONAL</text>
+  </g>
+
+  <!-- Metric 2: Primary Focus -->
+  <g transform="translate(260, 20)">
+    <text x="0" y="10" fill="#737373" font-size="8.5" class="mono">CURRENT WORKSTREAM</text>
+    <text x="0" y="24" fill="#e5e5e5" font-size="11" font-weight="700" class="mono">AGENTIC PROTOCOLS &amp; DISTRIBUTED IO</text>
+  </g>
+
+  <!-- Metric 3: Concurrency Engine -->
+  <g transform="translate(560, 20)">
+    <text x="0" y="10" fill="#737373" font-size="8.5" class="mono">RUNTIME ENVIRONMENT</text>
+    <text x="0" y="24" fill="#e5e5e5" font-size="11" font-weight="700" class="mono">RUST • GO • PYTORCH • NEXT.JS</text>
+  </g>
+
+  <!-- Metric 4: Coordinates -->
+  <g transform="translate(790, 20)">
+    <text x="0" y="10" fill="#737373" font-size="8.5" class="mono">SECURITY POSTURE</text>
+    <text x="0" y="24" fill="#a3a3a3" font-size="11" font-weight="700" class="mono">ZERO-TRUST // SAST</text>
+  </g>
+</svg>

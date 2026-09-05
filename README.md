@@ -16,8 +16,8 @@
 
 <br/><br/>
 
-[![GitHub followers](https://img.shields.io/github/followers/ThePaleArchitect?style=for-the-badge&logo=github&logoColor=white&color=0d0d0d&labelColor=000000)](https://github.com/ThePaleArchitect)
-[![Repositories](https://img.shields.io/badge/FOCUS-AUTONOMOUS%20AGENTS%20%26%20DISTRIBUTED%20SYSTEMS-ffffff?style=for-the-badge&color=0d0d0d&labelColor=000000)](https://github.com/ThePaleArchitect)
+[![GitHub followers](https://img.shields.io/github/followers/palearchitect?style=for-the-badge&logo=github&logoColor=white&color=0d0d0d&labelColor=000000)](https://github.com/palearchitect)
+[![Repositories](https://img.shields.io/badge/FOCUS-AUTONOMOUS%20AGENTS%20%26%20DISTRIBUTED%20SYSTEMS-ffffff?style=for-the-badge&color=0d0d0d&labelColor=000000)](https://github.com/palearchitect)
 [![License](https://img.shields.io/badge/STATUS-OPERATIONAL%20%5B2026%5D-ffffff?style=for-the-badge&color=0d0d0d&labelColor=000000)](mailto:thepalearchitect@gmail.com)
 
 </div>
@@ -28,7 +28,7 @@
 
 ```
 ┌──────────────────────────────────────────────────────────────────────────────┐
-│  ID          : ThePaleArchitect                                              │
+│  ID          : ThePaleArchitect (palearchitect)                             │
 │  DOMAIN      : Full-Stack Systems, Autonomous Agents & Distributed Engines   │
 │  METHODOLOGY : Deterministic Execution • Zero Cyberpunk Clichés • Zero Fluff │
 │  COORDINATES : thepalearchitect@gmail.com                                    │
@@ -153,15 +153,15 @@ impl EngineeringPillars {
   <table border="0" cellspacing="0" cellpadding="0">
     <tr>
       <td width="50%" align="center">
-        <img src="https://github-readme-stats.vercel.app/api?username=ThePaleArchitect&show_icons=true&theme=dark&bg_color=050505&title_color=f5f5f5&text_color=a3a3a3&icon_color=ffffff&border_color=262626&hide_border=false" width="100%" alt="ThePaleArchitect Stats" />
+        <img src="https://github-readme-stats.vercel.app/api?username=palearchitect&show_icons=true&theme=dark&bg_color=050505&title_color=f5f5f5&text_color=a3a3a3&icon_color=ffffff&border_color=262626&hide_border=false" width="100%" alt="palearchitect Stats" />
       </td>
       <td width="50%" align="center">
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ThePaleArchitect&layout=compact&theme=dark&bg_color=050505&title_color=f5f5f5&text_color=a3a3a3&border_color=262626&hide_border=false" width="100%" alt="Top Languages" />
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=palearchitect&layout=compact&theme=dark&bg_color=050505&title_color=f5f5f5&text_color=a3a3a3&border_color=262626&hide_border=false" width="100%" alt="Top Languages" />
       </td>
     </tr>
     <tr>
       <td colspan="2" align="center">
-        <img src="https://github-readme-streak-stats.herokuapp.com/?user=ThePaleArchitect&theme=dark&background=050505&border=262626&stroke=ffffff&ring=ffffff&fire=ffffff&currStreakNum=ffffff&sideNums=a3a3a3&sideLabels=737373&dates=737373&hide_border=false" width="100%" alt="GitHub Streak" />
+        <img src="https://github-readme-streak-stats.herokuapp.com/?user=palearchitect&theme=dark&background=050505&border=262626&stroke=ffffff&ring=ffffff&fire=ffffff&currStreakNum=ffffff&sideNums=a3a3a3&sideLabels=737373&dates=737373&hide_border=false" width="100%" alt="GitHub Streak" />
       </td>
     </tr>
   </table>
@@ -179,7 +179,7 @@ impl EngineeringPillars {
   ┌────────────────────────────────────────────────────────────────────────┐
   │                                                                        │
   │   EMAIL       ▸  thepalearchitect@gmail.com                            │
-  │   GITHUB      ▸  github.com/ThePaleArchitect                           │
+  │   GITHUB      ▸  github.com/palearchitect                              │
   │   X / TWITTER ▸  x.com/ThePaleArchitect                                │
   │   LINKEDIN    ▸  linkedin.com/in/thepalearchitect                      │
   │                                                                        │
@@ -189,7 +189,7 @@ impl EngineeringPillars {
 <br/>
 
 [![Email](https://img.shields.io/badge/EMAIL-thepalearchitect%40gmail.com-000000?style=for-the-badge&logo=gmail&logoColor=white)](mailto:thepalearchitect@gmail.com)
-[![GitHub](https://img.shields.io/badge/GITHUB-ThePaleArchitect-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ThePaleArchitect)
+[![GitHub](https://img.shields.io/badge/GITHUB-palearchitect-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/palearchitect)
 [![X/Twitter](https://img.shields.io/badge/X-@ThePaleArchitect-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/ThePaleArchitect)
 [![LinkedIn](https://img.shields.io/badge/LINKEDIN-/in/thepalearchitect-000000?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/thepalearchitect)
 
