@@ -62,15 +62,15 @@
   <text x="460" y="112" fill="url(#ink-grad)" font-size="34" text-anchor="middle" class="editorial-serif">THE PALE ARCHITECT</text>
   <text x="460" y="142" fill="#9ca3af" font-size="10.5" text-anchor="middle" class="editorial-sans">FULL-STACK SYSTEMS • <tspan fill="#a855f7">AUTONOMOUS AGENTS</tspan> • <tspan fill="#f97316">DISTRIBUTED RUNTIMES</tspan></text>
 
-  <!-- Bottom Telemetry: Stack Stacks + Real-Time Date + Real-Time UTC Time -->
+  <!-- Bottom Coordinates Matrix: Core Stacks + Exact Coordinates + Time Zone -->
   <g transform="translate(0, 192)">
-    <!-- Left: Stack Badges -->
+    <!-- Left: Core Stacks -->
     <text x="36" y="0" fill="#9ca3af" font-size="9" class="mono"><tspan fill="#f97316">RUST</tspan> • <tspan fill="#00add8">GO</tspan> • <tspan fill="#ee4c2c">PYTORCH</tspan> • <tspan fill="#ffffff">NEXT.JS</tspan></text>
     
-    <!-- Center: Real-Time Dynamic Date -->
-    <text x="460" y="0" fill="#f3f4f6" font-size="9.5" text-anchor="middle" class="mono" id="realtime-date"><tspan fill="#9ca3af">DATE:</tspan> 2026.09.05</text>
+    <!-- Center: Exact Coordinates -->
+    <text x="460" y="0" fill="#f3f4f6" font-size="9" text-anchor="middle" class="mono">41.0081° N, 28.9778° E</text>
     
-    <!-- Right: Real-Time Dynamic UTC Time -->
-    <text x="884" y="0" fill="#f3f4f6" font-size="9.5" text-anchor="end" class="mono" id="realtime-time"><tspan fill="#9ca3af">UTC TIME:</tspan> <tspan fill="#22c55e" font-weight="700">16:37:00</tspan></text>
+    <!-- Right: Time Zone -->
+    <text x="884" y="0" fill="#9ca3af" font-size="9" text-anchor="end" class="mono">TZ: <tspan fill="#22c55e" font-weight="700">UTC+3 (TRT)</tspan></text>
   </g>
 </svg>
