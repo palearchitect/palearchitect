@@ -2,22 +2,16 @@
   <defs>
     <!-- Background Fine Grid -->
     <pattern id="fine-grid" width="24" height="24" patternUnits="userSpaceOnUse">
-      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#101726" stroke-width="0.75" />
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#222530" stroke-width="0.75" />
     </pattern>
 
     <!-- Chrome Title Shimmer -->
     <linearGradient id="ink-grad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#ffffff" />
       <stop offset="40%" stop-color="#f8fafc" />
-      <stop offset="75%" stop-color="#93c5fd" />
-      <stop offset="100%" stop-color="#38bdf8" />
+      <stop offset="80%" stop-color="#cbd5e1" />
+      <stop offset="100%" stop-color="#94a3b8" />
     </linearGradient>
-
-    <!-- Subtle Ambient Glow -->
-    <radialGradient id="ambient-cyan" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.12" />
-      <stop offset="100%" stop-color="#0284c7" stop-opacity="0" />
-    </radialGradient>
   </defs>
 
   <style>
@@ -43,36 +37,35 @@
     .status-live { transform-origin: 872px 34px; animation: pulseLive 2.2s infinite ease-in-out; }
   </style>
 
-  <!-- Deep Ground -->
-  <rect width="920" height="230" fill="#04060a" rx="6" />
+  <!-- Ground: Rich Studio Gray -->
+  <rect width="920" height="230" fill="#121319" rx="6" />
   <rect width="920" height="230" fill="url(#fine-grid)" rx="6" />
-  <rect width="920" height="230" fill="url(#ambient-cyan)" rx="6" />
 
   <!-- Outer Framing -->
-  <rect x="12" y="12" width="896" height="206" fill="none" stroke="#172033" stroke-width="1" rx="4" />
+  <rect x="12" y="12" width="896" height="206" fill="none" stroke="#252836" stroke-width="1" rx="4" />
 
-  <!-- Corner Drafting Marks with Semantic Accent -->
-  <path d="M 8 22 L 22 22 M 22 8 L 22 22" stroke="#38bdf8" stroke-width="1.2" />
-  <path d="M 912 22 L 898 22 M 898 8 L 898 22" stroke="#38bdf8" stroke-width="1.2" />
-  <path d="M 8 208 L 22 208 M 22 222 L 22 208" stroke="#38bdf8" stroke-width="1.2" />
-  <path d="M 912 208 L 898 208 M 898 222 L 898 208" stroke="#38bdf8" stroke-width="1.2" />
+  <!-- Corner Drafting Marks -->
+  <path d="M 8 22 L 22 22 M 22 8 L 22 22" stroke="#4b5563" stroke-width="1.2" />
+  <path d="M 912 22 L 898 22 M 898 8 L 898 22" stroke="#4b5563" stroke-width="1.2" />
+  <path d="M 8 208 L 22 208 M 22 222 L 22 208" stroke="#4b5563" stroke-width="1.2" />
+  <path d="M 912 208 L 898 208 M 898 222 L 898 208" stroke="#4b5563" stroke-width="1.2" />
 
   <!-- Top Metadata Bar -->
-  <text x="36" y="38" fill="#94a3b8" font-size="9.5" class="mono">SYSTEMS SPECIFICATION • <tspan fill="#38bdf8" font-weight="700">VOL. 01</tspan></text>
-  <circle cx="872" cy="34" r="3.5" fill="#38bdf8" class="status-live" />
-  <text x="860" y="38" fill="#93c5fd" font-size="9" text-anchor="end" class="mono" font-weight="700">ONLINE</text>
+  <text x="36" y="38" fill="#9ca3af" font-size="9.5" class="mono">SYSTEMS SPECIFICATION • <tspan fill="#ffffff" font-weight="700">VOL. 01</tspan></text>
+  <circle cx="872" cy="34" r="3.5" fill="#22c55e" class="status-live" />
+  <text x="860" y="38" fill="#4ade80" font-size="9" text-anchor="end" class="mono" font-weight="700">ONLINE</text>
 
   <!-- Large Editorial Japanese Kanji Watermark -->
-  <text x="460" y="146" fill="#09101d" font-size="122" font-family="'Noto Serif JP', serif" text-anchor="middle" font-weight="900">建築</text>
+  <text x="460" y="146" fill="#1a1c24" font-size="122" font-family="'Noto Serif JP', serif" text-anchor="middle" font-weight="900">建築</text>
 
   <!-- Primary Headline Typography -->
   <text x="460" y="112" fill="url(#ink-grad)" font-size="34" text-anchor="middle" class="editorial-serif">THE PALE ARCHITECT</text>
-  <text x="460" y="142" fill="#94a3b8" font-size="10.5" text-anchor="middle" class="editorial-sans">FULL-STACK SYSTEMS • <tspan fill="#60a5fa">AUTONOMOUS AGENTS</tspan> • <tspan fill="#cbd5e1">DISTRIBUTED RUNTIMES</tspan></text>
+  <text x="460" y="142" fill="#9ca3af" font-size="10.5" text-anchor="middle" class="editorial-sans">FULL-STACK SYSTEMS • <tspan fill="#a855f7">AUTONOMOUS AGENTS</tspan> • <tspan fill="#f97316">DISTRIBUTED RUNTIMES</tspan></text>
 
-  <!-- Bottom Coordinates Matrix -->
+  <!-- Bottom Coordinates Matrix with Authentic Accents -->
   <g transform="translate(0, 192)">
-    <text x="36" y="0" fill="#64748b" font-size="9" class="mono"><tspan fill="#38bdf8">RUST</tspan> • <tspan fill="#60a5fa">GO</tspan> • <tspan fill="#93c5fd">PYTORCH</tspan> • <tspan fill="#e2e8f0">NEXT.JS</tspan></text>
-    <text x="460" y="0" fill="#475569" font-size="9" text-anchor="middle" class="mono">40.7128° N, 74.0060° W</text>
-    <text x="884" y="0" fill="#64748b" font-size="9" text-anchor="end" class="mono">LATENCY: <tspan fill="#38bdf8">0.38ms</tspan></text>
+    <text x="36" y="0" fill="#9ca3af" font-size="9" class="mono"><tspan fill="#f97316">RUST</tspan> • <tspan fill="#00add8">GO</tspan> • <tspan fill="#ee4c2c">PYTORCH</tspan> • <tspan fill="#ffffff">NEXT.JS</tspan></text>
+    <text x="460" y="0" fill="#6b7280" font-size="9" text-anchor="middle" class="mono">40.7128° N, 74.0060° W</text>
+    <text x="884" y="0" fill="#9ca3af" font-size="9" text-anchor="end" class="mono">LATENCY: <tspan fill="#22c55e">0.38ms</tspan></text>
   </g>
 </svg>

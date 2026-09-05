@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 200" width="100%" height="100%">
   <defs>
     <linearGradient id="term-bg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0c1322" />
-      <stop offset="100%" stop-color="#070b14" />
+      <stop offset="0%" stop-color="#181a23" />
+      <stop offset="100%" stop-color="#12131a" />
     </linearGradient>
   </defs>
 
@@ -23,43 +23,43 @@
   </style>
 
   <!-- Container Ground -->
-  <rect width="920" height="200" fill="url(#term-bg)" stroke="#1e2e4a" stroke-width="1.2" rx="6" />
+  <rect width="920" height="200" fill="url(#term-bg)" stroke="#262a38" stroke-width="1.2" rx="6" />
 
   <!-- Window Header Bar -->
-  <rect width="920" height="30" fill="#0f172a" rx="6" />
-  <circle cx="20" cy="15" r="4.5" fill="#ef4444" opacity="0.8" />
-  <circle cx="35" cy="15" r="4.5" fill="#f59e0b" opacity="0.8" />
-  <circle cx="50" cy="15" r="4.5" fill="#10b981" opacity="0.8" />
+  <rect width="920" height="30" fill="#1f222d" rx="6" />
+  <circle cx="20" cy="15" r="4.5" fill="#ef4444" opacity="0.85" />
+  <circle cx="35" cy="15" r="4.5" fill="#f59e0b" opacity="0.85" />
+  <circle cx="50" cy="15" r="4.5" fill="#10b981" opacity="0.85" />
   
-  <text x="460" y="20" fill="#94a3b8" font-size="9.5" text-anchor="middle" class="mono" font-weight="600">palearchitect@engine-node-01:~ (zsh)</text>
+  <text x="460" y="20" fill="#9ca3af" font-size="9.5" text-anchor="middle" class="mono" font-weight="600">palearchitect@engine-node-01:~ (zsh)</text>
 
   <!-- Terminal Content -->
   <g transform="translate(24, 46)">
     <!-- Command Prompt -->
     <text x="0" y="16" fill="#38bdf8" font-size="11" class="mono" font-weight="700">❯</text>
-    <text x="18" y="16" fill="#f8fafc" font-size="11" class="mono"><tspan fill="#38bdf8">pale-engine</tspan> --verify-mesh --target=production-cluster</text>
+    <text x="18" y="16" fill="#f8fafc" font-size="11" class="mono"><tspan fill="#60a5fa">pale-engine</tspan> --verify-mesh --target=production-cluster</text>
 
     <!-- Line 1 -->
     <g class="line-1">
-      <text x="18" y="40" fill="#60a5fa" font-size="10.5" class="mono" font-weight="600">[INFO]</text>
-      <text x="72" y="40" fill="#cbd5e1" font-size="10.5" class="mono">Loading distributed agent kernels: [LangChain, LlamaIndex, PyTorch] ... <tspan fill="#38bdf8" font-weight="700">OK</tspan></text>
+      <text x="18" y="40" fill="#a855f7" font-size="10.5" class="mono" font-weight="600">[INFO]</text>
+      <text x="72" y="40" fill="#e2e8f0" font-size="10.5" class="mono">Loading distributed agent kernels: [<tspan fill="#22c55e">LangChain</tspan>, <tspan fill="#a855f7">LlamaIndex</tspan>, <tspan fill="#ee4c2c">PyTorch</tspan>] ... <tspan fill="#22c55e" font-weight="700">OK</tspan></text>
     </g>
 
     <!-- Line 2 -->
     <g class="line-2">
-      <text x="18" y="64" fill="#60a5fa" font-size="10.5" class="mono" font-weight="600">[INFO]</text>
-      <text x="72" y="64" fill="#cbd5e1" font-size="10.5" class="mono">Benchmarking async IO throughput: Rust SIMD channels @ 0.38ms latency ... <tspan fill="#38bdf8" font-weight="700">VERIFIED</tspan></text>
+      <text x="18" y="64" fill="#a855f7" font-size="10.5" class="mono" font-weight="600">[INFO]</text>
+      <text x="72" y="64" fill="#e2e8f0" font-size="10.5" class="mono">Benchmarking async IO throughput: <tspan fill="#f97316">Rust SIMD</tspan> channels @ 0.38ms latency ... <tspan fill="#22c55e" font-weight="700">VERIFIED</tspan></text>
     </g>
 
     <!-- Line 3 -->
     <g class="line-3">
-      <text x="18" y="88" fill="#60a5fa" font-size="10.5" class="mono" font-weight="600">[INFO]</text>
-      <text x="72" y="88" fill="#cbd5e1" font-size="10.5" class="mono">Vector store sync: Qdrant + PostgreSQL WAL replication ... <tspan fill="#38bdf8" font-weight="700">SYNCHRONIZED</tspan></text>
+      <text x="18" y="88" fill="#a855f7" font-size="10.5" class="mono" font-weight="600">[INFO]</text>
+      <text x="72" y="88" fill="#e2e8f0" font-size="10.5" class="mono">Vector store sync: <tspan fill="#dc2626">Qdrant</tspan> + <tspan fill="#336791">PostgreSQL</tspan> WAL replication ... <tspan fill="#22c55e" font-weight="700">SYNCHRONIZED</tspan></text>
     </g>
 
     <!-- Line 4 -->
     <g class="line-4">
-      <text x="18" y="112" fill="#38bdf8" font-size="10.5" class="mono" font-weight="700">❯ ALL SYSTEMS OPERATIONAL. ARCHITECTURAL PROTOCOL ACTIVE<tspan class="cursor" fill="#38bdf8">_</tspan></text>
+      <text x="18" y="112" fill="#f8fafc" font-size="10.5" class="mono" font-weight="700">❯ ALL SYSTEMS OPERATIONAL. ARCHITECTURAL PROTOCOL ACTIVE<tspan class="cursor" fill="#38bdf8">_</tspan></text>
     </g>
   </g>
 </svg>

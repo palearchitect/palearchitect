@@ -1,400 +1,392 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 460" width="100%" height="100%">
   <defs>
-    <!-- Background Blueprint Grid -->
+    <!-- Modern Studio Gray Blueprint Grid -->
     <pattern id="bento-grid" width="18" height="18" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="0.65" fill="#141f33" />
+      <circle cx="2" cy="2" r="0.65" fill="#232634" />
     </pattern>
 
-    <!-- Professional Linear Gradients -->
+    <!-- Professional Studio Gray Gradients -->
     <linearGradient id="panel-bg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0c1322" />
-      <stop offset="100%" stop-color="#070b14" />
+      <stop offset="0%" stop-color="#181a23" />
+      <stop offset="100%" stop-color="#13151c" />
     </linearGradient>
 
     <linearGradient id="chip-bg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#111c30" />
-      <stop offset="100%" stop-color="#0b1220" />
-    </linearGradient>
-
-    <linearGradient id="header-accent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" />
-      <stop offset="100%" stop-color="#60a5fa" />
+      <stop offset="0%" stop-color="#212430" />
+      <stop offset="100%" stop-color="#191c24" />
     </linearGradient>
   </defs>
 
   <style>
     .mono { font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace; }
-    .panel-title { font-family: 'Inter', -apple-system, sans-serif; font-size: 11px; font-weight: 700; fill: #f8fafc; letter-spacing: 0.05em; }
-    .tier-badge { font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 700; fill: #38bdf8; }
-    .chip-text { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; font-weight: 600; fill: #e2e8f0; }
+    .panel-title { font-family: 'Inter', -apple-system, sans-serif; font-size: 11px; font-weight: 700; fill: #f3f4f6; letter-spacing: 0.05em; }
+    .tier-badge { font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 700; fill: #9ca3af; }
+    .chip-text { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; font-weight: 600; fill: #f3f4f6; }
   </style>
 
-  <!-- Container Ground -->
-  <rect width="920" height="460" fill="#04060a" rx="8" />
+  <!-- Container Ground (Rich Studio Gray) -->
+  <rect width="920" height="460" fill="#121319" rx="8" />
   <rect width="920" height="460" fill="url(#bento-grid)" rx="8" />
-  <rect x="8" y="8" width="904" height="444" fill="none" stroke="#17243a" stroke-width="1" rx="6" />
+  <rect x="8" y="8" width="904" height="444" fill="none" stroke="#252836" stroke-width="1" rx="6" />
 
   <!-- Master Section Header -->
   <g transform="translate(24, 26)">
-    <text x="0" y="0" fill="#f8fafc" font-size="12" class="mono" font-weight="700">TECHNICAL CAPABILITY INVENTORY</text>
-    <text x="872" y="0" fill="#60a5fa" font-size="9" text-anchor="end" class="mono" font-weight="600">● 27 ACTIVE RUNTIMES &amp; ENGINES</text>
+    <text x="0" y="0" fill="#ffffff" font-size="12" class="mono" font-weight="700">TECHNICAL CAPABILITY INVENTORY</text>
+    <text x="872" y="0" fill="#9ca3af" font-size="9" text-anchor="end" class="mono" font-weight="600">● 27 ACTIVE RUNTIMES &amp; FRAMEWORKS</text>
   </g>
 
   <!-- ================= ROW 1 ================= -->
 
-  <!-- Panel 1: Systems & Core Runtimes (Left: x=24, y=42, w=428, h=124) -->
+  <!-- Panel 1: Systems & Core Runtimes -->
   <g transform="translate(24, 42)">
-    <rect width="428" height="124" fill="url(#panel-bg)" stroke="#1e2e4a" stroke-width="1" rx="5" />
-    <!-- Header -->
+    <rect width="428" height="124" fill="url(#panel-bg)" stroke="#262938" stroke-width="1" rx="5" />
     <text x="14" y="22" class="panel-title">SYSTEMS &amp; CORE RUNTIMES</text>
     <text x="414" y="22" text-anchor="end" class="tier-badge">TIER 01</text>
-    <line x1="14" y1="32" x2="414" y2="32" stroke="#16233a" stroke-width="0.75" />
+    <line x1="14" y1="32" x2="414" y2="32" stroke="#212430" stroke-width="0.75" />
 
-    <!-- Chips (2 columns x 3 rows) -->
     <!-- Col 1 -->
-    <!-- Rust -->
+    <!-- Rust (Brand Orange #f97316) -->
     <g transform="translate(14, 42)">
-      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#2563eb" stroke-width="0.75" rx="3" />
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#373c4f" stroke-width="0.75" rx="3" />
       <g transform="translate(8, 5)">
-        <path d="M6 1a5 5 0 100 10A5 5 0 006 1zm0 1.5a3.5 3.5 0 110 7 3.5 3.5 0 010-7zM4.5 4.5h2a1.2 1.2 0 010 2.4h-1v1.6H4.5V4.5zm1 1.5h1a.4.4 0 000-.8h-1v.8z" fill="#38bdf8" />
+        <path d="M6 1a5 5 0 100 10A5 5 0 006 1zm0 1.5a3.5 3.5 0 110 7 3.5 3.5 0 010-7zM4.5 4.5h2a1.2 1.2 0 010 2.4h-1v1.6H4.5V4.5zm1 1.5h1a.4.4 0 000-.8h-1v.8z" fill="#f97316" />
       </g>
       <text x="30" y="15" class="chip-text">RUST</text>
-      <text x="184" y="15" text-anchor="end" fill="#60a5fa" font-size="8" class="mono">ADVANCED</text>
+      <text x="184" y="15" text-anchor="end" fill="#9ca3af" font-size="8" class="mono">ADVANCED</text>
     </g>
-    <!-- Go -->
+    <!-- Go (Brand Cyan #00add8) -->
     <g transform="translate(14, 69)">
-      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#373c4f" stroke-width="0.75" rx="3" />
       <g transform="translate(8, 5)">
-        <path d="M1.5 4.5h6.5v1.2H3v1.8h4.5v1.2H1.5zm8 0h3.2a2.4 2.4 0 012.4 2.4v.8a2.4 2.4 0 01-2.4 2.4H9.5zm1.5 1.2v3.2h1.6a1.2 1.2 0 001.2-1.2v-.8a1.2 1.2 0 00-1.2-1.2z" fill="#60a5fa" />
+        <path d="M1.5 4.5h6.5v1.2H3v1.8h4.5v1.2H1.5zm8 0h3.2a2.4 2.4 0 012.4 2.4v.8a2.4 2.4 0 01-2.4 2.4H9.5zm1.5 1.2v3.2h1.6a1.2 1.2 0 001.2-1.2v-.8a1.2 1.2 0 00-1.2-1.2z" fill="#00add8" />
       </g>
       <text x="30" y="15" class="chip-text">GO</text>
-      <text x="184" y="15" text-anchor="end" fill="#94a3b8" font-size="8" class="mono">ASYNC IO</text>
+      <text x="184" y="15" text-anchor="end" fill="#9ca3af" font-size="8" class="mono">ASYNC IO</text>
     </g>
-    <!-- C++ -->
+    <!-- C++ (Brand Blue #00599c / #659ad2) -->
     <g transform="translate(14, 96)">
-      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#373c4f" stroke-width="0.75" rx="3" />
       <g transform="translate(8, 5)">
-        <path d="M6 0.5L1.5 3.2v5.6L6 11.5l4.5-2.7V3.2L6 0.5zm-1 3.5a2 2 0 110 4 2 2 0 010-4zm3.2 1.5h.8v1h-.8V7.5h-.8V6.5h-.8v-1h.8V4.5h.8v1zm2 0h.8v1h-.8V7.5h-.8V6.5h-.8v-1h.8V4.5h.8v1z" fill="#94a3b8" />
+        <path d="M6 0.5L1.5 3.2v5.6L6 11.5l4.5-2.7V3.2L6 0.5zm-1 3.5a2 2 0 110 4 2 2 0 010-4zm3.2 1.5h.8v1h-.8V7.5h-.8V6.5h-.8v-1h.8V4.5h.8v1zm2 0h.8v1h-.8V7.5h-.8V6.5h-.8v-1h.8V4.5h.8v1z" fill="#659ad2" />
       </g>
       <text x="30" y="15" class="chip-text">C++ (20/23)</text>
-      <text x="184" y="15" text-anchor="end" fill="#94a3b8" font-size="8" class="mono">SIMD</text>
+      <text x="184" y="15" text-anchor="end" fill="#9ca3af" font-size="8" class="mono">SIMD</text>
     </g>
 
     <!-- Col 2 -->
-    <!-- Python -->
+    <!-- Python (Brand Blue & Yellow) -->
     <g transform="translate(222, 42)">
-      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#373c4f" stroke-width="0.75" rx="3" />
       <g transform="translate(8, 5)">
-        <path d="M6 0.5C3.5 0.5 2 1.5 2 3v1.5h4v.5H1.5C.5 5 0 6.2 0 8s.5 3 1.5 3.5h1V10c0-1.5 1.2-2.8 2.8-2.8h4.4c.8 0 1.5-.7 1.5-1.5V3c0-1.5-1.7-2.5-3.7-2.5zm-1.8 1a.6.6 0 110 1.2.6.6 0 010-1.2zm3.6 11.5c2.5 0 4-1 4-2.5v-1.5H7.8V8.5h4.5c1 0 1.5-1.2 1.5-3s-.5-3-1.5-3.5h-1V3.5c0 1.5-1.2 2.8-2.8 2.8H4.1c-.8 0-1.5.7-1.5 1.5v2.7c0 1.5 1.7 2.5 3.7 2.5zm1.8-1a.6.6 0 110-1.2.6.6 0 010 1.2z" fill="#38bdf8" />
+        <path d="M6 0.5C3.5 0.5 2 1.5 2 3v1.5h4v.5H1.5C.5 5 0 6.2 0 8s.5 3 1.5 3.5h1V10c0-1.5 1.2-2.8 2.8-2.8h4.4c.8 0 1.5-.7 1.5-1.5V3c0-1.5-1.7-2.5-3.7-2.5zm-1.8 1a.6.6 0 110 1.2.6.6 0 010-1.2zm3.6 11.5c2.5 0 4-1 4-2.5v-1.5H7.8V8.5h4.5c1 0 1.5-1.2 1.5-3s-.5-3-1.5-3.5h-1V3.5c0 1.5-1.2 2.8-2.8 2.8H4.1c-.8 0-1.5.7-1.5 1.5v2.7c0 1.5 1.7 2.5 3.7 2.5zm1.8-1a.6.6 0 110-1.2.6.6 0 010 1.2z" fill="#3b82f6" />
       </g>
       <text x="30" y="15" class="chip-text">PYTHON</text>
-      <text x="184" y="15" text-anchor="end" fill="#38bdf8" font-size="8" class="mono">AI CORE</text>
+      <text x="184" y="15" text-anchor="end" fill="#facc15" font-size="8" class="mono">3.12+</text>
     </g>
-    <!-- TypeScript -->
+    <!-- TypeScript (Brand Blue #3178c6) -->
     <g transform="translate(222, 69)">
-      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#2563eb" stroke-width="0.75" rx="3" />
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#373c4f" stroke-width="0.75" rx="3" />
       <g transform="translate(8, 5)">
-        <rect width="12" height="12" fill="none" stroke="#60a5fa" stroke-width="0.9" rx="1.5" />
-        <path d="M2.5 4h4m-2 0v5.5m3-3c.4-.6 1.8-.7 2.2 0s-.2 1.3-1.2 1.5 0 1.2.8 1.2" stroke="#60a5fa" stroke-width="0.8" fill="none" />
+        <rect width="12" height="12" fill="#3178c6" rx="1.5" />
+        <path d="M2.5 4h4m-2 0v5.5m3-3c.4-.6 1.8-.7 2.2 0s-.2 1.3-1.2 1.5 0 1.2.8 1.2" stroke="#ffffff" stroke-width="0.8" fill="none" />
       </g>
       <text x="30" y="15" class="chip-text">TYPESCRIPT</text>
-      <text x="184" y="15" text-anchor="end" fill="#60a5fa" font-size="8" class="mono">STRICT</text>
+      <text x="184" y="15" text-anchor="end" fill="#9ca3af" font-size="8" class="mono">STRICT</text>
     </g>
-    <!-- JavaScript -->
+    <!-- JavaScript (Brand Yellow #f7df1e) -->
     <g transform="translate(222, 96)">
-      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#373c4f" stroke-width="0.75" rx="3" />
       <g transform="translate(8, 5)">
-        <rect width="12" height="12" fill="none" stroke="#94a3b8" stroke-width="0.9" rx="1.5" />
-        <path d="M4 7v2.5a1 1 0 01-1.5 0m3.5-2c.4-.6 1.8-.7 2.2 0s-.2 1.3-1.2 1.5 0 1.2.8 1.2" stroke="#94a3b8" stroke-width="0.8" fill="none" />
+        <rect width="12" height="12" fill="#f7df1e" rx="1.5" />
+        <path d="M4 7v2.5a1 1 0 01-1.5 0m3.5-2c.4-.6 1.8-.7 2.2 0s-.2 1.3-1.2 1.5 0 1.2.8 1.2" stroke="#000000" stroke-width="0.8" fill="none" />
       </g>
       <text x="30" y="15" class="chip-text">JAVASCRIPT</text>
-      <text x="184" y="15" text-anchor="end" fill="#94a3b8" font-size="8" class="mono">ESNEXT</text>
+      <text x="184" y="15" text-anchor="end" fill="#9ca3af" font-size="8" class="mono">ESNEXT</text>
     </g>
   </g>
 
-  <!-- Panel 2: Agentic AI & Cognitive Engines (Right: x=468, y=42, w=428, h=124) -->
+  <!-- Panel 2: Agentic AI & Cognitive Engines -->
   <g transform="translate(468, 42)">
-    <rect width="428" height="124" fill="url(#panel-bg)" stroke="#1e2e4a" stroke-width="1" rx="5" />
+    <rect width="428" height="124" fill="url(#panel-bg)" stroke="#262938" stroke-width="1" rx="5" />
     <text x="14" y="22" class="panel-title">AGENTIC AI &amp; COGNITIVE ENGINES</text>
     <text x="414" y="22" text-anchor="end" class="tier-badge">TIER 02</text>
-    <line x1="14" y1="32" x2="414" y2="32" stroke="#16233a" stroke-width="0.75" />
+    <line x1="14" y1="32" x2="414" y2="32" stroke="#212430" stroke-width="0.75" />
 
     <!-- Col 1 -->
-    <!-- PyTorch -->
+    <!-- PyTorch (Brand Red-Orange #ee4c2c) -->
     <g transform="translate(14, 42)">
-      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#2563eb" stroke-width="0.75" rx="3" />
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#373c4f" stroke-width="0.75" rx="3" />
       <g transform="translate(8, 5)">
-        <path d="M7.5 1a5.5 5.5 0 00-4 9.2l1-1A4.2 4.2 0 013.2 6a4.3 4.3 0 016-3.8l.8-.8A5.5 5.5 0 007.5 1zm2.8 2.2l-.8.8a4.2 4.2 0 011.3 3.2 4.3 4.3 0 01-6 3.8l-.8.8a5.5 5.5 0 006.3-8.6zM8 3.5a1 1 0 100 2 1 1 0 000-2z" fill="#38bdf8" />
+        <path d="M7.5 1a5.5 5.5 0 00-4 9.2l1-1A4.2 4.2 0 013.2 6a4.3 4.3 0 016-3.8l.8-.8A5.5 5.5 0 007.5 1zm2.8 2.2l-.8.8a4.2 4.2 0 011.3 3.2 4.3 4.3 0 01-6 3.8l-.8.8a5.5 5.5 0 006.3-8.6zM8 3.5a1 1 0 100 2 1 1 0 000-2z" fill="#ee4c2c" />
       </g>
       <text x="30" y="15" class="chip-text">PYTORCH</text>
-      <text x="184" y="15" text-anchor="end" fill="#38bdf8" font-size="8" class="mono">MODELS</text>
+      <text x="184" y="15" text-anchor="end" fill="#9ca3af" font-size="8" class="mono">MODELS</text>
     </g>
-    <!-- LangChain -->
+    <!-- LangChain (Brand Green #22c55e) -->
     <g transform="translate(14, 69)">
-      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#373c4f" stroke-width="0.75" rx="3" />
       <g transform="translate(8, 5)">
-        <path d="M7 1a3 3 0 00-3 3v2H2a1 1 0 00-1 1v4a1 1 0 001 1h8a1 1 0 001-1V4a3 3 0 00-3-3zm-1 3a1 1 0 110-2 1 1 0 010 2z" fill="#60a5fa" />
+        <path d="M7 1a3 3 0 00-3 3v2H2a1 1 0 00-1 1v4a1 1 0 001 1h8a1 1 0 001-1V4a3 3 0 00-3-3zm-1 3a1 1 0 110-2 1 1 0 010 2z" fill="#22c55e" />
       </g>
       <text x="30" y="15" class="chip-text">LANGCHAIN</text>
-      <text x="184" y="15" text-anchor="end" fill="#60a5fa" font-size="8" class="mono">CHAINS</text>
+      <text x="184" y="15" text-anchor="end" fill="#9ca3af" font-size="8" class="mono">CHAINS</text>
     </g>
-    <!-- LlamaIndex -->
+    <!-- LlamaIndex (Brand Violet #a855f7) -->
     <g transform="translate(14, 96)">
-      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#373c4f" stroke-width="0.75" rx="3" />
       <g transform="translate(8, 5)">
-        <path d="M3 1h2v4h3v2H7v4H5V7H3V1zm0 0l-1 2h1V1z" fill="#94a3b8" />
+        <path d="M3 1h2v4h3v2H7v4H5V7H3V1zm0 0l-1 2h1V1z" fill="#a855f7" />
       </g>
       <text x="30" y="15" class="chip-text">LLAMAINDEX</text>
-      <text x="184" y="15" text-anchor="end" fill="#94a3b8" font-size="8" class="mono">RAG</text>
+      <text x="184" y="15" text-anchor="end" fill="#9ca3af" font-size="8" class="mono">RAG</text>
     </g>
 
     <!-- Col 2 -->
-    <!-- OpenAI API -->
+    <!-- OpenAI API (Brand Emerald #10a37f) -->
     <g transform="translate(222, 42)">
-      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#373c4f" stroke-width="0.75" rx="3" />
       <g transform="translate(8, 5)">
-        <circle cx="6" cy="6" r="5" fill="none" stroke="#38bdf8" stroke-width="0.9" />
-        <circle cx="6" cy="6" r="1.5" fill="#38bdf8" />
+        <circle cx="6" cy="6" r="5" fill="none" stroke="#10a37f" stroke-width="0.9" />
+        <circle cx="6" cy="6" r="1.5" fill="#10a37f" />
       </g>
       <text x="30" y="15" class="chip-text">OPENAI API</text>
-      <text x="184" y="15" text-anchor="end" fill="#38bdf8" font-size="8" class="mono">LLMS</text>
+      <text x="184" y="15" text-anchor="end" fill="#9ca3af" font-size="8" class="mono">LLMS</text>
     </g>
-    <!-- HuggingFace -->
+    <!-- HuggingFace (Brand Amber #ff9d00) -->
     <g transform="translate(222, 69)">
-      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#373c4f" stroke-width="0.75" rx="3" />
       <g transform="translate(8, 5)">
-        <circle cx="6" cy="6" r="5.2" fill="none" stroke="#60a5fa" stroke-width="0.9" />
-        <circle cx="4.2" cy="4.8" r="0.75" fill="#60a5fa" />
-        <circle cx="7.8" cy="4.8" r="0.75" fill="#60a5fa" />
-        <path d="M3.8 7.8c.8.9 3.6.9 4.4 0" stroke="#60a5fa" stroke-width="0.8" fill="none" />
+        <circle cx="6" cy="6" r="5.2" fill="none" stroke="#ff9d00" stroke-width="0.9" />
+        <circle cx="4.2" cy="4.8" r="0.75" fill="#ff9d00" />
+        <circle cx="7.8" cy="4.8" r="0.75" fill="#ff9d00" />
+        <path d="M3.8 7.8c.8.9 3.6.9 4.4 0" stroke="#ff9d00" stroke-width="0.8" fill="none" />
       </g>
       <text x="30" y="15" class="chip-text">HUGGINGFACE</text>
-      <text x="184" y="15" text-anchor="end" fill="#60a5fa" font-size="8" class="mono">TRANSFORMERS</text>
+      <text x="184" y="15" text-anchor="end" fill="#9ca3af" font-size="8" class="mono">HUB</text>
     </g>
-    <!-- MCP Protocol -->
+    <!-- MCP Protocol (Brand Pink #ec4899) -->
     <g transform="translate(222, 96)">
-      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#2563eb" stroke-width="0.75" rx="3" />
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#373c4f" stroke-width="0.75" rx="3" />
       <g transform="translate(8, 5)">
-        <circle cx="2.5" cy="2.5" r="1.5" fill="#38bdf8" />
-        <circle cx="9.5" cy="2.5" r="1.5" fill="#38bdf8" />
-        <circle cx="6" cy="9.5" r="1.5" fill="#38bdf8" />
-        <path d="M2.5 2.5L6 9.5L9.5 2.5" stroke="#38bdf8" stroke-width="0.8" fill="none" />
+        <circle cx="2.5" cy="2.5" r="1.5" fill="#ec4899" />
+        <circle cx="9.5" cy="2.5" r="1.5" fill="#ec4899" />
+        <circle cx="6" cy="9.5" r="1.5" fill="#ec4899" />
+        <path d="M2.5 2.5L6 9.5L9.5 2.5" stroke="#ec4899" stroke-width="0.8" fill="none" />
       </g>
       <text x="30" y="15" class="chip-text">MCP PROTOCOL</text>
-      <text x="184" y="15" text-anchor="end" fill="#38bdf8" font-size="8" class="mono">STANDARD</text>
+      <text x="184" y="15" text-anchor="end" fill="#9ca3af" font-size="8" class="mono">TOOLS</text>
     </g>
   </g>
 
   <!-- ================= ROW 2 ================= -->
 
-  <!-- Panel 3: High-Performance Web & APIs (Left: x=24, y=178, w=428, h=124) -->
+  <!-- Panel 3: High-Performance Web & APIs -->
   <g transform="translate(24, 178)">
-    <rect width="428" height="124" fill="url(#panel-bg)" stroke="#1e2e4a" stroke-width="1" rx="5" />
+    <rect width="428" height="124" fill="url(#panel-bg)" stroke="#262938" stroke-width="1" rx="5" />
     <text x="14" y="22" class="panel-title">HIGH-PERFORMANCE WEB &amp; APIS</text>
     <text x="414" y="22" text-anchor="end" class="tier-badge">TIER 03</text>
-    <line x1="14" y1="32" x2="414" y2="32" stroke="#16233a" stroke-width="0.75" />
+    <line x1="14" y1="32" x2="414" y2="32" stroke="#212430" stroke-width="0.75" />
 
     <!-- Col 1 -->
-    <!-- Next.js 15 -->
+    <!-- Next.js 15 (White #ffffff) -->
     <g transform="translate(14, 42)">
-      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#2563eb" stroke-width="0.75" rx="3" />
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#373c4f" stroke-width="0.75" rx="3" />
       <g transform="translate(8, 5)">
-        <path d="M6 0a6 6 0 100 12A6 6 0 006 0zm2.2 8.7L4.7 4.2h-.9v4.5h.9V5.6l3 4a5 5 0 01-.5.3z" fill="#f8fafc" />
+        <path d="M6 0a6 6 0 100 12A6 6 0 006 0zm2.2 8.7L4.7 4.2h-.9v4.5h.9V5.6l3 4a5 5 0 01-.5.3z" fill="#ffffff" />
       </g>
       <text x="30" y="15" class="chip-text">NEXT.JS 15 (APP)</text>
-      <text x="184" y="15" text-anchor="end" fill="#f8fafc" font-size="8" class="mono">SSR/RSC</text>
+      <text x="184" y="15" text-anchor="end" fill="#9ca3af" font-size="8" class="mono">RSC</text>
     </g>
-    <!-- React 19 -->
+    <!-- React 19 (Brand Cyan #61dafb) -->
     <g transform="translate(14, 69)">
-      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#373c4f" stroke-width="0.75" rx="3" />
       <g transform="translate(8, 5)">
-        <ellipse cx="6" cy="6" rx="5.5" ry="2.2" fill="none" stroke="#38bdf8" stroke-width="0.8" />
-        <ellipse cx="6" cy="6" rx="5.5" ry="2.2" fill="none" stroke="#38bdf8" stroke-width="0.8" transform="rotate(60 6 6)" />
-        <ellipse cx="6" cy="6" rx="5.5" ry="2.2" fill="none" stroke="#38bdf8" stroke-width="0.8" transform="rotate(120 6 6)" />
-        <circle cx="6" cy="6" r="1.2" fill="#38bdf8" />
+        <ellipse cx="6" cy="6" rx="5.5" ry="2.2" fill="none" stroke="#61dafb" stroke-width="0.8" />
+        <ellipse cx="6" cy="6" rx="5.5" ry="2.2" fill="none" stroke="#61dafb" stroke-width="0.8" transform="rotate(60 6 6)" />
+        <ellipse cx="6" cy="6" rx="5.5" ry="2.2" fill="none" stroke="#61dafb" stroke-width="0.8" transform="rotate(120 6 6)" />
+        <circle cx="6" cy="6" r="1.2" fill="#61dafb" />
       </g>
       <text x="30" y="15" class="chip-text">REACT 19</text>
-      <text x="184" y="15" text-anchor="end" fill="#38bdf8" font-size="8" class="mono">CONCURRENT</text>
+      <text x="184" y="15" text-anchor="end" fill="#9ca3af" font-size="8" class="mono">CONCURRENT</text>
     </g>
-    <!-- Node.js -->
+    <!-- Node.js (Brand Green #5fa04e) -->
     <g transform="translate(14, 96)">
-      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#373c4f" stroke-width="0.75" rx="3" />
       <g transform="translate(8, 5)">
-        <path d="M6 1L1 3.9v5.8L6 12.6l5-2.9V3.9L6 1zm0 2.2l3.5 2v4.1L6 11.3 2.5 9.3V5.2L6 3.2zm-1.5 2v3.6h1.2V6.6l1.8 2.2h1.2V5.2h-1.2v2.2L5.7 5.2H4.5z" fill="#60a5fa" />
+        <path d="M6 1L1 3.9v5.8L6 12.6l5-2.9V3.9L6 1zm0 2.2l3.5 2v4.1L6 11.3 2.5 9.3V5.2L6 3.2zm-1.5 2v3.6h1.2V6.6l1.8 2.2h1.2V5.2h-1.2v2.2L5.7 5.2H4.5z" fill="#5fa04e" />
       </g>
       <text x="30" y="15" class="chip-text">NODE.JS</text>
-      <text x="184" y="15" text-anchor="end" fill="#60a5fa" font-size="8" class="mono">RUNTIME</text>
+      <text x="184" y="15" text-anchor="end" fill="#9ca3af" font-size="8" class="mono">V8</text>
     </g>
 
     <!-- Col 2 -->
-    <!-- FastAPI -->
+    <!-- FastAPI (Brand Teal #05998b) -->
     <g transform="translate(222, 42)">
-      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#373c4f" stroke-width="0.75" rx="3" />
       <g transform="translate(8, 5)">
-        <path d="M6 0a6 6 0 100 12A6 6 0 006 0zm.8 2.2L3.5 6.5h2.8l-.8 3.3 4.2-4.5H6.8l.8-3.1z" fill="#38bdf8" />
+        <path d="M6 0a6 6 0 100 12A6 6 0 006 0zm.8 2.2L3.5 6.5h2.8l-.8 3.3 4.2-4.5H6.8l.8-3.1z" fill="#05998b" />
       </g>
       <text x="30" y="15" class="chip-text">FASTAPI</text>
-      <text x="184" y="15" text-anchor="end" fill="#38bdf8" font-size="8" class="mono">ASYNC REST</text>
+      <text x="184" y="15" text-anchor="end" fill="#9ca3af" font-size="8" class="mono">ASYNC</text>
     </g>
-    <!-- gRPC -->
+    <!-- gRPC (Brand Blue #4285f4) -->
     <g transform="translate(222, 69)">
-      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#373c4f" stroke-width="0.75" rx="3" />
       <g transform="translate(8, 5)">
-        <circle cx="6" cy="6" r="5" fill="none" stroke="#94a3b8" stroke-width="0.9" stroke-dasharray="2.5,1.5" />
-        <circle cx="6" cy="6" r="1.8" fill="#94a3b8" />
+        <circle cx="6" cy="6" r="5" fill="none" stroke="#4285f4" stroke-width="0.9" stroke-dasharray="2.5,1.5" />
+        <circle cx="6" cy="6" r="1.8" fill="#4285f4" />
       </g>
       <text x="30" y="15" class="chip-text">GRPC &amp; PROTOBUF</text>
-      <text x="184" y="15" text-anchor="end" fill="#94a3b8" font-size="8" class="mono">RPC</text>
+      <text x="184" y="15" text-anchor="end" fill="#9ca3af" font-size="8" class="mono">RPC</text>
     </g>
-    <!-- TailwindCSS -->
+    <!-- TailwindCSS (Brand Sky #06b6d4) -->
     <g transform="translate(222, 96)">
-      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#373c4f" stroke-width="0.75" rx="3" />
       <g transform="translate(8, 5)">
-        <path d="M2.5 4.5C3.3 3 4.3 2.5 5.5 3c.9.4 1.5 1.4 2.2 1.6C8.5 4.8 9.3 4.3 10 3.5c-.8 1.5-1.8 2-3 1.5-.9-.4-1.5-1.4-2.2-1.6-.8-.2-1.6.3-2.3 1.1zm-2 4C1.3 7 2.3 6.5 3.5 7c.9.4 1.5 1.4 2.2 1.6.8.2 1.6-.3 2.3-1.1-.8 1.5-1.8 2-3 1.5-.9-.4-1.5-1.4-2.2-1.6-.8-.2-1.6.3-2.3 1.1z" fill="#38bdf8" />
+        <path d="M2.5 4.5C3.3 3 4.3 2.5 5.5 3c.9.4 1.5 1.4 2.2 1.6C8.5 4.8 9.3 4.3 10 3.5c-.8 1.5-1.8 2-3 1.5-.9-.4-1.5-1.4-2.2-1.6-.8-.2-1.6.3-2.3 1.1zm-2 4C1.3 7 2.3 6.5 3.5 7c.9.4 1.5 1.4 2.2 1.6.8.2 1.6-.3 2.3-1.1-.8 1.5-1.8 2-3 1.5-.9-.4-1.5-1.4-2.2-1.6-.8-.2-1.6.3-2.3 1.1z" fill="#06b6d4" />
       </g>
       <text x="30" y="15" class="chip-text">TAILWINDCSS</text>
-      <text x="184" y="15" text-anchor="end" fill="#38bdf8" font-size="8" class="mono">ENGINE</text>
+      <text x="184" y="15" text-anchor="end" fill="#9ca3af" font-size="8" class="mono">v4</text>
     </g>
   </g>
 
-  <!-- Panel 4: Vector Data & Persistence (Right: x=468, y=178, w=428, h=124) -->
+  <!-- Panel 4: Vector Data & Persistence -->
   <g transform="translate(468, 178)">
-    <rect width="428" height="124" fill="url(#panel-bg)" stroke="#1e2e4a" stroke-width="1" rx="5" />
+    <rect width="428" height="124" fill="url(#panel-bg)" stroke="#262938" stroke-width="1" rx="5" />
     <text x="14" y="22" class="panel-title">VECTOR DATA &amp; PERSISTENCE</text>
     <text x="414" y="22" text-anchor="end" class="tier-badge">TIER 04</text>
-    <line x1="14" y1="32" x2="414" y2="32" stroke="#16233a" stroke-width="0.75" />
+    <line x1="14" y1="32" x2="414" y2="32" stroke="#212430" stroke-width="0.75" />
 
     <!-- Col 1 -->
-    <!-- PostgreSQL -->
+    <!-- PostgreSQL (Brand Blue #336791) -->
     <g transform="translate(14, 42)">
-      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#2563eb" stroke-width="0.75" rx="3" />
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#373c4f" stroke-width="0.75" rx="3" />
       <g transform="translate(8, 5)">
-        <path d="M6 1C3.5 1 2 2.5 2 4.5c0 1.5.8 2.5 1.5 3.2V11h1.5V9.2c.4.2.8.3 1.2.3.8 0 1.5-.3 2-.8V11h1.5V7.5c.8-.8 1.3-1.8 1.3-3C10 2.5 8.5 1 6 1zm-1.5 3a.8.8 0 110 1.6.8.8 0 010-1.6zm3 0a.8.8 0 110 1.6.8.8 0 010-1.6z" fill="#38bdf8" />
+        <path d="M6 1C3.5 1 2 2.5 2 4.5c0 1.5.8 2.5 1.5 3.2V11h1.5V9.2c.4.2.8.3 1.2.3.8 0 1.5-.3 2-.8V11h1.5V7.5c.8-.8 1.3-1.8 1.3-3C10 2.5 8.5 1 6 1zm-1.5 3a.8.8 0 110 1.6.8.8 0 010-1.6zm3 0a.8.8 0 110 1.6.8.8 0 010-1.6z" fill="#336791" />
       </g>
       <text x="30" y="15" class="chip-text">POSTGRESQL (PGVECTOR)</text>
-      <text x="184" y="15" text-anchor="end" fill="#38bdf8" font-size="8" class="mono">ACID</text>
+      <text x="184" y="15" text-anchor="end" fill="#9ca3af" font-size="8" class="mono">ACID</text>
     </g>
-    <!-- Redis -->
+    <!-- Redis (Brand Red #dc382d) -->
     <g transform="translate(14, 69)">
-      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#373c4f" stroke-width="0.75" rx="3" />
       <g transform="translate(8, 5)">
-        <path d="M6 1L1 3.5 6 6l5-2.5L6 1zm-4.5 4L6 7.5 10.5 5 11 5.8 6 8.5 1 5.8 1.5 5zm0 2.5L6 10l4.5-2.5.5.8L6 11 1 8.3l.5-.8z" fill="#60a5fa" />
+        <path d="M6 1L1 3.5 6 6l5-2.5L6 1zm-4.5 4L6 7.5 10.5 5 11 5.8 6 8.5 1 5.8 1.5 5zm0 2.5L6 10l4.5-2.5.5.8L6 11 1 8.3l.5-.8z" fill="#dc382d" />
       </g>
       <text x="30" y="15" class="chip-text">REDIS</text>
-      <text x="184" y="15" text-anchor="end" fill="#60a5fa" font-size="8" class="mono">SUB-MS</text>
+      <text x="184" y="15" text-anchor="end" fill="#9ca3af" font-size="8" class="mono">CACHE</text>
     </g>
-    <!-- Qdrant -->
+    <!-- Qdrant (Brand Coral #dc2626) -->
     <g transform="translate(14, 96)">
-      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#2563eb" stroke-width="0.75" rx="3" />
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#373c4f" stroke-width="0.75" rx="3" />
       <g transform="translate(8, 5)">
-        <circle cx="6" cy="6" r="4.8" fill="none" stroke="#38bdf8" stroke-width="0.9" />
-        <line x1="6" y1="1" x2="6" y2="11" stroke="#38bdf8" stroke-width="0.8" />
-        <line x1="1" y1="6" x2="11" y2="6" stroke="#38bdf8" stroke-width="0.8" />
+        <circle cx="6" cy="6" r="4.8" fill="none" stroke="#dc2626" stroke-width="0.9" />
+        <line x1="6" y1="1" x2="6" y2="11" stroke="#dc2626" stroke-width="0.8" />
+        <line x1="1" y1="6" x2="11" y2="6" stroke="#dc2626" stroke-width="0.8" />
       </g>
       <text x="30" y="15" class="chip-text">QDRANT</text>
-      <text x="184" y="15" text-anchor="end" fill="#38bdf8" font-size="8" class="mono">HNSW</text>
+      <text x="184" y="15" text-anchor="end" fill="#9ca3af" font-size="8" class="mono">HNSW</text>
     </g>
 
     <!-- Col 2 -->
-    <!-- Pinecone -->
+    <!-- Pinecone (Brand Green #22c55e) -->
     <g transform="translate(222, 42)">
-      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#373c4f" stroke-width="0.75" rx="3" />
       <g transform="translate(8, 5)">
-        <polygon points="6,1 10.5,9.5 1.5,9.5" fill="none" stroke="#60a5fa" stroke-width="0.9" />
-        <line x1="6" y1="9.5" x2="6" y2="11.5" stroke="#60a5fa" stroke-width="1.2" />
+        <polygon points="6,1 10.5,9.5 1.5,9.5" fill="none" stroke="#22c55e" stroke-width="0.9" />
+        <line x1="6" y1="9.5" x2="6" y2="11.5" stroke="#22c55e" stroke-width="1.2" />
       </g>
       <text x="30" y="15" class="chip-text">PINECONE</text>
-      <text x="184" y="15" text-anchor="end" fill="#60a5fa" font-size="8" class="mono">SERVERLESS</text>
+      <text x="184" y="15" text-anchor="end" fill="#9ca3af" font-size="8" class="mono">MANAGED</text>
     </g>
-    <!-- ChromaDB -->
+    <!-- ChromaDB (Brand Coral #f97316) -->
     <g transform="translate(222, 69)">
-      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#373c4f" stroke-width="0.75" rx="3" />
       <g transform="translate(8, 5)">
-        <circle cx="3.5" cy="4.5" r="2.2" fill="none" stroke="#94a3b8" stroke-width="0.8" />
-        <circle cx="8.5" cy="4.5" r="2.2" fill="none" stroke="#94a3b8" stroke-width="0.8" />
-        <circle cx="6" cy="8.5" r="2.2" fill="none" stroke="#94a3b8" stroke-width="0.8" />
+        <circle cx="3.5" cy="4.5" r="2.2" fill="none" stroke="#f97316" stroke-width="0.8" />
+        <circle cx="8.5" cy="4.5" r="2.2" fill="none" stroke="#f97316" stroke-width="0.8" />
+        <circle cx="6" cy="8.5" r="2.2" fill="none" stroke="#f97316" stroke-width="0.8" />
       </g>
       <text x="30" y="15" class="chip-text">CHROMADB</text>
-      <text x="184" y="15" text-anchor="end" fill="#94a3b8" font-size="8" class="mono">EMBEDDINGS</text>
+      <text x="184" y="15" text-anchor="end" fill="#9ca3af" font-size="8" class="mono">EMBEDS</text>
     </g>
-    <!-- SQLite / Vector -->
+    <!-- SQLite (Brand Blue #003b57) -->
     <g transform="translate(222, 96)">
-      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.75" rx="3" />
+      <rect width="192" height="23" fill="url(#chip-bg)" stroke="#373c4f" stroke-width="0.75" rx="3" />
       <g transform="translate(8, 5)">
-        <ellipse cx="6" cy="3" rx="4.5" ry="1.5" fill="none" stroke="#94a3b8" stroke-width="0.8" />
-        <path d="M1.5 3v5c0 1 2 1.5 4.5 1.5s4.5-.5 4.5-1.5V3" fill="none" stroke="#94a3b8" stroke-width="0.8" />
+        <ellipse cx="6" cy="3" rx="4.5" ry="1.5" fill="none" stroke="#38bdf8" stroke-width="0.8" />
+        <path d="M1.5 3v5c0 1 2 1.5 4.5 1.5s4.5-.5 4.5-1.5V3" fill="none" stroke="#38bdf8" stroke-width="0.8" />
       </g>
       <text x="30" y="15" class="chip-text">SQLITE &amp; LIB当中</text>
-      <text x="184" y="15" text-anchor="end" fill="#94a3b8" font-size="8" class="mono">LOCAL</text>
+      <text x="184" y="15" text-anchor="end" fill="#9ca3af" font-size="8" class="mono">LOCAL</text>
     </g>
   </g>
 
   <!-- ================= ROW 3: Full Width ================= -->
 
-  <!-- Panel 5: Cloud, Infrastructure & Zero-Trust DevOps (x=24, y=314, w=872, h=124) -->
+  <!-- Panel 5: Cloud, Infrastructure & Zero-Trust DevOps -->
   <g transform="translate(24, 314)">
-    <rect width="872" height="124" fill="url(#panel-bg)" stroke="#1e2e4a" stroke-width="1" rx="5" />
+    <rect width="872" height="124" fill="url(#panel-bg)" stroke="#262938" stroke-width="1" rx="5" />
     <text x="14" y="22" class="panel-title">CLOUD, INFRASTRUCTURE &amp; ZERO-TRUST DEVOPS</text>
     <text x="858" y="22" text-anchor="end" class="tier-badge">TIER 05</text>
-    <line x1="14" y1="32" x2="858" y2="32" stroke="#16233a" stroke-width="0.75" />
+    <line x1="14" y1="32" x2="858" y2="32" stroke="#212430" stroke-width="0.75" />
 
-    <!-- 6 Columns across 2 rows -->
     <!-- Row 1 of Panel 5 -->
-    <!-- Kubernetes -->
+    <!-- Kubernetes (Brand Blue #326ce5) -->
     <g transform="translate(14, 44)">
-      <rect width="268" height="28" fill="url(#chip-bg)" stroke="#2563eb" stroke-width="0.8" rx="3" />
+      <rect width="268" height="28" fill="url(#chip-bg)" stroke="#373c4f" stroke-width="0.8" rx="3" />
       <g transform="translate(10, 8)">
-        <path d="M6 1a5 5 0 100 10A5 5 0 006 1zm0 1.2a3.8 3.8 0 013.7 3.3L8.2 6a2.2 2.2 0 00-1.4-1.2V3.4A3.8 3.8 0 016 2.2zm-1.2 1.2v1.4A2.2 2.2 0 003.4 6L2.1 5.5A3.8 3.8 0 014.8 3.4zM6 5a1 1 0 110 2 1 1 0 010-2zm-2.8 2.2l1.3.5a2.2 2.2 0 001.2 1.4v1.5A3.8 3.8 0 013.2 7.2zm3.3 3.4V9.1a2.2 2.2 0 001.3-1.4l1.3-.5a3.8 3.8 0 01-2.6 3.4z" fill="#38bdf8" />
+        <path d="M6 1a5 5 0 100 10A5 5 0 006 1zm0 1.2a3.8 3.8 0 013.7 3.3L8.2 6a2.2 2.2 0 00-1.4-1.2V3.4A3.8 3.8 0 016 2.2zm-1.2 1.2v1.4A2.2 2.2 0 003.4 6L2.1 5.5A3.8 3.8 0 014.8 3.4zM6 5a1 1 0 110 2 1 1 0 010-2zm-2.8 2.2l1.3.5a2.2 2.2 0 001.2 1.4v1.5A3.8 3.8 0 013.2 7.2zm3.3 3.4V9.1a2.2 2.2 0 001.3-1.4l1.3-.5a3.8 3.8 0 01-2.6 3.4z" fill="#326ce5" />
       </g>
       <text x="34" y="18" class="chip-text">KUBERNETES (K8S)</text>
-      <text x="256" y="18" text-anchor="end" fill="#38bdf8" font-size="8.5" class="mono">ORCHESTRATION</text>
+      <text x="256" y="18" text-anchor="end" fill="#9ca3af" font-size="8.5" class="mono">CLUSTERS</text>
     </g>
-    <!-- Docker -->
+    <!-- Docker (Brand Blue #2496ed) -->
     <g transform="translate(302, 44)">
-      <rect width="268" height="28" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.8" rx="3" />
+      <rect width="268" height="28" fill="url(#chip-bg)" stroke="#373c4f" stroke-width="0.8" rx="3" />
       <g transform="translate(10, 8)">
-        <path d="M1 4.5h1.2v1.2H1zm1.6 0h1.2v1.2H2.6zm1.6 0h1.2v1.2H4.2zm-1.6-1.5h1.2v1.2H2.6zm1.6 0h1.2v1.2H4.2zm1.6 1.5h1.2v1.2H5.8zm1.6 0h1.2v1.2H7.4zm-1.6-1.5h1.2v1.2H5.8zm4 3.5c-.5-.2-.8-.6-.9-1.2H.5C.2 8.5 1.5 10.5 5 10.5c3.2 0 4.8-1.5 5.5-2.8.5.1 1 .1 1.5-.2-.2-.5-.6-.8-1-1z" fill="#60a5fa" />
+        <path d="M1 4.5h1.2v1.2H1zm1.6 0h1.2v1.2H2.6zm1.6 0h1.2v1.2H4.2zm-1.6-1.5h1.2v1.2H2.6zm1.6 0h1.2v1.2H4.2zm1.6 1.5h1.2v1.2H5.8zm1.6 0h1.2v1.2H7.4zm-1.6-1.5h1.2v1.2H5.8zm4 3.5c-.5-.2-.8-.6-.9-1.2H.5C.2 8.5 1.5 10.5 5 10.5c3.2 0 4.8-1.5 5.5-2.8.5.1 1 .1 1.5-.2-.2-.5-.6-.8-1-1z" fill="#2496ed" />
       </g>
       <text x="34" y="18" class="chip-text">DOCKER &amp; PODMAN</text>
-      <text x="256" y="18" text-anchor="end" fill="#60a5fa" font-size="8.5" class="mono">CONTAINERS</text>
+      <text x="256" y="18" text-anchor="end" fill="#9ca3af" font-size="8.5" class="mono">CONTAINERS</text>
     </g>
-    <!-- Terraform -->
+    <!-- Terraform (Brand Purple #844fba) -->
     <g transform="translate(590, 44)">
-      <rect width="268" height="28" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.8" rx="3" />
+      <rect width="268" height="28" fill="url(#chip-bg)" stroke="#373c4f" stroke-width="0.8" rx="3" />
       <g transform="translate(10, 8)">
-        <path d="M1 1h3.2v3.8H1zm3.8 0H8v3.8H4.8zm0 4.2H8V9H4.8zm3.8 0h3.2V9H8.6z" fill="#38bdf8" />
+        <path d="M1 1h3.2v3.8H1zm3.8 0H8v3.8H4.8zm0 4.2H8V9H4.8zm3.8 0h3.2V9H8.6z" fill="#844fba" />
       </g>
       <text x="34" y="18" class="chip-text">TERRAFORM (IAC)</text>
-      <text x="256" y="18" text-anchor="end" fill="#38bdf8" font-size="8.5" class="mono">DECLARATIVE</text>
+      <text x="256" y="18" text-anchor="end" fill="#9ca3af" font-size="8.5" class="mono">INFRA</text>
     </g>
 
     <!-- Row 2 of Panel 5 -->
-    <!-- GitHub Actions -->
+    <!-- GitHub Actions (Brand Blue #2088ff) -->
     <g transform="translate(14, 80)">
-      <rect width="268" height="28" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.8" rx="3" />
+      <rect width="268" height="28" fill="url(#chip-bg)" stroke="#373c4f" stroke-width="0.8" rx="3" />
       <g transform="translate(10, 8)">
-        <path d="M6 0C2.7 0 0 2.7 0 6c0 2.6 1.7 4.8 4.1 5.6.3.1.4-.1.4-.3v-1.1c-1.7.4-2.1-.8-2.1-.8-.3-.7-.7-.9-.7-.9-.5-.4.1-.4.1-.4.6 0 1 .6 1 .6.5.9 1.4.6 1.8.5.1-.4.2-.6.4-.8-1.3-.1-2.7-.7-2.7-3 0-.7.2-1.2.6-1.6-.1-.2-.3-.8.1-1.6 0 0 .5-.2 1.7.6.5-.1 1-.2 1.5-.2s1 .1 1.5.2c1.2-.8 1.7-.6 1.7-.6.4.8.2 1.4.1 1.6.4.4.6.9.6 1.6 0 2.3-1.4 2.9-2.7 3 .2.2.4.6.4 1.2v1.8c0 .2.1.4.4.3C10.3 10.8 12 8.6 12 6c0-3.3-2.7-6-6-6z" fill="#94a3b8" />
+        <path d="M6 0C2.7 0 0 2.7 0 6c0 2.6 1.7 4.8 4.1 5.6.3.1.4-.1.4-.3v-1.1c-1.7.4-2.1-.8-2.1-.8-.3-.7-.7-.9-.7-.9-.5-.4.1-.4.1-.4.6 0 1 .6 1 .6.5.9 1.4.6 1.8.5.1-.4.2-.6.4-.8-1.3-.1-2.7-.7-2.7-3 0-.7.2-1.2.6-1.6-.1-.2-.3-.8.1-1.6 0 0 .5-.2 1.7.6.5-.1 1-.2 1.5-.2s1 .1 1.5.2c1.2-.8 1.7-.6 1.7-.6.4.8.2 1.4.1 1.6.4.4.6.9.6 1.6 0 2.3-1.4 2.9-2.7 3 .2.2.4.6.4 1.2v1.8c0 .2.1.4.4.3C10.3 10.8 12 8.6 12 6c0-3.3-2.7-6-6-6z" fill="#f3f4f6" />
       </g>
       <text x="34" y="18" class="chip-text">GITHUB ACTIONS CI/CD</text>
-      <text x="256" y="18" text-anchor="end" fill="#94a3b8" font-size="8.5" class="mono">SAST / AUDIT</text>
+      <text x="256" y="18" text-anchor="end" fill="#9ca3af" font-size="8.5" class="mono">SECURITY</text>
     </g>
-    <!-- GCP -->
+    <!-- GCP (Brand Multi #4285f4) -->
     <g transform="translate(302, 80)">
-      <rect width="268" height="28" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.8" rx="3" />
+      <rect width="268" height="28" fill="url(#chip-bg)" stroke="#373c4f" stroke-width="0.8" rx="3" />
       <g transform="translate(10, 8)">
-        <path d="M7.5 3a2.5 2.5 0 00-2.3 1.5A3 3 0 002 7a3 3 0 003 3h4.5a2.5 2.5 0 000-5H9a2.5 2.5 0 00-1.5-2z" fill="#60a5fa" />
+        <path d="M7.5 3a2.5 2.5 0 00-2.3 1.5A3 3 0 002 7a3 3 0 003 3h4.5a2.5 2.5 0 000-5H9a2.5 2.5 0 00-1.5-2z" fill="#4285f4" />
       </g>
       <text x="34" y="18" class="chip-text">GOOGLE CLOUD (GCP)</text>
-      <text x="256" y="18" text-anchor="end" fill="#60a5fa" font-size="8.5" class="mono">GKE / BIGQUERY</text>
+      <text x="256" y="18" text-anchor="end" fill="#9ca3af" font-size="8.5" class="mono">GKE</text>
     </g>
-    <!-- AWS -->
+    <!-- AWS (Brand Amber #ff9900) -->
     <g transform="translate(590, 80)">
-      <rect width="268" height="28" fill="url(#chip-bg)" stroke="#1e2e4a" stroke-width="0.8" rx="3" />
+      <rect width="268" height="28" fill="url(#chip-bg)" stroke="#373c4f" stroke-width="0.8" rx="3" />
       <g transform="translate(10, 8)">
-        <path d="M1 8.5C3.8 10.2 7.2 10.2 10 8.5c.2-.1.4 0 .3.2-.4.7-1.2 1.2-2.1 1.5-1.5.4-3.1.2-4.5-.7-.2-.1-.1-.3.1-.4zm8.6-.2l1.2.6c.1.1.1.2 0 .3l-1.3.8c-.1.1-.3 0-.3-.1l.1-.6-.6-.2c-.1 0-.1-.2 0-.3l.7-.4c.1-.1.2-.1.2-.1z" fill="#38bdf8" />
+        <path d="M1 8.5C3.8 10.2 7.2 10.2 10 8.5c.2-.1.4 0 .3.2-.4.7-1.2 1.2-2.1 1.5-1.5.4-3.1.2-4.5-.7-.2-.1-.1-.3.1-.4zm8.6-.2l1.2.6c.1.1.1.2 0 .3l-1.3.8c-.1.1-.3 0-.3-.1l.1-.6-.6-.2c-.1 0-.1-.2 0-.3l.7-.4c.1-.1.2-.1.2-.1z" fill="#ff9900" />
       </g>
       <text x="34" y="18" class="chip-text">AMAZON WEB SERVICES</text>
-      <text x="256" y="18" text-anchor="end" fill="#38bdf8" font-size="8.5" class="mono">EKS / S3 / IAM</text>
+      <text x="256" y="18" text-anchor="end" fill="#9ca3af" font-size="8.5" class="mono">IAM / S3</text>
     </g>
   </g>
 </svg>

@@ -1,37 +1,37 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 340" width="100%" height="100%">
   <defs>
     <pattern id="dot-grid" width="18" height="18" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="0.75" fill="#172033" />
+      <circle cx="2" cy="2" r="0.65" fill="#232634" />
     </pattern>
 
     <linearGradient id="box-fill" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0a101d" />
-      <stop offset="100%" stop-color="#05080f" />
+      <stop offset="0%" stop-color="#181a23" />
+      <stop offset="100%" stop-color="#13151c" />
     </linearGradient>
 
-    <!-- Blue to Slate Glowing Bus Gradient -->
+    <!-- Moderate Flowing Bus Gradient -->
     <linearGradient id="bus-glow" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" />
-      <stop offset="35%" stop-color="#60a5fa" />
-      <stop offset="70%" stop-color="#2563eb" />
-      <stop offset="100%" stop-color="#94a3b8" />
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="35%" stop-color="#f97316" />
+      <stop offset="70%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#22c55e" />
     </linearGradient>
   </defs>
 
   <style>
     .mono { font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace; }
-    .tier-title { font-family: 'Inter', -apple-system, sans-serif; font-weight: 700; font-size: 12px; fill: #f8fafc; }
-    .tier-sub { font-family: 'Inter', -apple-system, sans-serif; font-size: 10.5px; fill: #94a3b8; }
+    .tier-title { font-family: 'Inter', -apple-system, sans-serif; font-weight: 700; font-size: 12px; fill: #f3f4f6; }
+    .tier-sub { font-family: 'Inter', -apple-system, sans-serif; font-size: 10.5px; fill: #9ca3af; }
     .label { font-size: 9px; font-weight: 700; }
 
     @keyframes flowBus {
       0% { stroke-dashoffset: 32; }
       100% { stroke-dashoffset: 0; }
     }
-    @keyframes pulseNode1 { 0%, 100% { fill: #38bdf8; opacity: 1; } 50% { fill: #0284c7; opacity: 0.35; } }
-    @keyframes pulseNode2 { 0%, 100% { fill: #60a5fa; opacity: 1; } 50% { fill: #1d4ed8; opacity: 0.35; } }
-    @keyframes pulseNode3 { 0%, 100% { fill: #93c5fd; opacity: 1; } 50% { fill: #2563eb; opacity: 0.35; } }
-    @keyframes pulseNode4 { 0%, 100% { fill: #cbd5e1; opacity: 1; } 50% { fill: #475569; opacity: 0.35; } }
+    @keyframes pulseNode1 { 0%, 100% { fill: #c084fc; opacity: 1; } 50% { fill: #7e22ce; opacity: 0.35; } }
+    @keyframes pulseNode2 { 0%, 100% { fill: #fb923c; opacity: 1; } 50% { fill: #c2410c; opacity: 0.35; } }
+    @keyframes pulseNode3 { 0%, 100% { fill: #38bdf8; opacity: 1; } 50% { fill: #0369a1; opacity: 0.35; } }
+    @keyframes pulseNode4 { 0%, 100% { fill: #4ade80; opacity: 1; } 50% { fill: #15803d; opacity: 0.35; } }
 
     .bus-stream { stroke-dasharray: 6, 6; animation: flowBus 1.4s linear infinite; }
     .node-1 { animation: pulseNode1 2.4s ease-in-out infinite; }
@@ -40,111 +40,111 @@
     .node-4 { animation: pulseNode4 2.4s ease-in-out infinite; }
   </style>
 
-  <!-- Container -->
-  <rect width="920" height="340" fill="#04060a" rx="8" />
+  <!-- Container Ground -->
+  <rect width="920" height="340" fill="#121319" rx="8" />
   <rect width="920" height="340" fill="url(#dot-grid)" rx="8" />
-  <rect x="8" y="8" width="904" height="324" fill="none" stroke="#172033" stroke-width="1" rx="6" />
+  <rect x="8" y="8" width="904" height="324" fill="none" stroke="#252836" stroke-width="1" rx="6" />
 
   <!-- Section Header -->
-  <text x="32" y="34" fill="#cbd5e1" font-size="10.5" class="mono" font-weight="700">DISTRIBUTED SYSTEM TOPOLOGY &amp; DATA BUS</text>
-  <text x="888" y="34" fill="#38bdf8" font-size="9" text-anchor="end" class="mono" font-weight="600">● SYNCHRONIZED BUS // ACTIVE</text>
+  <text x="32" y="34" fill="#f3f4f6" font-size="10.5" class="mono" font-weight="700">DISTRIBUTED SYSTEM TOPOLOGY &amp; DATA BUS</text>
+  <text x="888" y="34" fill="#22c55e" font-size="9" text-anchor="end" class="mono" font-weight="600">● SYNCHRONIZED BUS // ACTIVE</text>
 
   <!-- Color Bus Interconnect Line -->
-  <line x1="128" y1="175" x2="792" y2="175" stroke="#0f172a" stroke-width="3" />
+  <line x1="128" y1="175" x2="792" y2="175" stroke="#262938" stroke-width="3" />
   <line x1="128" y1="175" x2="792" y2="175" stroke="url(#bus-glow)" stroke-width="2" class="bus-stream" />
 
-  <!-- Tier 1: Agentic Core (Sky Accent) -->
+  <!-- Tier 1: Agentic Core (Purple Accent) -->
   <g transform="translate(32, 54)">
-    <rect width="194" height="236" fill="url(#box-fill)" stroke="#1e293b" stroke-width="1.2" rx="5" />
-    <rect x="0" y="0" width="194" height="28" fill="#0c1628" rx="5" />
-    <text x="14" y="18" fill="#e0f2fe" font-size="11" class="mono" font-weight="700">01 ▪ AGENTIC CORE</text>
+    <rect width="194" height="236" fill="url(#box-fill)" stroke="#2b2d3d" stroke-width="1.2" rx="5" />
+    <rect x="0" y="0" width="194" height="28" fill="#1e202c" rx="5" />
+    <text x="14" y="18" fill="#f3f4f6" font-size="11" class="mono" font-weight="700">01 ▪ AGENTIC CORE</text>
     <circle cx="176" cy="14" r="3.5" class="node-1" />
 
-    <text x="14" y="52" fill="#38bdf8" class="mono label">ORCHESTRATION</text>
+    <text x="14" y="52" fill="#c084fc" class="mono label">ORCHESTRATION</text>
     <text x="14" y="68" class="tier-title">Autonomous Loops</text>
     <text x="14" y="84" class="tier-sub">LangChain • LlamaIndex</text>
 
-    <line x1="14" y1="102" x2="180" y2="102" stroke="#172033" stroke-width="0.75" />
+    <line x1="14" y1="102" x2="180" y2="102" stroke="#262938" stroke-width="0.75" />
 
-    <text x="14" y="122" fill="#60a5fa" class="mono label">MODEL PIPELINES</text>
+    <text x="14" y="122" fill="#c084fc" class="mono label">MODEL PIPELINES</text>
     <text x="14" y="138" class="tier-title">PyTorch &amp; GenAI</text>
     <text x="14" y="154" class="tier-sub">Fine-tuning • Evaluators</text>
 
-    <line x1="14" y1="172" x2="180" y2="172" stroke="#172033" stroke-width="0.75" />
+    <line x1="14" y1="172" x2="180" y2="172" stroke="#262938" stroke-width="0.75" />
 
-    <text x="14" y="192" fill="#94a3b8" class="mono label">TOOL PROTOCOL</text>
+    <text x="14" y="192" fill="#9ca3af" class="mono label">TOOL PROTOCOL</text>
     <text x="14" y="208" class="tier-title">MCP Specification</text>
     <text x="14" y="222" class="tier-sub">Deterministic Sandbox</text>
   </g>
 
-  <!-- Tier 2: Systems Engine (Cobalt Accent) -->
+  <!-- Tier 2: Systems Engine (Orange Accent) -->
   <g transform="translate(252, 54)">
-    <rect width="194" height="236" fill="url(#box-fill)" stroke="#1e293b" stroke-width="1.2" rx="5" />
-    <rect x="0" y="0" width="194" height="28" fill="#0c1628" rx="5" />
-    <text x="14" y="18" fill="#e0f2fe" font-size="11" class="mono" font-weight="700">02 ▪ SYSTEMS ENGINE</text>
+    <rect width="194" height="236" fill="url(#box-fill)" stroke="#2b2d3d" stroke-width="1.2" rx="5" />
+    <rect x="0" y="0" width="194" height="28" fill="#1e202c" rx="5" />
+    <text x="14" y="18" fill="#f3f4f6" font-size="11" class="mono" font-weight="700">02 ▪ SYSTEMS ENGINE</text>
     <circle cx="176" cy="14" r="3.5" class="node-2" />
 
-    <text x="14" y="52" fill="#38bdf8" class="mono label">CONCURRENCY</text>
+    <text x="14" y="52" fill="#fb923c" class="mono label">CONCURRENCY</text>
     <text x="14" y="68" class="tier-title">Rust • Go • C++</text>
     <text x="14" y="84" class="tier-sub">Lock-Free IO • Microservices</text>
 
-    <line x1="14" y1="102" x2="180" y2="102" stroke="#172033" stroke-width="0.75" />
+    <line x1="14" y1="102" x2="180" y2="102" stroke="#262938" stroke-width="0.75" />
 
-    <text x="14" y="122" fill="#60a5fa" class="mono label">HIGH-THROUGHPUT</text>
+    <text x="14" y="122" fill="#fb923c" class="mono label">HIGH-THROUGHPUT</text>
     <text x="14" y="138" class="tier-title">FastAPI • gRPC</text>
     <text x="14" y="154" class="tier-sub">Async Streaming Events</text>
 
-    <line x1="14" y1="172" x2="180" y2="172" stroke="#172033" stroke-width="0.75" />
+    <line x1="14" y1="172" x2="180" y2="172" stroke="#262938" stroke-width="0.75" />
 
-    <text x="14" y="192" fill="#94a3b8" class="mono label">DATA FABRIC</text>
+    <text x="14" y="192" fill="#9ca3af" class="mono label">DATA FABRIC</text>
     <text x="14" y="208" class="tier-title">Postgres &amp; Redis</text>
     <text x="14" y="222" class="tier-sub">Sub-millisecond State Cache</text>
   </g>
 
-  <!-- Tier 3: Vector Intelligence (Blue Accent) -->
+  <!-- Tier 3: Vector Intelligence (Cyan Accent) -->
   <g transform="translate(472, 54)">
-    <rect width="194" height="236" fill="url(#box-fill)" stroke="#1e293b" stroke-width="1.2" rx="5" />
-    <rect x="0" y="0" width="194" height="28" fill="#0c1628" rx="5" />
-    <text x="14" y="18" fill="#e0f2fe" font-size="11" class="mono" font-weight="700">03 ▪ RETRIEVAL INDEX</text>
+    <rect width="194" height="236" fill="url(#box-fill)" stroke="#2b2d3d" stroke-width="1.2" rx="5" />
+    <rect x="0" y="0" width="194" height="28" fill="#1e202c" rx="5" />
+    <text x="14" y="18" fill="#f3f4f6" font-size="11" class="mono" font-weight="700">03 ▪ RETRIEVAL INDEX</text>
     <circle cx="176" cy="14" r="3.5" class="node-3" />
 
     <text x="14" y="52" fill="#38bdf8" class="mono label">EMBEDDINGS</text>
     <text x="14" y="68" class="tier-title">Qdrant • Pinecone</text>
     <text x="14" y="84" class="tier-sub">Hybrid Semantic Search</text>
 
-    <line x1="14" y1="102" x2="180" y2="102" stroke="#172033" stroke-width="0.75" />
+    <line x1="14" y1="102" x2="180" y2="102" stroke="#262938" stroke-width="0.75" />
 
-    <text x="14" y="122" fill="#60a5fa" class="mono label">CONTEXT GRAPH</text>
+    <text x="14" y="122" fill="#38bdf8" class="mono label">CONTEXT GRAPH</text>
     <text x="14" y="138" class="tier-title">Knowledge Graphs</text>
     <text x="14" y="154" class="tier-sub">ChromaDB • Vector Cache</text>
 
-    <line x1="14" y1="172" x2="180" y2="172" stroke="#172033" stroke-width="0.75" />
+    <line x1="14" y1="172" x2="180" y2="172" stroke="#262938" stroke-width="0.75" />
 
-    <text x="14" y="192" fill="#94a3b8" class="mono label">RERANKING</text>
+    <text x="14" y="192" fill="#9ca3af" class="mono label">RERANKING</text>
     <text x="14" y="208" class="tier-title">Cross-Encoders</text>
     <text x="14" y="222" class="tier-sub">Precision Context Windows</text>
   </g>
 
-  <!-- Tier 4: Zero-Trust Platform (Slate Accent) -->
+  <!-- Tier 4: Zero-Trust Platform (Green Accent) -->
   <g transform="translate(692, 54)">
-    <rect width="194" height="236" fill="url(#box-fill)" stroke="#1e293b" stroke-width="1.2" rx="5" />
-    <rect x="0" y="0" width="194" height="28" fill="#0c1628" rx="5" />
-    <text x="14" y="18" fill="#e0f2fe" font-size="11" class="mono" font-weight="700">04 ▪ CLOUD RUNTIME</text>
+    <rect width="194" height="236" fill="url(#box-fill)" stroke="#2b2d3d" stroke-width="1.2" rx="5" />
+    <rect x="0" y="0" width="194" height="28" fill="#1e202c" rx="5" />
+    <text x="14" y="18" fill="#f3f4f6" font-size="11" class="mono" font-weight="700">04 ▪ CLOUD RUNTIME</text>
     <circle cx="176" cy="14" r="3.5" class="node-4" />
 
-    <text x="14" y="52" fill="#38bdf8" class="mono label">INFRASTRUCTURE</text>
+    <text x="14" y="52" fill="#4ade80" class="mono label">INFRASTRUCTURE</text>
     <text x="14" y="68" class="tier-title">Kubernetes &amp; K8s</text>
     <text x="14" y="84" class="tier-sub">Docker • Terraform IaC</text>
 
-    <line x1="14" y1="102" x2="180" y2="102" stroke="#172033" stroke-width="0.75" />
+    <line x1="14" y1="102" x2="180" y2="102" stroke="#262938" stroke-width="0.75" />
 
-    <text x="14" y="122" fill="#60a5fa" class="mono label">SECURE DEPLOY</text>
+    <text x="14" y="122" fill="#4ade80" class="mono label">SECURE DEPLOY</text>
     <text x="14" y="138" class="tier-title">GitHub Actions CI</text>
     <text x="14" y="154" class="tier-sub">SAST • Zero-Trust Policies</text>
 
-    <line x1="14" y1="172" x2="180" y2="172" stroke="#172033" stroke-width="0.75" />
+    <line x1="14" y1="172" x2="180" y2="172" stroke="#262938" stroke-width="0.75" />
 
-    <text x="14" y="192" fill="#94a3b8" class="mono label">MULTI-CLOUD</text>
+    <text x="14" y="192" fill="#9ca3af" class="mono label">MULTI-CLOUD</text>
     <text x="14" y="208" class="tier-title">GCP • AWS Pods</text>
     <text x="14" y="222" class="tier-sub">Global Edge Routing</text>
   </g>

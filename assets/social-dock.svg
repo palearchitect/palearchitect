@@ -1,71 +1,71 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 120" width="100%" height="100%">
   <defs>
     <linearGradient id="dock-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#06090e" />
-      <stop offset="50%" stop-color="#0c121e" />
-      <stop offset="100%" stop-color="#06090e" />
+      <stop offset="0%" stop-color="#161822" />
+      <stop offset="50%" stop-color="#1c1f2b" />
+      <stop offset="100%" stop-color="#161822" />
     </linearGradient>
   </defs>
 
   <style>
     .mono { font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace; }
-    .label { font-family: 'Inter', -apple-system, sans-serif; font-size: 11px; font-weight: 700; fill: #f8fafc; }
-    .handle { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; fill: #94a3b8; }
+    .label { font-family: 'Inter', -apple-system, sans-serif; font-size: 11px; font-weight: 700; fill: #f3f4f6; }
+    .handle { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; fill: #9ca3af; }
     
     .card { transition: all 0.25s ease; cursor: pointer; }
-    .card:hover rect { fill: #0f172a; stroke: #38bdf8; }
-    .card:hover text.handle { fill: #38bdf8; }
+    .card:hover rect { fill: #212430; stroke: #4b5563; }
+    .card:hover text.handle { fill: #ffffff; }
   </style>
 
-  <!-- Background Dock -->
-  <rect width="920" height="120" fill="url(#dock-grad)" stroke="#172033" stroke-width="1" rx="8" />
+  <!-- Background Dock (Studio Gray) -->
+  <rect width="920" height="120" fill="url(#dock-grad)" stroke="#262a38" stroke-width="1" rx="8" />
 
   <!-- Top Metadata -->
-  <text x="32" y="28" fill="#cbd5e1" font-size="10" class="mono" font-weight="700">SECURE CHANNELS &amp; COORDINATES</text>
-  <text x="888" y="28" fill="#38bdf8" font-size="9" text-anchor="end" class="mono" font-weight="600">● AVAILABLE FOR ARCHITECTURAL INITIATIVES</text>
+  <text x="32" y="28" fill="#f3f4f6" font-size="10" class="mono" font-weight="700">SECURE CHANNELS &amp; COORDINATES</text>
+  <text x="888" y="28" fill="#22c55e" font-size="9" text-anchor="end" class="mono" font-weight="600">● AVAILABLE FOR ARCHITECTURAL INITIATIVES</text>
 
   <!-- 4 Clickable Channel Cards -->
   <g transform="translate(24, 42)">
-    <!-- 01: Email -->
+    <!-- 01: Email (Brand Coral / Amber) -->
     <a href="mailto:thepalearchitect@gmail.com" target="_blank" class="card">
-      <rect width="206" height="58" fill="#0a101d" stroke="#1e293b" stroke-width="1" rx="5" />
+      <rect width="206" height="58" fill="#181a23" stroke="#2b2e3e" stroke-width="1" rx="5" />
       <!-- Mail Icon -->
       <g transform="translate(16, 17)">
-        <rect width="22" height="16" fill="none" stroke="#38bdf8" stroke-width="1.5" rx="2" />
-        <path d="M 1 2 L 11 10 L 21 2" fill="none" stroke="#38bdf8" stroke-width="1.5" />
+        <rect width="22" height="16" fill="none" stroke="#f97316" stroke-width="1.5" rx="2" />
+        <path d="M 1 2 L 11 10 L 21 2" fill="none" stroke="#f97316" stroke-width="1.5" />
       </g>
       <text x="48" y="28" class="label">EMAIL</text>
       <text x="48" y="44" class="handle">thepalearchitect</text>
     </a>
 
-    <!-- 02: GitHub -->
+    <!-- 02: GitHub (Brand White) -->
     <a href="https://github.com/palearchitect" target="_blank" class="card" transform="translate(222, 0)">
-      <rect width="206" height="58" fill="#0a101d" stroke="#1e293b" stroke-width="1" rx="5" />
+      <rect width="206" height="58" fill="#181a23" stroke="#2b2e3e" stroke-width="1" rx="5" />
       <!-- GitHub Icon -->
       <g transform="translate(16, 17)">
-        <path d="M11 0C4.9 0 0 4.9 0 11c0 4.8 3.1 9 7.5 10.5.5.1.8-.2.8-.5v-1.8c-3.1.7-3.7-1.5-3.7-1.5-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.6 1.2 3.2.9.1-.7.4-1.2.7-1.5-2.4-.3-5-1.2-5-5.5 0-1.2.4-2.2 1.1-3-.1-.3-.5-1.4.1-3 0 0 .9-.3 3.1 1.2.9-.2 1.8-.4 2.8-.4s1.9.2 2.8.4c2.1-1.5 3.1-1.2 3.1-1.2.6 1.6.2 2.7.1 3 .7.8 1.1 1.8 1.1 3 0 4.3-2.6 5.2-5 5.5.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.3-1.5 7.5-5.6 7.5-10.5 0-6.1-4.9-11-11-11z" fill="#38bdf8"/>
+        <path d="M11 0C4.9 0 0 4.9 0 11c0 4.8 3.1 9 7.5 10.5.5.1.8-.2.8-.5v-1.8c-3.1.7-3.7-1.5-3.7-1.5-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.6 1.2 3.2.9.1-.7.4-1.2.7-1.5-2.4-.3-5-1.2-5-5.5 0-1.2.4-2.2 1.1-3-.1-.3-.5-1.4.1-3 0 0 .9-.3 3.1 1.2.9-.2 1.8-.4 2.8-.4s1.9.2 2.8.4c2.1-1.5 3.1-1.2 3.1-1.2.6 1.6.2 2.7.1 3 .7.8 1.1 1.8 1.1 3 0 4.3-2.6 5.2-5 5.5.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.3-1.5 7.5-5.6 7.5-10.5 0-6.1-4.9-11-11-11z" fill="#ffffff"/>
       </g>
       <text x="48" y="28" class="label">GITHUB</text>
       <text x="48" y="44" class="handle">@palearchitect</text>
     </a>
 
-    <!-- 03: X / Twitter -->
+    <!-- 03: X / Twitter (Brand White) -->
     <a href="https://x.com/ThePaleArchitect" target="_blank" class="card" transform="translate(444, 0)">
-      <rect width="206" height="58" fill="#0a101d" stroke="#1e293b" stroke-width="1" rx="5" />
+      <rect width="206" height="58" fill="#181a23" stroke="#2b2e3e" stroke-width="1" rx="5" />
       <!-- X Icon -->
       <g transform="translate(18, 19)">
-        <path d="M14.2 0h2.8l-6.1 7 7.2 9.5h-5.6l-4.4-5.8-5 5.8H0.3l6.5-7.5L0 0h5.7l4 5.3L14.2 0zm-1 14.8h1.5L4.9 1.5H3.3l9.9 13.3z" fill="#60a5fa" />
+        <path d="M14.2 0h2.8l-6.1 7 7.2 9.5h-5.6l-4.4-5.8-5 5.8H0.3l6.5-7.5L0 0h5.7l4 5.3L14.2 0zm-1 14.8h1.5L4.9 1.5H3.3l9.9 13.3z" fill="#ffffff" />
       </g>
       <text x="48" y="28" class="label">X / TWITTER</text>
       <text x="48" y="44" class="handle">@ThePaleArchitect</text>
     </a>
 
-    <!-- 04: LinkedIn -->
+    <!-- 04: LinkedIn (Brand Blue #0a66c2) -->
     <a href="https://linkedin.com/in/thepalearchitect" target="_blank" class="card" transform="translate(666, 0)">
-      <rect width="206" height="58" fill="#0a101d" stroke="#1e293b" stroke-width="1" rx="5" />
+      <rect width="206" height="58" fill="#181a23" stroke="#2b2e3e" stroke-width="1" rx="5" />
       <!-- LinkedIn Icon -->
       <g transform="translate(18, 18)">
-        <path d="M4 0H1C0.4 0 0 0.4 0 1v14c0 0.6 0.4 1 1 1h3c0.6 0 1-0.4 1-1V1C5 0.4 4.6 0 4 0zM2.5 5.2C1.4 5.2 0.5 4.3 0.5 3.2 0.5 2.1 1.4 1.2 2.5 1.2s2 0.9 2 2c0 1.1-0.9 2-2 2zM15 5.2c-1.8 0-2.8 1-3.3 1.8V5.5H8.5V16h3.2v-5.2c0-1.4 0.3-2.7 2-2.7 1.7 0 1.7 1.6 1.7 2.8V16h3.2V10.2C18.6 7.4 18 5.2 15 5.2z" fill="#60a5fa"/>
+        <path d="M4 0H1C0.4 0 0 0.4 0 1v14c0 0.6 0.4 1 1 1h3c0.6 0 1-0.4 1-1V1C5 0.4 4.6 0 4 0zM2.5 5.2C1.4 5.2 0.5 4.3 0.5 3.2 0.5 2.1 1.4 1.2 2.5 1.2s2 0.9 2 2c0 1.1-0.9 2-2 2zM15 5.2c-1.8 0-2.8 1-3.3 1.8V5.5H8.5V16h3.2v-5.2c0-1.4 0.3-2.7 2-2.7 1.7 0 1.7 1.6 1.7 2.8V16h3.2V10.2C18.6 7.4 18 5.2 15 5.2z" fill="#0a66c2"/>
       </g>
       <text x="48" y="28" class="label">LINKEDIN</text>
       <text x="48" y="44" class="handle">/in/thepalearchitect</text>

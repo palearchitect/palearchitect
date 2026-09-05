@@ -16,9 +16,9 @@
 
 <br/>
 
-[![GitHub followers](https://img.shields.io/github/followers/palearchitect?style=for-the-badge&logo=github&logoColor=38bdf8&color=0e1726&labelColor=06090e)](https://github.com/palearchitect)
-[![Focus](https://img.shields.io/badge/FOCUS-AUTONOMOUS%20AGENTS%20%26%20DISTRIBUTED%20SYSTEMS-38bdf8?style=for-the-badge&color=0e1726&labelColor=06090e)](https://github.com/palearchitect)
-[![Status](https://img.shields.io/badge/STATUS-OPERATIONAL%20%5B2026%5D-60a5fa?style=for-the-badge&color=0e1726&labelColor=06090e)](mailto:thepalearchitect@gmail.com)
+[![GitHub followers](https://img.shields.io/github/followers/palearchitect?style=for-the-badge&logo=github&logoColor=ffffff&color=212430&labelColor=161822)](https://github.com/palearchitect)
+[![Focus](https://img.shields.io/badge/FOCUS-AUTONOMOUS%20AGENTS%20%26%20DISTRIBUTED%20SYSTEMS-ffffff?style=for-the-badge&color=212430&labelColor=161822)](https://github.com/palearchitect)
+[![Status](https://img.shields.io/badge/STATUS-OPERATIONAL%20%5B2026%5D-22c55e?style=for-the-badge&color=212430&labelColor=161822)](mailto:thepalearchitect@gmail.com)
 
 </div>
 

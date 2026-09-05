@@ -2,7 +2,7 @@
   <defs>
     <!-- Background Grid -->
     <pattern id="matrix-pat" width="16" height="16" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="0.65" fill="#131d2e" />
+      <circle cx="2" cy="2" r="0.65" fill="#232634" />
     </pattern>
 
     <!-- Clip Path for Row 4 Marquee -->
@@ -10,35 +10,35 @@
       <rect x="24" y="280" width="872" height="74" rx="4" />
     </clipPath>
 
-    <!-- Edge Soft Fade Masks -->
+    <!-- Edge Soft Fade Masks (Studio Gray) -->
     <linearGradient id="fade-left-mask" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#080e18" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#080e18" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#181a23" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#181a23" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="fade-right-mask" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#080e18" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#080e18" stop-opacity="1"/>
+      <stop offset="0%" stop-color="#181a23" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#181a23" stop-opacity="1"/>
     </linearGradient>
 
-    <!-- Blue to Slate Progress Meter Gradients -->
-    <linearGradient id="meter-blue-primary" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#1e3a8a" />
+    <!-- Progress Meter Gradients -->
+    <linearGradient id="meter-amber" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c2d12" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+    <linearGradient id="meter-purple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#581c87" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+    <linearGradient id="meter-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0c4a6e" />
       <stop offset="100%" stop-color="#38bdf8" />
-    </linearGradient>
-    <linearGradient id="meter-blue-mid" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#172554" />
-      <stop offset="100%" stop-color="#60a5fa" />
-    </linearGradient>
-    <linearGradient id="meter-blue-slate" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0f172a" />
-      <stop offset="100%" stop-color="#94a3b8" />
     </linearGradient>
   </defs>
 
   <style>
     .mono { font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace; }
-    .title { font-family: 'Inter', -apple-system, sans-serif; font-weight: 700; fill: #f8fafc; }
-    .tag { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; font-weight: 700; fill: #e2e8f0; }
+    .title { font-family: 'Inter', -apple-system, sans-serif; font-weight: 700; fill: #f3f4f6; }
+    .tag { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; font-weight: 700; fill: #f3f4f6; }
 
     @keyframes marqueeScrollInfinite {
       0% { transform: translateX(0); }
@@ -54,211 +54,205 @@
     .meter-3 { animation: loadBar3 3.8s ease-in-out infinite; }
   </style>
 
-  <!-- Container -->
-  <rect width="920" height="370" fill="#04060a" rx="6" />
+  <!-- Container Ground -->
+  <rect width="920" height="370" fill="#121319" rx="6" />
   <rect width="920" height="370" fill="url(#matrix-pat)" rx="6" />
-  <rect x="8" y="8" width="904" height="354" fill="none" stroke="#151e2e" stroke-width="1" rx="5" />
+  <rect x="8" y="8" width="904" height="354" fill="none" stroke="#252836" stroke-width="1" rx="5" />
 
   <!-- Section Header -->
-  <text x="32" y="34" fill="#e2e8f0" font-size="10.5" class="mono" font-weight="700">TECHNICAL SPECIFICATION MATRIX</text>
-  <text x="888" y="34" fill="#38bdf8" font-size="9" text-anchor="end" class="mono" font-weight="600">LIVE TELEMETRY • v4.2</text>
+  <text x="32" y="34" fill="#f3f4f6" font-size="10.5" class="mono" font-weight="700">TECHNICAL SPECIFICATION MATRIX</text>
+  <text x="888" y="34" fill="#22c55e" font-size="9" text-anchor="end" class="mono" font-weight="600">LIVE TELEMETRY • v4.2</text>
 
   <!-- Row 1: Systems & Concurrency -->
   <g transform="translate(24, 52)">
-    <rect width="872" height="68" fill="#080e18" stroke="#1c283d" stroke-width="1" rx="4" />
+    <rect width="872" height="68" fill="#181a23" stroke="#262938" stroke-width="1" rx="4" />
     <text x="20" y="28" font-size="12" class="title">01 ▪ SYSTEMS &amp; CONCURRENCY</text>
-    <text x="20" y="48" fill="#94a3b8" font-size="9.5" class="mono"><tspan fill="#38bdf8">Rust</tspan> • <tspan fill="#60a5fa">Go</tspan> • <tspan fill="#94a3b8">C++</tspan> • Low-Latency Async IO • SIMD • Memory Safety</text>
+    <text x="20" y="48" fill="#9ca3af" font-size="9.5" class="mono"><tspan fill="#f97316">Rust</tspan> • <tspan fill="#00add8">Go</tspan> • <tspan fill="#659ad2">C++</tspan> • Low-Latency Async IO • SIMD • Memory Safety</text>
     
     <!-- Telemetry Meter -->
     <g transform="translate(530, 20)">
-      <text x="0" y="10" fill="#94a3b8" font-size="8.5" class="mono" font-weight="600">THROUGHPUT: 95%</text>
-      <rect x="0" y="16" width="180" height="5" fill="#0f172a" rx="2.5" />
-      <rect x="0" y="16" width="170" height="5" fill="url(#meter-blue-primary)" rx="2.5" class="meter-1" />
+      <text x="0" y="10" fill="#9ca3af" font-size="8.5" class="mono" font-weight="600">THROUGHPUT: 95%</text>
+      <rect x="0" y="16" width="180" height="5" fill="#262938" rx="2.5" />
+      <rect x="0" y="16" width="170" height="5" fill="url(#meter-amber)" rx="2.5" class="meter-1" />
     </g>
 
     <!-- Status Badge -->
-    <rect x="750" y="20" width="102" height="28" fill="#0b1728" stroke="#2563eb" stroke-width="1" rx="4" />
-    <circle cx="765" cy="34" r="3" fill="#38bdf8" />
-    <text x="778" y="38" fill="#93c5fd" font-size="9.5" class="mono" font-weight="700">OPTIMAL</text>
+    <rect x="750" y="20" width="102" height="28" fill="#1e202c" stroke="#373c4f" stroke-width="1" rx="4" />
+    <circle cx="765" cy="34" r="3" fill="#22c55e" />
+    <text x="778" y="38" fill="#4ade80" font-size="9.5" class="mono" font-weight="700">OPTIMAL</text>
   </g>
 
   <!-- Row 2: Agentic AI -->
   <g transform="translate(24, 128)">
-    <rect width="872" height="68" fill="#080e18" stroke="#1c283d" stroke-width="1" rx="4" />
+    <rect width="872" height="68" fill="#181a23" stroke="#262938" stroke-width="1" rx="4" />
     <text x="20" y="28" font-size="12" class="title">02 ▪ AGENTIC AI &amp; MODEL PIPELINES</text>
-    <text x="20" y="48" fill="#94a3b8" font-size="9.5" class="mono"><tspan fill="#38bdf8">PyTorch</tspan> • <tspan fill="#60a5fa">LangChain</tspan> • <tspan fill="#94a3b8">LlamaIndex</tspan> • MCP Protocols • Evaluators</text>
+    <text x="20" y="48" fill="#9ca3af" font-size="9.5" class="mono"><tspan fill="#ee4c2c">PyTorch</tspan> • <tspan fill="#22c55e">LangChain</tspan> • <tspan fill="#a855f7">LlamaIndex</tspan> • MCP Protocols • Evaluators</text>
     
     <!-- Telemetry Meter -->
     <g transform="translate(530, 20)">
-      <text x="0" y="10" fill="#94a3b8" font-size="8.5" class="mono" font-weight="600">REASONING: 92%</text>
-      <rect x="0" y="16" width="180" height="5" fill="#0f172a" rx="2.5" />
-      <rect x="0" y="16" width="165" height="5" fill="url(#meter-blue-mid)" rx="2.5" class="meter-2" />
+      <text x="0" y="10" fill="#9ca3af" font-size="8.5" class="mono" font-weight="600">REASONING: 92%</text>
+      <rect x="0" y="16" width="180" height="5" fill="#262938" rx="2.5" />
+      <rect x="0" y="16" width="165" height="5" fill="url(#meter-purple)" rx="2.5" class="meter-2" />
     </g>
 
     <!-- Status Badge -->
-    <rect x="750" y="20" width="102" height="28" fill="#0b1728" stroke="#2563eb" stroke-width="1" rx="4" />
-    <circle cx="765" cy="34" r="3" fill="#38bdf8" />
-    <text x="778" y="38" fill="#93c5fd" font-size="9.5" class="mono" font-weight="700">OPTIMAL</text>
+    <rect x="750" y="20" width="102" height="28" fill="#1e202c" stroke="#373c4f" stroke-width="1" rx="4" />
+    <circle cx="765" cy="34" r="3" fill="#22c55e" />
+    <text x="778" y="38" fill="#4ade80" font-size="9.5" class="mono" font-weight="700">OPTIMAL</text>
   </g>
 
   <!-- Row 3: Vector & Cloud -->
   <g transform="translate(24, 204)">
-    <rect width="872" height="68" fill="#080e18" stroke="#1c283d" stroke-width="1" rx="4" />
+    <rect width="872" height="68" fill="#181a23" stroke="#262938" stroke-width="1" rx="4" />
     <text x="20" y="28" font-size="12" class="title">03 ▪ DATA FABRIC &amp; INFRASTRUCTURE</text>
-    <text x="20" y="48" fill="#94a3b8" font-size="9.5" class="mono"><tspan fill="#38bdf8">Postgres</tspan> • <tspan fill="#60a5fa">Qdrant</tspan> • <tspan fill="#94a3b8">K8s</tspan> • Docker • Redis • Terraform</text>
+    <text x="20" y="48" fill="#9ca3af" font-size="9.5" class="mono"><tspan fill="#336791">Postgres</tspan> • <tspan fill="#dc2626">Qdrant</tspan> • <tspan fill="#326ce5">K8s</tspan> • Docker • Redis • Terraform</text>
     
     <!-- Telemetry Meter -->
     <g transform="translate(530, 20)">
-      <text x="0" y="10" fill="#94a3b8" font-size="8.5" class="mono" font-weight="600">CLUSTER LOAD: 88%</text>
-      <rect x="0" y="16" width="180" height="5" fill="#0f172a" rx="2.5" />
-      <rect x="0" y="16" width="160" height="5" fill="url(#meter-blue-slate)" rx="2.5" class="meter-3" />
+      <text x="0" y="10" fill="#9ca3af" font-size="8.5" class="mono" font-weight="600">CLUSTER LOAD: 88%</text>
+      <rect x="0" y="16" width="180" height="5" fill="#262938" rx="2.5" />
+      <rect x="0" y="16" width="160" height="5" fill="url(#meter-cyan)" rx="2.5" class="meter-3" />
     </g>
 
     <!-- Status Badge -->
-    <rect x="750" y="20" width="102" height="28" fill="#0b1728" stroke="#2563eb" stroke-width="1" rx="4" />
-    <circle cx="765" cy="34" r="3" fill="#38bdf8" />
-    <text x="778" y="38" fill="#93c5fd" font-size="9.5" class="mono" font-weight="700">OPTIMAL</text>
+    <rect x="750" y="20" width="102" height="28" fill="#1e202c" stroke="#373c4f" stroke-width="1" rx="4" />
+    <circle cx="765" cy="34" r="3" fill="#22c55e" />
+    <text x="778" y="38" fill="#4ade80" font-size="9.5" class="mono" font-weight="700">OPTIMAL</text>
   </g>
 
   <!-- Row 4: Multi-Tile Continuous Horizontal Slider with Vector Icons -->
   <g transform="translate(24, 280)">
-    <rect width="872" height="74" fill="#080e18" stroke="#1c283d" stroke-width="1" rx="4" />
-    <text x="20" y="20" fill="#cbd5e1" font-size="9" class="mono" font-weight="700">EXPANDED PLATFORM CAPABILITIES</text>
+    <rect width="872" height="74" fill="#181a23" stroke="#262938" stroke-width="1" rx="4" />
+    <text x="20" y="20" fill="#f3f4f6" font-size="9" class="mono" font-weight="700">EXPANDED PLATFORM CAPABILITIES</text>
     
     <!-- Clipped Marquee Viewport Container -->
     <g clip-path="url(#marquee-row-clip)">
       <g class="marquee-track" transform="translate(10, 32)">
         <!-- Pill 1: Rust -->
         <g transform="translate(0, 0)">
-          <rect width="106" height="26" fill="#0f172a" stroke="#2563eb" stroke-width="0.75" rx="3" />
+          <rect width="106" height="26" fill="#212430" stroke="#373c4f" stroke-width="0.75" rx="3" />
           <g transform="translate(10, 7)">
-            <circle cx="5" cy="5" r="4.5" fill="none" stroke="#38bdf8" stroke-width="0.9" />
-            <circle cx="5" cy="5" r="1.2" fill="#38bdf8" />
+            <path d="M6 1a5 5 0 100 10A5 5 0 006 1zm0 1.5a3.5 3.5 0 110 7 3.5 3.5 0 010-7z" fill="#f97316" />
           </g>
           <text x="59" y="17" text-anchor="middle" class="tag">RUST</text>
         </g>
         <!-- Pill 2: Go -->
         <g transform="translate(116, 0)">
-          <rect width="90" height="26" fill="#0f172a" stroke="#1e293b" stroke-width="0.75" rx="3" />
+          <rect width="90" height="26" fill="#212430" stroke="#373c4f" stroke-width="0.75" rx="3" />
           <g transform="translate(10, 7)">
-            <path d="M1 4h5v1.5H1V4zm0 2.5h7V8H1V6.5z" fill="#60a5fa" />
+            <path d="M1 4h5v1.5H1V4zm0 2.5h7V8H1V6.5z" fill="#00add8" />
           </g>
           <text x="51" y="17" text-anchor="middle" class="tag">GO</text>
         </g>
         <!-- Pill 3: PyTorch -->
         <g transform="translate(216, 0)">
-          <rect width="120" height="26" fill="#0f172a" stroke="#2563eb" stroke-width="0.75" rx="3" />
+          <rect width="120" height="26" fill="#212430" stroke="#373c4f" stroke-width="0.75" rx="3" />
           <g transform="translate(10, 7)">
-            <circle cx="5" cy="5" r="4.5" fill="none" stroke="#38bdf8" stroke-width="0.9" />
-            <path d="M5 2v3l2 2" stroke="#38bdf8" stroke-width="0.9" fill="none" />
+            <path d="M7.5 1a5.5 5.5 0 00-4 9.2l1-1A4.2 4.2 0 013.2 6a4.3 4.3 0 016-3.8l.8-.8A5.5 5.5 0 007.5 1z" fill="#ee4c2c" />
           </g>
           <text x="65" y="17" text-anchor="middle" class="tag">PYTORCH</text>
         </g>
         <!-- Pill 4: Next.js -->
         <g transform="translate(346, 0)">
-          <rect width="130" height="26" fill="#0f172a" stroke="#1e293b" stroke-width="0.75" rx="3" />
+          <rect width="130" height="26" fill="#212430" stroke="#373c4f" stroke-width="0.75" rx="3" />
           <g transform="translate(10, 7)">
-            <circle cx="5.5" cy="5.5" r="5" fill="none" stroke="#f8fafc" stroke-width="0.9" />
-            <path d="M4 3.5v5l4-5" stroke="#f8fafc" stroke-width="0.8" fill="none" />
+            <circle cx="5.5" cy="5.5" r="5" fill="none" stroke="#ffffff" stroke-width="0.9" />
+            <path d="M4 3.5v5l4-5" stroke="#ffffff" stroke-width="0.8" fill="none" />
           </g>
           <text x="70" y="17" text-anchor="middle" class="tag">NEXT.JS 15</text>
         </g>
         <!-- Pill 5: Qdrant -->
         <g transform="translate(486, 0)">
-          <rect width="118" height="26" fill="#0f172a" stroke="#2563eb" stroke-width="0.75" rx="3" />
+          <rect width="118" height="26" fill="#212430" stroke="#373c4f" stroke-width="0.75" rx="3" />
           <g transform="translate(10, 7)">
-            <circle cx="5.5" cy="5.5" r="4.5" fill="none" stroke="#38bdf8" stroke-width="0.9" />
-            <line x1="5.5" y1="1" x2="5.5" y2="10" stroke="#38bdf8" stroke-width="0.8" />
+            <circle cx="5.5" cy="5.5" r="4.5" fill="none" stroke="#dc2626" stroke-width="0.9" />
+            <line x1="5.5" y1="1" x2="5.5" y2="10" stroke="#dc2626" stroke-width="0.8" />
           </g>
           <text x="64" y="17" text-anchor="middle" class="tag">QDRANT</text>
         </g>
         <!-- Pill 6: Kubernetes -->
         <g transform="translate(614, 0)">
-          <rect width="138" height="26" fill="#0f172a" stroke="#1e293b" stroke-width="0.75" rx="3" />
+          <rect width="138" height="26" fill="#212430" stroke="#373c4f" stroke-width="0.75" rx="3" />
           <g transform="translate(10, 7)">
-            <circle cx="5.5" cy="5.5" r="4.5" fill="none" stroke="#60a5fa" stroke-width="0.9" />
-            <circle cx="5.5" cy="5.5" r="1.5" fill="#60a5fa" />
+            <circle cx="5.5" cy="5.5" r="4.5" fill="none" stroke="#326ce5" stroke-width="0.9" />
+            <circle cx="5.5" cy="5.5" r="1.5" fill="#326ce5" />
           </g>
           <text x="74" y="17" text-anchor="middle" class="tag">KUBERNETES</text>
         </g>
         <!-- Pill 7: FastAPI -->
         <g transform="translate(762, 0)">
-          <rect width="122" height="26" fill="#0f172a" stroke="#2563eb" stroke-width="0.75" rx="3" />
+          <rect width="122" height="26" fill="#212430" stroke="#373c4f" stroke-width="0.75" rx="3" />
           <g transform="translate(10, 7)">
-            <path d="M6 0L1 6h4l-1 5 6-7H6l2-4z" fill="#38bdf8" />
+            <path d="M6 0L1 6h4l-1 5 6-7H6l2-4z" fill="#05998b" />
           </g>
           <text x="66" y="17" text-anchor="middle" class="tag">FASTAPI</text>
         </g>
         <!-- Pill 8: Terraform -->
         <g transform="translate(894, 0)">
-          <rect width="136" height="26" fill="#0f172a" stroke="#1e293b" stroke-width="0.75" rx="3" />
+          <rect width="136" height="26" fill="#212430" stroke="#373c4f" stroke-width="0.75" rx="3" />
           <g transform="translate(10, 7)">
-            <polygon points="1,1 4.5,3 4.5,7 1,5" fill="#38bdf8" opacity="0.8" />
-            <polygon points="5.5,3 9,5 9,9 5.5,7" fill="#60a5fa" />
+            <path d="M1 1h3.2v3.8H1zm3.8 0H8v3.8H4.8zm0 4.2H8V9H4.8zm3.8 0h3.2V9H8.6z" fill="#844fba" />
           </g>
           <text x="74" y="17" text-anchor="middle" class="tag">TERRAFORM</text>
         </g>
 
         <!-- DUPLICATE TRACK FOR CONTINUOUS LOOP -->
         <g transform="translate(1040, 0)">
-          <rect width="106" height="26" fill="#0f172a" stroke="#2563eb" stroke-width="0.75" rx="3" />
+          <rect width="106" height="26" fill="#212430" stroke="#373c4f" stroke-width="0.75" rx="3" />
           <g transform="translate(10, 7)">
-            <circle cx="5" cy="5" r="4.5" fill="none" stroke="#38bdf8" stroke-width="0.9" />
-            <circle cx="5" cy="5" r="1.2" fill="#38bdf8" />
+            <path d="M6 1a5 5 0 100 10A5 5 0 006 1zm0 1.5a3.5 3.5 0 110 7 3.5 3.5 0 010-7z" fill="#f97316" />
           </g>
           <text x="59" y="17" text-anchor="middle" class="tag">RUST</text>
         </g>
         <g transform="translate(1156, 0)">
-          <rect width="90" height="26" fill="#0f172a" stroke="#1e293b" stroke-width="0.75" rx="3" />
+          <rect width="90" height="26" fill="#212430" stroke="#373c4f" stroke-width="0.75" rx="3" />
           <g transform="translate(10, 7)">
-            <path d="M1 4h5v1.5H1V4zm0 2.5h7V8H1V6.5z" fill="#60a5fa" />
+            <path d="M1 4h5v1.5H1V4zm0 2.5h7V8H1V6.5z" fill="#00add8" />
           </g>
           <text x="51" y="17" text-anchor="middle" class="tag">GO</text>
         </g>
         <g transform="translate(1256, 0)">
-          <rect width="120" height="26" fill="#0f172a" stroke="#2563eb" stroke-width="0.75" rx="3" />
+          <rect width="120" height="26" fill="#212430" stroke="#373c4f" stroke-width="0.75" rx="3" />
           <g transform="translate(10, 7)">
-            <circle cx="5" cy="5" r="4.5" fill="none" stroke="#38bdf8" stroke-width="0.9" />
-            <path d="M5 2v3l2 2" stroke="#38bdf8" stroke-width="0.9" fill="none" />
+            <path d="M7.5 1a5.5 5.5 0 00-4 9.2l1-1A4.2 4.2 0 013.2 6a4.3 4.3 0 016-3.8l.8-.8A5.5 5.5 0 007.5 1z" fill="#ee4c2c" />
           </g>
           <text x="65" y="17" text-anchor="middle" class="tag">PYTORCH</text>
         </g>
         <g transform="translate(1386, 0)">
-          <rect width="130" height="26" fill="#0f172a" stroke="#1e293b" stroke-width="0.75" rx="3" />
+          <rect width="130" height="26" fill="#212430" stroke="#373c4f" stroke-width="0.75" rx="3" />
           <g transform="translate(10, 7)">
-            <circle cx="5.5" cy="5.5" r="5" fill="none" stroke="#f8fafc" stroke-width="0.9" />
-            <path d="M4 3.5v5l4-5" stroke="#f8fafc" stroke-width="0.8" fill="none" />
+            <circle cx="5.5" cy="5.5" r="5" fill="none" stroke="#ffffff" stroke-width="0.9" />
+            <path d="M4 3.5v5l4-5" stroke="#ffffff" stroke-width="0.8" fill="none" />
           </g>
           <text x="70" y="17" text-anchor="middle" class="tag">NEXT.JS 15</text>
         </g>
         <g transform="translate(1526, 0)">
-          <rect width="118" height="26" fill="#0f172a" stroke="#2563eb" stroke-width="0.75" rx="3" />
+          <rect width="118" height="26" fill="#212430" stroke="#373c4f" stroke-width="0.75" rx="3" />
           <g transform="translate(10, 7)">
-            <circle cx="5.5" cy="5.5" r="4.5" fill="none" stroke="#38bdf8" stroke-width="0.9" />
-            <line x1="5.5" y1="1" x2="5.5" y2="10" stroke="#38bdf8" stroke-width="0.8" />
+            <circle cx="5.5" cy="5.5" r="4.5" fill="none" stroke="#dc2626" stroke-width="0.9" />
+            <line x1="5.5" y1="1" x2="5.5" y2="10" stroke="#dc2626" stroke-width="0.8" />
           </g>
           <text x="64" y="17" text-anchor="middle" class="tag">QDRANT</text>
         </g>
         <g transform="translate(1654, 0)">
-          <rect width="138" height="26" fill="#0f172a" stroke="#1e293b" stroke-width="0.75" rx="3" />
+          <rect width="138" height="26" fill="#212430" stroke="#373c4f" stroke-width="0.75" rx="3" />
           <g transform="translate(10, 7)">
-            <circle cx="5.5" cy="5.5" r="4.5" fill="none" stroke="#60a5fa" stroke-width="0.9" />
-            <circle cx="5.5" cy="5.5" r="1.5" fill="#60a5fa" />
+            <circle cx="5.5" cy="5.5" r="4.5" fill="none" stroke="#326ce5" stroke-width="0.9" />
+            <circle cx="5.5" cy="5.5" r="1.5" fill="#326ce5" />
           </g>
           <text x="74" y="17" text-anchor="middle" class="tag">KUBERNETES</text>
         </g>
         <g transform="translate(1802, 0)">
-          <rect width="122" height="26" fill="#0f172a" stroke="#2563eb" stroke-width="0.75" rx="3" />
+          <rect width="122" height="26" fill="#212430" stroke="#373c4f" stroke-width="0.75" rx="3" />
           <g transform="translate(10, 7)">
-            <path d="M6 0L1 6h4l-1 5 6-7H6l2-4z" fill="#38bdf8" />
+            <path d="M6 0L1 6h4l-1 5 6-7H6l2-4z" fill="#05998b" />
           </g>
           <text x="66" y="17" text-anchor="middle" class="tag">FASTAPI</text>
         </g>
         <g transform="translate(1934, 0)">
-          <rect width="136" height="26" fill="#0f172a" stroke="#1e293b" stroke-width="0.75" rx="3" />
+          <rect width="136" height="26" fill="#212430" stroke="#373c4f" stroke-width="0.75" rx="3" />
           <g transform="translate(10, 7)">
-            <polygon points="1,1 4.5,3 4.5,7 1,5" fill="#38bdf8" opacity="0.8" />
-            <polygon points="5.5,3 9,5 9,9 5.5,7" fill="#60a5fa" />
+            <path d="M1 1h3.2v3.8H1zm3.8 0H8v3.8H4.8zm0 4.2H8V9H4.8zm3.8 0h3.2V9H8.6z" fill="#844fba" />
           </g>
           <text x="74" y="17" text-anchor="middle" class="tag">TERRAFORM</text>
         </g>
