@@ -1,0 +1,43 @@
+name: Update Header Blueprint Real-Time Date & Time
+
+on:
+  schedule:
+    # Runs at the start of every day at 00:00 UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  sync-time:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Update Date and Time in Header Blueprint SVG
+        run: |
+          # Calculate current UTC date and time
+          CURRENT_DATE=$(date -u +"%Y.%m.%d")
+          CURRENT_TIME=$(date -u +"%H:%M:%S")
+
+          echo "Current UTC Date: $CURRENT_DATE"
+          echo "Current UTC Time: $CURRENT_TIME"
+
+          # Replace Date and Time strings in assets/header-blueprint.svg
+          sed -i -E "s|<text x=\"460\" y=\"0\" fill=\"#f3f4f6\" font-size=\"9.5\" text-anchor=\"middle\" class=\"mono\" id=\"realtime-date\"><tspan fill=\"#9ca3af\">DATE:</tspan> [0-9.]+<\/text>|<text x=\"460\" y=\"0\" fill=\"#f3f4f6\" font-size=\"9.5\" text-anchor=\"middle\" class=\"mono\" id=\"realtime-date\"><tspan fill=\"#9ca3af\">DATE:</tspan> $CURRENT_DATE<\/text>|g" assets/header-blueprint.svg
+          sed -i -E "s|<text x=\"884\" y=\"0\" fill=\"#f3f4f6\" font-size=\"9.5\" text-anchor=\"end\" class=\"mono\" id=\"realtime-time\"><tspan fill=\"#9ca3af\">UTC TIME:</tspan> <tspan fill=\"#22c55e\" font-weight=\"700\">[0-9:]+<\/tspan><\/text>|<text x=\"884\" y=\"0\" fill=\"#f3f4f6\" font-size=\"9.5\" text-anchor=\"end\" class=\"mono\" id=\"realtime-time\"><tspan fill=\"#9ca3af\">UTC TIME:</tspan> <tspan fill=\"#22c55e\" font-weight=\"700\">$CURRENT_TIME<\/tspan><\/text>|g" assets/header-blueprint.svg
+
+      - name: Commit and push if updated
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/header-blueprint.svg
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "chore(telemetry): update real-time header date & time [automated]"
+            git push
+          fi
