@@ -47,69 +47,12 @@
 <br/>
 
 <details>
-<summary><b>▸ Expand full inventory matrix</b></summary>
+<summary><b>▸ Click to inspect full technology inventory matrix</b></summary>
 <br/>
 
-<table>
-  <tr>
-    <th width="24%" align="left">LAYER</th>
-    <th width="76%" align="left">DEPLOYED TECHNOLOGIES &amp; TOOLING</th>
-  </tr>
-  <tr>
-    <td><b>Core Systems</b></td>
-    <td>
-      <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Go-000000?style=flat-square&logo=go&logoColor=white"/>
-      <img src="https://img.shields.io/badge/C%2B%2B-000000?style=flat-square&logo=c%2B%2B&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Python-000000?style=flat-square&logo=python&logoColor=white"/>
-      <img src="https://img.shields.io/badge/TypeScript-000000?style=flat-square&logo=typescript&logoColor=white"/>
-      <img src="https://img.shields.io/badge/JavaScript-000000?style=flat-square&logo=javascript&logoColor=white"/>
-    </td>
-  </tr>
-  <tr>
-    <td><b>Agentic &amp; AI</b></td>
-    <td>
-      <img src="https://img.shields.io/badge/PyTorch-000000?style=flat-square&logo=pytorch&logoColor=white"/>
-      <img src="https://img.shields.io/badge/LangChain-000000?style=flat-square&logo=chainlink&logoColor=white"/>
-      <img src="https://img.shields.io/badge/LlamaIndex-000000?style=flat-square&logo=diagram-next&logoColor=white"/>
-      <img src="https://img.shields.io/badge/OpenAI%20API-000000?style=flat-square&logo=openai&logoColor=white"/>
-      <img src="https://img.shields.io/badge/HuggingFace-000000?style=flat-square&logo=huggingface&logoColor=white"/>
-      <img src="https://img.shields.io/badge/MCP%20Protocol-000000?style=flat-square&logo=json&logoColor=white"/>
-    </td>
-  </tr>
-  <tr>
-    <td><b>Web &amp; APIs</b></td>
-    <td>
-      <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white"/>
-      <img src="https://img.shields.io/badge/React-000000?style=flat-square&logo=react&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Node.js-000000?style=flat-square&logo=nodedotjs&logoColor=white"/>
-      <img src="https://img.shields.io/badge/FastAPI-000000?style=flat-square&logo=fastapi&logoColor=white"/>
-      <img src="https://img.shields.io/badge/gRPC-000000?style=flat-square&logo=grpc&logoColor=white"/>
-      <img src="https://img.shields.io/badge/TailwindCSS-000000?style=flat-square&logo=tailwindcss&logoColor=white"/>
-    </td>
-  </tr>
-  <tr>
-    <td><b>Data &amp; Vectors</b></td>
-    <td>
-      <img src="https://img.shields.io/badge/PostgreSQL-000000?style=flat-square&logo=postgresql&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Redis-000000?style=flat-square&logo=redis&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Qdrant-000000?style=flat-square&logo=database&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Pinecone-000000?style=flat-square&logo=pinecone&logoColor=white"/>
-      <img src="https://img.shields.io/badge/ChromaDB-000000?style=flat-square&logo=databricks&logoColor=white"/>
-    </td>
-  </tr>
-  <tr>
-    <td><b>Cloud &amp; Platform</b></td>
-    <td>
-      <img src="https://img.shields.io/badge/Kubernetes-000000?style=flat-square&logo=kubernetes&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Docker-000000?style=flat-square&logo=docker&logoColor=white"/>
-      <img src="https://img.shields.io/badge/Terraform-000000?style=flat-square&logo=terraform&logoColor=white"/>
-      <img src="https://img.shields.io/badge/GitHub%20Actions-000000?style=flat-square&logo=githubactions&logoColor=white"/>
-      <img src="https://img.shields.io/badge/GCP-000000?style=flat-square&logo=googlecloud&logoColor=white"/>
-      <img src="https://img.shields.io/badge/AWS-000000?style=flat-square&logo=amazonwebservices&logoColor=white"/>
-    </td>
-  </tr>
-</table>
+<div align="center">
+  <img src="./assets/tech-inventory.svg" alt="Technology Inventory Matrix" width="100%">
+</div>
 
 </details>
 
