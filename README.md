@@ -87,8 +87,8 @@ impl EngineeringPillars {
 
 <a href="mailto:thepalearchitect@gmail.com"><img src="./assets/dock-email.svg" width="22%" alt="Email"></a>
 <a href="https://github.com/palearchitect"><img src="./assets/dock-github.svg" width="22%" alt="GitHub"></a>
-<a href="https://x.com/ThePaleArchitect"><img src="./assets/dock-x.svg" width="22%" alt="X / Twitter"></a>
-<a href="https://linkedin.com/in/thepalearchitect"><img src="./assets/dock-linkedin.svg" width="22%" alt="LinkedIn"></a>
+<a href="https://x.com/palearchitect"><img src="./assets/dock-x.svg" width="22%" alt="X / Twitter"></a>
+<a href="https://instagram.com/palearchitect"><img src="./assets/dock-instagram.svg" width="22%" alt="Instagram"></a>
 
 <br/><br/>
 <sub><b>THE PALE ARCHITECT</b> • HIGH-CONCURRENCY SYSTEMS • AUTONOMOUS AGENTS • DETERMINISTIC RUNTIMES</sub>
