@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 216 60" width="100%" height="100%">
+  <style>
+    .mono { font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace; }
+    .label { font-family: 'Inter', -apple-system, sans-serif; font-size: 11px; font-weight: 700; fill: #f3f4f6; }
+    .handle { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; fill: #9ca3af; }
+    rect { transition: all 0.2s ease; }
+    rect:hover { fill: #212430; stroke: #ffffff; }
+  </style>
+  <rect width="216" height="60" fill="#181a23" stroke="#2b2e3e" stroke-width="1.2" rx="6" />
+  <g transform="translate(18, 20)">
+    <path d="M14.2 0h2.8l-6.1 7 7.2 9.5h-5.6l-4.4-5.8-5 5.8H0.3l6.5-7.5L0 0h5.7l4 5.3L14.2 0zm-1 14.8h1.5L4.9 1.5H3.3l9.9 13.3z" fill="#ffffff" />
+  </g>
+  <text x="50" y="28" class="label">X / TWITTER</text>
+  <text x="50" y="44" class="handle">@ThePaleArchitect</text>
+</svg>

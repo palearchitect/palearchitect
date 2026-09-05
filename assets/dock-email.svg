@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 216 60" width="100%" height="100%">
+  <style>
+    .mono { font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace; }
+    .label { font-family: 'Inter', -apple-system, sans-serif; font-size: 11px; font-weight: 700; fill: #f3f4f6; }
+    .handle { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; fill: #9ca3af; }
+    rect { transition: all 0.2s ease; }
+    rect:hover { fill: #212430; stroke: #f97316; }
+  </style>
+  <rect width="216" height="60" fill="#181a23" stroke="#2b2e3e" stroke-width="1.2" rx="6" />
+  <g transform="translate(16, 18)">
+    <rect width="22" height="16" fill="none" stroke="#f97316" stroke-width="1.5" rx="2" />
+    <path d="M 1 2 L 11 10 L 21 2" fill="none" stroke="#f97316" stroke-width="1.5" />
+  </g>
+  <text x="50" y="28" class="label">EMAIL</text>
+  <text x="50" y="44" class="handle">thepalearchitect</text>
+</svg>
